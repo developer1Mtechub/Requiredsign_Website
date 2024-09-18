@@ -1,0 +1,15 @@
+.inputfield::placeholder {
+    color: gray;
+}
+
+.contactus .ant-input-placeholder {
+    color: red;
+  }
+  
+  .input::placeholder {
+    color: rgb(138, 121, 121);
+}
+  
+  
+  
+  

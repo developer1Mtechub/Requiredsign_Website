@@ -1,0 +1,17 @@
+.home {
+  /* background-image: url("../Assets/homemain.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home .btn_home_download {
+  background-color: #100C79;
+  color: white;
+  box-shadow: none;
+}
+
+.home .btn_home_download:hover {
+  background-color: #100C79;
+  color: white;
+  box-shadow: none;
+}
