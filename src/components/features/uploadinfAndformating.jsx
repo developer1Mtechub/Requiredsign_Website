@@ -10,11 +10,11 @@ function UploadingAndFormatting() {
     return (
         <>
             <Box pt={3} pb={3}>
-                <Container>
+                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center" pb={5}>
-                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "40px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "30px" }} color="#1662A7">
+                        <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "50px" }} color="#1662A7">
                                 Uploading & Formatting Documents
                             </Typography>
                         </Grid>
@@ -22,11 +22,11 @@ function UploadingAndFormatting() {
                         <Grid xs={12} md={4} p={2}>
                             <Card
                                 sx={{
-                                    boxShadow:"none",
-                                    width: "95%",
+                                    boxShadow: "none",
+                                   width:"90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC" 
+                                    border: "1px solid #B8C2CC"
                                 }}
                             >
                                 <CardContent>
@@ -36,7 +36,7 @@ function UploadingAndFormatting() {
                                             src={add_file}
                                             sx={{ alignSelf: "center", width: 150, height: 150 }}
                                         />
-                                        <Typography 
+                                        <Typography
                                             sx={{
                                                 pt: 2,
                                                 fontFamily: "Roboto",
@@ -57,11 +57,11 @@ function UploadingAndFormatting() {
                         <Grid xs={12} md={4} p={2}>
                             <Card
                                 sx={{
-                                    boxShadow:"none",
-                                    width: "95%",
+                                    boxShadow: "none",
+                                   width:"90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC" 
+                                    border: "1px solid #B8C2CC"
                                 }}
                             >
                                 <CardContent>
@@ -83,7 +83,7 @@ function UploadingAndFormatting() {
                                                 textAlign: "center", // Default text alignment
                                             }}
                                         >
-                                        Assign areas to complete
+                                            Assign areas to complete
                                         </Typography>
                                     </Stack>
                                 </CardContent>
@@ -93,11 +93,11 @@ function UploadingAndFormatting() {
                         <Grid xs={12} md={4} p={2}>
                             <Card
                                 sx={{
-                                    boxShadow:"none",
-                                    width: "95%",
+                                    boxShadow: "none",
+                                   width:"90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC" 
+                                    border: "1px solid #B8C2CC"
                                 }}
                             >
                                 <CardContent>
@@ -107,7 +107,7 @@ function UploadingAndFormatting() {
                                             src={links}
                                             sx={{ alignSelf: "center", width: 150, height: 150 }}
                                         />
-                                        <Typography 
+                                        <Typography
                                             sx={{
                                                 pt: 2,
                                                 fontFamily: "Roboto",
@@ -118,7 +118,7 @@ function UploadingAndFormatting() {
                                                 textAlign: "center", // Default text alignment
                                             }}
                                         >
-                                      Create public web link
+                                            Create public web link
                                         </Typography>
                                     </Stack>
                                 </CardContent>
@@ -126,7 +126,7 @@ function UploadingAndFormatting() {
                         </Grid>
 
                     </Grid>
-                </Container>
+                </Box>
             </Box>
         </>
     )
