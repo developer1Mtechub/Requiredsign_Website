@@ -1,0 +1,16 @@
+.navbar .btn_download {
+    width: 170px;
+    background-color: #100C79;
+    color: white;
+    box-shadow: none;
+    border-radius: 50px;
+    text-transform: capitalize;
+    transition: width 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .btn_download:hover {
+    width: 170px;
+    background-color: #2984FF;
+    color: white;
+    box-shadow: none;
+}

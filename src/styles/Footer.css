@@ -1,0 +1,14 @@
+.footer li {
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    flex-direction: column;
+    padding: 3px;
+}
+
+.footer .navbar-link {
+    text-decoration: none;
+    color: #111111;
+    font-weight: medium;
+    font-size: small; 
+}
