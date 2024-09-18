@@ -20,13 +20,13 @@ function DataCenters() {
         <>
 
             <Box pb={4}>
-                <Container>
+                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12}  >
-                            <Stack direction="column" pb={4} spacing={2}>
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize="35px" color="#1662A7">
-                                    Data Centers
+                            <Stack direction="column" pt={4} pb={4} spacing={2}>
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="medium" fontSize="55px" color="#1662A7">
+                                    Our Data Center's
                                 </Typography>
                             </Stack>
                         </Grid>
@@ -89,7 +89,7 @@ function DataCenters() {
 
 
                     </Grid>
-                </Container>
+                </Box>
             </Box>
 
         </>

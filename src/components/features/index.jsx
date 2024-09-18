@@ -11,26 +11,26 @@ function Features() {
 
     return (
         <>
-            <Box id=" " pt={16} pb={7} sx={{ backgroundColor: "#F8F8F8" }} >
-                <Container>
+        <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#F8F8F8" }} >
+                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize="55px" color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="medium" fontSize="75px" color="#1662A7">
                                     Features
                                 </Typography>
                             </Stack>
                         </Grid>
                     </Grid>
-                </Container>
+                </Box>
             </Box>
 
             <Box pt={5} pb={5}>
-                <Container>
+                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center">
-                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "40px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "30px" }} color="#1662A7">
+                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "50px" }} color="#1662A7">
                                 Rebranding & White Labeling
                             </Typography>
                         </Grid>
@@ -44,9 +44,9 @@ function Features() {
                                 <Stack pt={15} pl={10}>
                                     <Typography
                                         variant="paragraph"
-                                        sx={{ width: "100%", fontFamily: "Roboto", lineHeight: "35px" }}
-                                        fontWeight="normal"
-                                        fontSize={{ xs: "15px", md: "22px" }}
+                                        sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: "50px" }}
+                                        fontWeight="medium"
+                                        fontSize={{ xs: "15px", md: "30px" }}
                                         color="#6E6B7B"
                                     >
                                         Tailor your experience with our Rebranding & White Labeling features. Professional and Team plans offer logo customization, while Enterprise and On-Prem take it to the next level with custom domain names.
@@ -55,34 +55,23 @@ function Features() {
                                     </Typography>
 
                                     <div style={{ marginTop: "20px" }}>
-                                        <Button
-                                            sx={{
-                                                backgroundColor: "#25B2E8",
-                                                fontFamily: "Roboto",
-                                                height: "45px",
-                                                fontWeight: "bold",
-                                                borderRadius: "10px",
-                                                fontSize: "15px",
-                                                color: "white",
-                                                textTransform: "capitalize",
-                                                width: "130px",
-                                                "&:hover": {
-                                                    backgroundColor: "#1A8CC7" // Changed hover color for contrast
-                                                }
-                                            }}
-                                        >
-                                            Try for FREE
+                                        <Button sx={{
+                                            backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
+                                            "&:hover": {
+                                                backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
+                                            }
+                                        }}>Try for FREE
                                         </Button>
                                     </div>
                                 </Stack>
                             </div>
                         </Grid>
                     </Grid>
-                </Container>
+                </Box>
             </Box>
 
             <UploadingAndFormatting />
-<Functions/>
+            <Functions />
 
         </>
     )

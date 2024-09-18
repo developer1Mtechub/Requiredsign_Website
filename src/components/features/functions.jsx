@@ -26,11 +26,11 @@ function Functions() {
     return (
         <>
             <Box pt={3} pb={3}>
-                <Container>
+            <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center" pb={5}>
-                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "40px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "30px" }} color="#1662A7">
+                        <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "55px" }} color="#1662A7">
                                 Functions
                             </Typography>
                         </Grid>
@@ -39,7 +39,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -74,7 +74,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -110,7 +110,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -145,7 +145,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -180,7 +180,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -215,7 +215,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -250,7 +250,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -285,7 +285,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -320,7 +320,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -355,7 +355,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -390,7 +390,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -425,7 +425,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -460,7 +460,7 @@ function Functions() {
                             <Card
                                 sx={{
                                     boxShadow: "none",
-                                    width: "95%",
+                                    width: "90%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC"
@@ -508,7 +508,7 @@ function Functions() {
                             </Box>
                         </Grid>
                     </Grid>
-                </Container>
+                </Box>
             </Box>
         </>
     )

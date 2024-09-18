@@ -13,7 +13,7 @@ function Cards() {
 
     return (
         <>
-            <Box id="" pt={{ xs: 10, md: 15 }} pb={{ xs: 10, md: 15 }}>
+            <Box id="" pt={{ xs: 10, md: 10 }} pb={{ xs: 10, md: 15 }}>
 
                 <Grid container spacing={0}>
                     <Grid xs={12} md={12} p={""} sx={{ display: { xs: "none", md: "block" } }}>
@@ -28,7 +28,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#1662A7",
+                                        backgroundColor: "#25B2E8", 
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -48,7 +48,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "20px" },
+                                                fontSize: { xs: "14px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -70,7 +70,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#1662A7",
+                                        backgroundColor: "#25B2E8", 
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -90,7 +90,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "20px" },
+                                                fontSize: { xs: "14px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -112,7 +112,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#1662A7",
+                                        backgroundColor: "#25B2E8", 
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -132,7 +132,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "20px" },
+                                                fontSize: { xs: "14px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -154,7 +154,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#1662A7",
+                                        backgroundColor: "#25B2E8", 
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -174,13 +174,13 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "18px" },
+                                                fontSize: { xs: "14px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
                                             }}
                                         >
-                                            Secured by
+                                            Secured by<br/>
                                             Encrption
                                         </Typography>
                                     </Stack>
@@ -197,7 +197,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#1662A7",
+                                        backgroundColor: "#25B2E8", 
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -217,7 +217,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "20px" },
+                                                fontSize: { xs: "14px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -246,7 +246,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#1662A7",
+                                    backgroundColor: "#25B2E8", 
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -266,7 +266,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "20px" },
+                                            fontSize: { xs: "14px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -290,7 +290,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#1662A7",
+                                    backgroundColor: "#25B2E8", 
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -310,7 +310,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "20px" },
+                                            fontSize: { xs: "14px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -334,7 +334,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#1662A7",
+                                    backgroundColor: "#25B2E8", 
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -354,7 +354,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "20px" },
+                                            fontSize: { xs: "14px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -378,7 +378,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#1662A7",
+                                    backgroundColor: "#25B2E8", 
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -398,7 +398,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "20px" },
+                                            fontSize: { xs: "14px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -423,7 +423,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#1662A7",
+                                    backgroundColor: "#25B2E8", 
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -443,7 +443,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "20px" },
+                                            fontSize: { xs: "14px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
