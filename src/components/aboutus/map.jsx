@@ -2,6 +2,7 @@ import { Avatar, Box, Button, Container, Divider, Grid, Stack, Typography } from
 import React, { useEffect } from 'react'
 import animated_map from "../../Assets/animated_map.gif";
 import "../../styles/Home.css"
+import Textfield from '../Textfield';
 
 function Map() {
 
@@ -21,6 +22,10 @@ function Map() {
                     </Stack>
 
                     <Box component="img" src={animated_map} sx={{ alignSelf: "center", width: { xs: "100%", md: "90%" } }} />
+
+                    <Box pb={2}>
+                        <Textfield />
+                    </Box>
 
                 </Box>
             </Box>

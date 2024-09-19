@@ -15,7 +15,7 @@ function AboutUs() {
                 <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center", alignContent: "center", height: "100vh" }}> */}
                     <Grid container spacing={0} pt={{ xs: 2, md: 10 }}>
-                        <Grid xs={12} md={6}>
+                        <Grid xs={12} sm={6} md={6}>
                             <Stack direction="column" spacing={{ xs: 1, md: 4 }}  >
                                 <Typography variant="paragraph" align="" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "40px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "35px", md: "65px" }} color="#1662A7">
                                     RequireSign
@@ -47,7 +47,7 @@ function AboutUs() {
                             </Stack>
                         </Grid>
 
-                        <Grid xs={12} md={6} align="center">
+                        <Grid xs={12} sm={6} md={6} align="center">
                             <Box component="img" src={aboutus_main} sx={{ pt: { xs: 2, md: 0 }, width: "100%" }} />
                         </Grid>
                     </Grid>
@@ -58,14 +58,14 @@ function AboutUs() {
             <Box pt={3} pb={5}>
                 <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
-                        <Grid xs={12} md={6}>
-                            <Box component="img" src={aboutus_sec1} sx={{ alignSelf: "start", width: { xs: "100%", md: "85%" } }} />
+                        <Grid xs={12} sm={6} md={6}>
+                            <Box component="img" src={aboutus_sec1} sx={{ pt: { xs: 5, md: 0 }, alignSelf: "start", width: { xs: "100%", md: "85%" } }} />
                         </Grid>
 
-                        <Grid xs={12} md={6}  >
-                            <Stack pt={{xs:5,md:13}}>
+                        <Grid xs={12} sm={6} md={6}  >
+                            <Stack pt={{ xs: 5, md: 7 }}>
                                 {/* <div style={{ display: "flex", justifyContent: "right", alignContent: "right" }}> */}
-                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
+                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
                                     Our team of seasoned tech experts has a proven track record of delivering innovative solutions for leading corporations worldwide.
                                     <br /><br />
                                     By leveraging our deep understanding of both business and technology, we've developed an e-signature platform that's not only powerful but also easy to use.
@@ -74,14 +74,14 @@ function AboutUs() {
                             </Stack>
                         </Grid>
 
-                        <Grid xs={12} md={6}>
-                            <Box component="img" src={aboutus_sec2} sx={{ alignSelf: "start", width: { xs: "100%", md: "85%" } }} />
+                        <Grid xs={12} sm={6} md={6}>
+                            <Box component="img" src={aboutus_sec2} sx={{ pt: { xs: 5, md: 0 }, alignSelf: "start", width: { xs: "100%", md: "85%" } }} />
                         </Grid>
 
-                        <Grid xs={12} md={6}>
-                            <Stack pt={{xs:5,md:13}}>
+                        <Grid xs={12} sm={6} md={6}>
+                            <Stack pt={{ xs: 5, md: 13 }}>
                                 {/* <div style={{ display: "flex", justifyContent: "right", alignContent: "right" }}> */}
-                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
+                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
                                     Whether you're a small local business or a large global enterprise, RequireSign offers a cost-effective solution that empowers you to streamline your processes, reduce paperwork, and enhance security.
                                     <br /><br />
                                     Join us in embracing the future of digital signatures.
@@ -94,8 +94,6 @@ function AboutUs() {
             </Box>
 
             <Map />
-
-            <Box sx={{ height: "40vh" }} />
 
         </>
     )

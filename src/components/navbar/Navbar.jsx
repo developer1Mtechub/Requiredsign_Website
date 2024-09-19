@@ -55,34 +55,34 @@ function Navbar() {
                                 <Grid item md={2.5} lg={2}>
                                     <Box pl={0} >
                                         {/* <Avatar variant="square" src={logo} sx={{ width: 20, height: 20 }} /> */}
-                                        <Box component="img" src={logo} sx={{ width: 200, height: 40 }} />
+                                        <Box component="img" src={logo} sx={{ pt: 0.5, width: 170, height: 40 }} />
                                     </Box>
                                 </Grid>
 
                                 <Grid item md={6.5} lg={7} align="center">
                                     <div style={{ display: "flex", justifyContent: "center", alignContent: "center" }}>
-                                        <Stack align="center" direction="row" spacing={{ md: 4, lg: 4 }} fontFamily="Roboto" sx={{ pt: 1.5, color: "white", fontSize: "19px", letterSpacing: "1px", fontWeight: "medium", cursor: "pointer" }}>
-                                            <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                        <Stack align="center" direction="row" spacing={{ md: 2, lg: 2 }} fontFamily="Roboto" sx={{ pt: 1.5, color: "white", fontSize: "17px", letterSpacing: "1px", fontWeight: "medium", cursor: "pointer" }}>
+                                            <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
                                                 <Typography variant="paragraph">Home</Typography>
                                             </NavLink>
-                                            <NavLink to="/aboutus" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
-                                                <Typography variant="paragraph">About Us</Typography>
+                                            <NavLink to="/aboutus" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                                <Typography variant="paragraph">About</Typography>
                                             </NavLink>
-                                            <NavLink to="/features" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                            <NavLink to="/features" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
                                                 <Typography variant="paragraph">Features</Typography>
                                             </NavLink>
-                                            <NavLink to="/security_and_compliance" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                            <NavLink to="/security_and_compliance" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
                                                 <Typography variant="paragraph">Security & Compliance</Typography>
                                             </NavLink>
-                                            {/* <NavLink to="" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}> */}
-                                            <Typography variant="paragraph" color="#6E6B7B">Pricing Plans</Typography>
-                                            {/* </NavLink> */}
-                                            {/* <NavLink to="" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}> */}
-                                            <Typography variant="paragraph" color="#6E6B7B">Partners</Typography>
-                                            {/* </NavLink> */}
-                                            {/* <NavLink to="" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}> */}
-                                            <Typography variant="paragraph" color="#6E6B7B">Contact</Typography>
-                                            {/* </NavLink> */}
+                                            <NavLink to="/pricing_and_plans" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                                <Typography variant="paragraph" >Pricing Plans</Typography>
+                                            </NavLink>
+                                            <NavLink to="/patners" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                                <Typography variant="paragraph">Partners</Typography>
+                                            </NavLink>
+                                            <NavLink to="/contact" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                                <Typography variant="paragraph" color="#6E6B7B">Contact</Typography>
+                                            </NavLink>
                                         </Stack>
                                     </div>
                                 </Grid>
@@ -91,17 +91,17 @@ function Navbar() {
                                     <div style={{ display: "flex", justifyContent: "flex-end" }}>
                                         <Stack align="right" spacing={2} direction="row" pt={0.8} >
                                             <Button sx={{
-                                                backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "19px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
                                                 "&:hover": {
-                                                    backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "19px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                    backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
                                                 }
                                             }}>Try for FREE
                                             </Button>
 
                                             <Button sx={{
-                                                backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "19px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
                                                 "&:hover": {
-                                                    backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "19px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                    backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
                                                 }
                                             }}>Login
                                             </Button>
@@ -154,24 +154,24 @@ function Navbar() {
                                             <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
                                                 <Typography variant="paragraph" pt={1}>Home</Typography>
                                             </NavLink>
-                                            <NavLink to="/aboutus" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
-                                                <Typography variant="paragraph" pt={1}>About Us</Typography>
+                                            <NavLink to="/aboutus" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                                <Typography variant="paragraph" pt={1}>About</Typography>
                                             </NavLink>
-                                            <NavLink to="/features" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                            <NavLink to="/features" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
                                                 <Typography variant="paragraph" pt={1}>Features</Typography>
                                             </NavLink>
-                                            <NavLink to="/security_and_compliance" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                            <NavLink to="/security_and_compliance" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
                                                 <Typography variant="paragraph" pt={1}>Security & Compliance</Typography>
                                             </NavLink>
-                                            {/* <NavLink to="" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}> */}
-                                            <Typography variant="paragraph" color="#6E6B7B">Pricing Plans</Typography>
-                                            {/* </NavLink> */}
-                                            {/* <NavLink to="" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}> */}
-                                            <Typography variant="paragraph" color="#6E6B7B">Partners</Typography>
-                                            {/* </NavLink> */}
-                                            {/* <NavLink to="" style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "30px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}> */}
-                                            <Typography variant="paragraph" color="#6E6B7B">Contact</Typography>
-                                            {/* </NavLink> */}
+                                            <NavLink to="/pricing_and_plans" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                                <Typography variant="paragraph" >Pricing Plans</Typography>
+                                            </NavLink>
+                                            <NavLink to="/patners" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                                <Typography variant="paragraph">Partners</Typography>
+                                            </NavLink>
+                                            <NavLink to="/contact" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                                <Typography variant="paragraph">Contact</Typography>
+                                            </NavLink>
                                         </Stack>
                                     </Container>
                                 </Drawer>

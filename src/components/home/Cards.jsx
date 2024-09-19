@@ -28,7 +28,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#25B2E8", 
+                                        backgroundColor: "#25B2E8",
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -70,7 +70,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#25B2E8", 
+                                        backgroundColor: "#25B2E8",
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -112,7 +112,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#25B2E8", 
+                                        backgroundColor: "#25B2E8",
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -154,7 +154,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#25B2E8", 
+                                        backgroundColor: "#25B2E8",
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -180,7 +180,7 @@ function Cards() {
                                                 textAlign: "center", // Default text alignment
                                             }}
                                         >
-                                            Secured by<br/>
+                                            Secured by<br />
                                             Encrption
                                         </Typography>
                                     </Stack>
@@ -197,7 +197,7 @@ function Cards() {
                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                     transition: "background-color 0.3s ease",
                                     '&:hover': {
-                                        backgroundColor: "#25B2E8", 
+                                        backgroundColor: "#25B2E8",
                                         '.hover-text': {
                                             color: "white", // Directly change the color on hover
                                             // textAlign: "start", // Align the text on hover
@@ -246,7 +246,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#25B2E8", 
+                                    backgroundColor: "#25B2E8",
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -290,7 +290,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#25B2E8", 
+                                    backgroundColor: "#25B2E8",
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -334,7 +334,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#25B2E8", 
+                                    backgroundColor: "#25B2E8",
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -378,7 +378,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#25B2E8", 
+                                    backgroundColor: "#25B2E8",
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -423,7 +423,7 @@ function Cards() {
                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
-                                    backgroundColor: "#25B2E8", 
+                                    backgroundColor: "#25B2E8",
                                     '.hover-text': {
                                         color: "white", // Directly change the color on hover
                                         // textAlign: "start", // Align the text on hover
@@ -457,8 +457,6 @@ function Cards() {
                         </Card>
                     </Grid>
                 </Grid>
-
-                <Box sx={{height:"40vh"}}/>
             </Box >
         </>
     )

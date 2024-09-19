@@ -11,12 +11,12 @@ function Features() {
 
     return (
         <>
-        <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#F8F8F8" }} >
+            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#F8F8F8" }} >
                 <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="medium" fontSize="75px" color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize="75px" color="#1662A7">
                                     Features
                                 </Typography>
                             </Stack>
@@ -45,13 +45,17 @@ function Features() {
                                     <Typography
                                         variant="paragraph"
                                         sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: "50px" }}
-                                        fontWeight="medium"
-                                        fontSize={{ xs: "15px", md: "30px" }}
+                                        fontWeight="normal"
+                                        fontSize={{ xs: "15px", md: "25px" }}
                                         color="#6E6B7B"
                                     >
                                         Tailor your experience with our Rebranding & White Labeling features. Professional and Team plans offer logo customization, while Enterprise and On-Prem take it to the next level with custom domain names.
-                                        <br /><br />
-                                        Elevate your brand's professional image today! Example of custom domain: esign.YourCompany.com
+                                        <br />
+                                        <Stack sx={{ pt: 2, pb: 2 }}>Elevate your brand's professional image today!</Stack>
+
+                                        Example of custom domain:
+                                        <br />
+                                        esign.YourCompany.com
                                     </Typography>
 
                                     <div style={{ marginTop: "20px" }}>
