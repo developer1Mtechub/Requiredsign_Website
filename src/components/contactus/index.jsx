@@ -13,22 +13,22 @@ function Contactus() {
     const validationSchema = yup.object({
         firstname: yup
             .string()
-            .required('First name is required'),
+            .required('First Name* is required'),
         lastname: yup
             .string()
-            .required('Last name is required'),
+            .required('Last Name* is required'),
         businessemail: yup
             .string()
             .required('Email is required'),
         companyname: yup
             .string()
-            .required('Company name is required'),
+            .required('Company Name* is required'),
         jobtitle: yup
             .string()
-            .required('Job title is required'),
+            .required('Job Title* is required'),
         companysize: yup
             .string()
-            .required('Company size is required'),
+            .required('Company Size* is required'),
         comments: yup
             .string()
             .nullable(),
@@ -52,7 +52,7 @@ function Contactus() {
 
     return (
         <>
-            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#F8F8F8" }} >
+            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
@@ -77,26 +77,25 @@ function Contactus() {
                         </Grid>
 
                         <Grid xs={12} md={12} align="center" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
-                            <Grid xs={12} md={12}  >
-                                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "50px" }}>
+                            <Grid xs={12} md={12}>
+                                <div style={{ marginLeft: "70px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "50px", alignItems: "center" }}>
                                     {/* Contact Sales Section */}
-                                    <div>
+                                    <div style={{ textAlign: "left" }}>
                                         <Typography
                                             variant="h5"
                                             sx={{ fontFamily: "Roboto", lineHeight: "45px" }}
-                                            fontWeight="medium"
+                                            fontWeight="bold"
                                             fontSize={{ xs: "15px", md: "33px" }}
                                             color="#1662A7"
-                                            align="left"
                                         >
                                             Contact Sales
                                         </Typography>
 
-                                        <form onSubmit={formik.handleSubmit} >
+                                        <form onSubmit={formik.handleSubmit}>
                                             <Card
                                                 sx={{
                                                     mt: 2,
-                                                    width: { xs: "100%", md: "100%" },
+                                                    width: { xs: "100%", md: "93%" },
                                                     backgroundColor: "#F3F4F6",
                                                     border: "1px solid #B8C2CC",
                                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
@@ -107,96 +106,105 @@ function Contactus() {
                                                     <Stack pt={1.5} spacing={4}>
                                                         <Stack direction="row" spacing={3}>
                                                             <Inputfield
-                                                                label="First Name"
+                                                                label="First Name*"
                                                                 name="firstname"
                                                                 value={formik.values.firstname}
-                                                                onChngeterm={(e) => formik.setFieldValue("firstname", e.target.value)}
+                                                                onChange={(e) => formik.setFieldValue("firstname", e.target.value)}
                                                                 error={formik.touched.firstname && Boolean(formik.errors.firstname)}
                                                                 helperText={formik.touched.firstname && formik.errors.firstname}
                                                             />
-
                                                             <Inputfield
-                                                                label="Last Name"
+                                                                label="Last Name*"
                                                                 name="lastname"
                                                                 value={formik.values.lastname}
-                                                                onChngeterm={(e) => formik.setFieldValue("lastname", e.target.value)}
+                                                                onChange={(e) => formik.setFieldValue("lastname", e.target.value)}
                                                                 error={formik.touched.lastname && Boolean(formik.errors.lastname)}
                                                                 helperText={formik.touched.lastname && formik.errors.lastname}
                                                             />
                                                         </Stack>
 
                                                         <Inputfield
-                                                            label="Business Email"
+                                                            label="Business Email*"
                                                             name="businessemail"
                                                             value={formik.values.businessemail}
-                                                            onChngeterm={(e) => formik.setFieldValue("businessemail", e.target.value)}
+                                                            onChange={(e) => formik.setFieldValue("businessemail", e.target.value)}
                                                             error={formik.touched.businessemail && Boolean(formik.errors.businessemail)}
                                                             helperText={formik.touched.businessemail && formik.errors.businessemail}
                                                         />
 
                                                         <Inputfield
-                                                            label="Company Name"
+                                                            label="Company Name*"
                                                             name="companyname"
                                                             value={formik.values.companyname}
-                                                            onChngeterm={(e) => formik.setFieldValue("companyname", e.target.value)}
+                                                            onChange={(e) => formik.setFieldValue("companyname", e.target.value)}
                                                             error={formik.touched.companyname && Boolean(formik.errors.companyname)}
                                                             helperText={formik.touched.companyname && formik.errors.companyname}
                                                         />
 
                                                         <Stack direction="row" spacing={4}>
                                                             <Inputfield
-                                                                label="Job Title"
+                                                                label="Job Title*"
                                                                 name="jobtitle"
                                                                 value={formik.values.jobtitle}
-                                                                onChngeterm={(e) => formik.setFieldValue("jobtitle", e.target.value)}
+                                                                onChange={(e) => formik.setFieldValue("jobtitle", e.target.value)}
                                                                 error={formik.touched.jobtitle && Boolean(formik.errors.jobtitle)}
                                                                 helperText={formik.touched.jobtitle && formik.errors.jobtitle}
                                                             />
 
                                                             <Inputfield
-                                                                label="Company Size"
+                                                                label="Company Size*"
                                                                 name="companysize"
                                                                 value={formik.values.companysize}
-                                                                onChngeterm={(e) => formik.setFieldValue("companysize", e.target.value)}
+                                                                onChange={(e) => formik.setFieldValue("companysize", e.target.value)}
                                                                 error={formik.touched.companysize && Boolean(formik.errors.companysize)}
                                                                 helperText={formik.touched.companysize && formik.errors.companysize}
                                                             />
                                                         </Stack>
 
                                                         <Inputfield
-                                                            label="Questions of comments (optional)"
+                                                            label="Questions or comments (optional)"
                                                             multiline={true}
                                                             rows={6}
                                                             name="comments"
                                                             value={formik.values.comments}
-                                                            onChngeterm={(e) => formik.setFieldValue("comments", e.target.value)}
+                                                            onChange={(e) => formik.setFieldValue("comments", e.target.value)}
                                                             error={formik.touched.comments && Boolean(formik.errors.comments)}
                                                             helperText={formik.touched.comments && formik.errors.comments}
                                                         />
 
-                                                        <Button type="submit" sx={{
-                                                            backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "55px", borderRadius: "10px", fontSize: "20px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
-                                                            "&:hover": {
-                                                                backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "55px", borderRadius: "10px", fontSize: "20px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
-                                                            }
-                                                        }}>Submit
+                                                        <Button
+                                                            type="submit"
+                                                            sx={{
+                                                                backgroundColor: "#25B2E8",
+                                                                fontFamily: "Roboto",
+                                                                height: "55px",
+                                                                borderRadius: "10px",
+                                                                fontSize: "20px",
+                                                                color: "white",
+                                                                textTransform: "capitalize",
+                                                                alignSelf: "center",
+                                                                width: "150px",
+                                                                "&:hover": {
+                                                                    backgroundColor: "#25B2E8",
+                                                                },
+                                                            }}
+                                                        >
+                                                            Submit
                                                         </Button>
                                                     </Stack>
                                                 </CardContent>
                                             </Card>
                                         </form>
-
                                     </div>
 
                                     {/* Contact Support Section */}
-                                    <div>
+                                    <div style={{ textAlign: "left" }}>
                                         <Typography
                                             variant="h5"
                                             sx={{ fontFamily: "Roboto", lineHeight: "45px" }}
-                                            fontWeight="medium"
+                                            fontWeight="bold"
                                             fontSize={{ xs: "15px", md: "33px" }}
                                             color="#1662A7"
-                                            align="left"
                                         >
                                             Contact Support
                                         </Typography>
@@ -204,7 +212,7 @@ function Contactus() {
                                         <Card
                                             sx={{
                                                 mt: 2,
-                                                width: { xs: "100%", md: "100%" },
+                                                width: { xs: "100%", md: "93%" },
                                                 backgroundColor: "#F3F4F6",
                                                 border: "1px solid #B8C2CC",
                                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
@@ -213,7 +221,11 @@ function Contactus() {
                                         >
                                             <CardContent>
                                                 <Stack spacing={4}>
-                                                    <Box component="img" src={it_support} sx={{ alignSelf: "center", width: "100%", height: "507px" }} />
+                                                    <Box
+                                                        component="img"
+                                                        src={it_support}
+                                                        sx={{ alignSelf: "center", width: "100%", height: "507px" }}
+                                                    />
                                                     <Typography
                                                         variant="body1"
                                                         sx={{ width: "90%", fontFamily: "Roboto" }}
@@ -248,10 +260,9 @@ function Contactus() {
                                         </Card>
                                     </div>
                                 </div>
-
                             </Grid>
-
                         </Grid>
+
 
                         {/* small screen */}
                         <Grid xs={12} md={12} align="center" sx={{ display: { xs: "block", sm: "none", md: "none" } }}>
@@ -275,7 +286,7 @@ function Contactus() {
                                                 <Stack pt={2} pb={2} spacing={4.5}>
                                                     <Stack direction="column" spacing={4}>
                                                         <Inputfield
-                                                            label="First Name"
+                                                            label="First Name*"
                                                             name="firstname"
                                                             value={formik.values.firstname}
                                                             onChngeterm={(e) => formik.setFieldValue("firstname", e.target.value)}
@@ -284,7 +295,7 @@ function Contactus() {
                                                         />
 
                                                         <Inputfield
-                                                            label="Last Name"
+                                                            label="Last Name*"
                                                             name="lastname"
                                                             value={formik.values.lastname}
                                                             onChngeterm={(e) => formik.setFieldValue("lastname", e.target.value)}
@@ -294,7 +305,7 @@ function Contactus() {
                                                     </Stack>
 
                                                     <Inputfield
-                                                        label="Business Email"
+                                                        label="Business Email*"
                                                         name="businessemail"
                                                         value={formik.values.businessemail}
                                                         onChngeterm={(e) => formik.setFieldValue("businessemail", e.target.value)}
@@ -303,7 +314,7 @@ function Contactus() {
                                                     />
 
                                                     <Inputfield
-                                                        label="Company Name"
+                                                        label="Company Name*"
                                                         name="companyname"
                                                         value={formik.values.companyname}
                                                         onChngeterm={(e) => formik.setFieldValue("companyname", e.target.value)}
@@ -313,7 +324,7 @@ function Contactus() {
 
                                                     <Stack direction="column" spacing={4}>
                                                         <Inputfield
-                                                            label="Job Title"
+                                                            label="Job Title*"
                                                             name="jobtitle"
                                                             value={formik.values.jobtitle}
                                                             onChngeterm={(e) => formik.setFieldValue("jobtitle", e.target.value)}
@@ -322,7 +333,7 @@ function Contactus() {
                                                         />
 
                                                         <Inputfield
-                                                            label="Company Size"
+                                                            label="Company Size*"
                                                             name="companysize"
                                                             value={formik.values.companysize}
                                                             onChngeterm={(e) => formik.setFieldValue("companysize", e.target.value)}

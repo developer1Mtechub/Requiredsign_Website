@@ -45,319 +45,310 @@ function Functions() {
                             </Typography>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center">
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={text}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Text
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={text}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Text
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center">
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={signature}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Signature
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={signature}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Signature
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center">
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={initials}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Initials
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={initials}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Initials
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center" pt={2}>
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={date}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Date
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={date}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Date
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center" pt={2}>
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={checkmark}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Checkmark
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={checkmark}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Checkmark
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center" pt={2}>
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={stamp}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Stamp
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={stamp}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Stamp
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center" pt={2}> 
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={driving_license}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Driving License
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={driving_license}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Driving License
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center" pt={2}> 
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={password_photo}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Passport Photo
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={password_photo}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Passport Photo
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} p={2}>
-                            <Card
+                        <Grid xs={12} md={4} align="center" pt={2}> 
+                            <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "90%",
+                                    width: "70%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
-                                    border: "1px solid #B8C2CC"
+                                    border: "1px solid #B8C2CC",
+                                    padding: "0px"
                                 }}
                             >
-                                <CardContent>
-                                    <Stack direction="row" spacing={4}>
-                                        <Box
-                                            component="img"
-                                            src={dropdown}
-                                            sx={{ alignSelf: "center", width: "15%" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                pt: 1,
-                                                fontFamily: "Roboto",
-                                                fontWeight: "medium",
-                                                fontSize: { xs: "14px", md: "24px" },
-                                                color: "#6E6B7B",
-                                                transition: "color 0.3s ease, text-align 0.3s ease",
-                                                textAlign: "center", // Default text alignment
-                                            }}
-                                        >
-                                            Dropdown
-                                        </Typography>
-                                    </Stack>
-                                </CardContent>
-                            </Card>
+                                <Stack direction="row" p={1} spacing={4}>
+                                    <Box
+                                        component="img"
+                                        src={dropdown}
+                                        sx={{ alignSelf: "center", width: "15%" }}
+                                    />
+                                    <Typography
+                                        sx={{
+                                            pt: 0.5,
+                                            fontFamily: "Roboto",
+                                            fontWeight: "bold",
+                                            fontSize: { xs: "14px", md: "28px" },
+                                            color: "#6E6B7B",
+                                            transition: "color 0.3s ease, text-align 0.3s ease",
+                                            textAlign: "center", // Default text alignment
+                                        }}
+                                    >
+                                        Dropdown
+                                    </Typography>
+                                </Stack>
+                            </Box>
                         </Grid>
                     </Grid>
 
@@ -374,11 +365,11 @@ function Functions() {
                         </Grid>
 
                         <Grid xs={12} md={6} pt={10} align="center">
-                            <Box component="img" src={coming_soon} sx={{ width: { xs: "100%", md: "85%" } }} />
+                            <Box component="img" src={coming_soon} sx={{ width: { xs: "100%", md: "75%" } }} />
                         </Grid>
 
-                        <Grid xs={12} md={6} pt={{ xs: 2, md: 10 }} align=" ">
-                            <div style={{ display: "flex", justifyContent: "right", alignContent: "right" }}>
+                        <Grid xs={12} md={6} pt={{ xs: 2, md: 8 }} align=" ">
+                            <div style={{ display: "flex", justifyContent: "center", alignContent: "center" }}>
                                 <Box sx={{ width: { xs: "100%", md: "80%" }, }}>
                                     <Stack direction="column" spacing={4} pt={7}>
                                         <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "52px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "32px" }} color="#6E6B7B">
@@ -386,7 +377,7 @@ function Functions() {
                                         </Typography>
 
                                         <Stack direction="row" spacing={2}>
-                                            <Avatar variant="square" src={secure} sx={{ pt: 1, width: { xs: 20, md: 30 }, height: { xs: 20, md: 35 } }} />
+                                            <Avatar variant="square" src={secure} sx={{ pt: 0.5, width: { xs: 20, md: 30 }, height: { xs: 20, md: 37 } }} />
                                             <div>
                                                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "50px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
                                                     we will be ready by

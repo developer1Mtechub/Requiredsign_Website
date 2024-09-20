@@ -8,7 +8,7 @@ function SecurityCompliance() {
 
     return (
         <>
-            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#F8F8F8" }} >
+            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
@@ -27,7 +27,7 @@ function SecurityCompliance() {
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12}  >
-                            <Stack direction="column" spacing={5}>
+                            <Stack direction="column" spacing={2}>
                                 <Typography
                                     variant="paragraph"
                                     sx={{ width: "100%", fontFamily: "Roboto", lineHeight: "55px" }}
@@ -58,7 +58,7 @@ function SecurityCompliance() {
                                             fontSize={{ xs: "15px", md: "27px" }}
                                             color="#020202"
                                         >
-                                            Our security measures include: <span style={{ fontWeight: "normal", color: "#6E6B7B" }}>We use industry-standard encryption protocols to protect your sensitive data.</span>
+                                            Robust data encryption: <span style={{ fontWeight: "normal", color: "#6E6B7B" }}>We use industry-standard encryption protocols to protect your sensitive data.</span>
                                         </Typography>
                                     </div>
                                 </Stack>
@@ -125,8 +125,8 @@ function SecurityCompliance() {
                                     variant="paragraph"
                                     sx={{ width: "100%", fontFamily: "Roboto", lineHeight: "55px" }}
                                     fontWeight="medium"
-                                    fontSize={{ xs: "15px", md: "25px" }}
-                                    color="#020202"
+                                    fontSize={{ xs: "15px", md: "35px" }}
+                                    color="#25B2E8"
                                 >
                                     Our compliance efforts ensure that:
                                 </Typography>
@@ -181,8 +181,8 @@ function SecurityCompliance() {
 
                         <Grid xs={12} md={12} pt={10} pb={5} align="center">
                             <Box sx={{ width: { xs: "100%", md: "90%" }, }}>
-                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "37px" }} color="#6E6B7B">
-                                    By choosing RequireSign, you can <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>TRUST</span> that your documents and data are <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>PROTECTED</span> by the
+                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "35px" }} color="#6E6B7B">
+                                    By choosing RequireSign, you can <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>TRUST</span> that your documents and data are <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>Protected</span> by the
                                     &nbsp;<span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>HIGHEST SECURITY STANDARDS.</span>
                                 </Typography>
                             </Box>

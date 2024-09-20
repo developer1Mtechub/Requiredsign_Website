@@ -63,9 +63,9 @@ function AboutUs() {
                         </Grid>
 
                         <Grid xs={12} sm={6} md={6}  >
-                            <Stack pt={{ xs: 5, md: 7 }}>
+                            <Stack pt={{ xs: 5, md: 6 }}>
                                 {/* <div style={{ display: "flex", justifyContent: "right", alignContent: "right" }}> */}
-                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
+                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "25px" }} color="#6E6B7B">
                                     Our team of seasoned tech experts has a proven track record of delivering innovative solutions for leading corporations worldwide.
                                     <br /><br />
                                     By leveraging our deep understanding of both business and technology, we've developed an e-signature platform that's not only powerful but also easy to use.
@@ -79,9 +79,9 @@ function AboutUs() {
                         </Grid>
 
                         <Grid xs={12} sm={6} md={6}>
-                            <Stack pt={{ xs: 5, md: 13 }}>
+                            <Stack pt={{ xs: 5, md: 8 }}>
                                 {/* <div style={{ display: "flex", justifyContent: "right", alignContent: "right" }}> */}
-                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
+                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "25px" }} color="#6E6B7B">
                                     Whether you're a small local business or a large global enterprise, RequireSign offers a cost-effective solution that empowers you to streamline your processes, reduce paperwork, and enhance security.
                                     <br /><br />
                                     Join us in embracing the future of digital signatures.

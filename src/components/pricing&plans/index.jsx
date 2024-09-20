@@ -70,7 +70,7 @@ function PricingAndPlans() {
 
     return (
         <>
-            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#F8F8F8" }} >
+            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
@@ -90,11 +90,11 @@ function PricingAndPlans() {
 
                         <Grid xs={12} align="center">
                             <Stack spacing={4}>
-                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "45px", textTransform: "uppercase" }} fontWeight={700} fontSize={{ xs: "15px", md: "28px" }} color="#1662A7">
-                                    <span style={{ fontSize: "33px" }}>UNLIMITED</span> document volume with simple and affordable pricing.
+                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "45px", textTransform: "uppercase" }} fontWeight={900} fontSize={{ xs: "15px", md: "28px" }} color="#1662A7">
+                                    <span style={{ fontSize: "40px" }}>UNLIMITED</span> document volume with simple and affordable pricing.
                                 </Typography>
 
-                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "33px" }} color="#25B2E8">
+                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="bold" fontSize={{ xs: "15px", md: "35px" }} color="#25B2E8">
                                     You WIN with RequireSign.
                                 </Typography>
 
@@ -173,14 +173,14 @@ function PricingAndPlans() {
                                                             align="center"
                                                             sx={{ borderRight: index !== pricingData.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                         >
-                                                            <Typography variant="h6" sx={{ color: "#25B2E8", fontSize: { xs: "15px", md: "20px" } }}>{item.plan}</Typography>
+                                                            <Typography variant="body1" sx={{ color: "#25B2E8", fontWeight: "bold", fontSize: { xs: "15px", md: "22px" } }}>{item.plan}</Typography>
                                                         </TableCell>
                                                     ))}
                                                 </TableRow>
                                             </TableHead>
                                             <TableBody>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>TEAM SIZE</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>TEAM SIZE</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -192,7 +192,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>PRICE</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>PRICE</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -236,7 +236,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Documents Included</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Documents Included</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -248,7 +248,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Templates</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Templates</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -260,7 +260,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Public Forms</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Public Forms</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -272,7 +272,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Branding</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Branding</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -284,7 +284,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Custom Web Address</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Custom Web Address</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -317,14 +317,14 @@ function PricingAndPlans() {
                                                             align="center"
                                                             sx={{ borderRight: index !== pricingData.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                         >
-                                                            <Typography variant="h6" sx={{ color: "#25B2E8", fontSize: { xs: "15px", md: "20px" } }}>{item.plan}</Typography>
+                                                            <Typography variant="body1" sx={{ color: "#25B2E8", fontWeight: "bold", fontSize: { xs: "15px", md: "22px" } }}>{item.plan}</Typography>
                                                         </TableCell>
                                                     ))}
                                                 </TableRow>
                                             </TableHead>
                                             <TableBody>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>TEAM SIZE</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>TEAM SIZE</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -336,7 +336,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>PRICE</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>PRICE</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -380,7 +380,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Documents Included</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Documents Included</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -392,7 +392,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Templates</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Templates</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -404,7 +404,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Public Forms</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Public Forms</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -416,7 +416,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Branding</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Branding</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
@@ -428,7 +428,7 @@ function PricingAndPlans() {
                                                     ))}
                                                 </TableRow>
                                                 <TableRow>
-                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "medium", fontSize: { xs: "14px", md: "15px" } }}>Custom Web Address</TableCell>
+                                                    <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "14px", md: "19px" } }}>Custom Web Address</TableCell>
                                                     {pricingData.map((item, index) => (
                                                         <TableCell
                                                             key={index}
