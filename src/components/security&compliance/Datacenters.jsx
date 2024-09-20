@@ -13,6 +13,7 @@ import data_center_8 from "../../Assets/data_center_8.png";
 
 import data_center_9 from "../../Assets/data_center_9.png";
 import data_center_10 from "../../Assets/data_center_10.png";
+import Textfield from '../Textfield';
 
 function DataCenters() {
 
@@ -87,6 +88,10 @@ function DataCenters() {
                             {/* <Box component="img" src={data_center_6} sx={{ width: "70%" }} /> */}
                         </Grid>
 
+                        {/* textfield */}
+                        <Grid item xs={12} sm={12} md={12} lg={12} pt={4} pb={4} align="center" >
+                            <Textfield />
+                        </Grid>
 
                     </Grid>
                 </Box>
