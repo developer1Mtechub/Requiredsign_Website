@@ -11,7 +11,7 @@ function Features() {
 
     return (
         <>
-            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#F8F8F8" }} >
+            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
@@ -41,11 +41,11 @@ function Features() {
 
                         <Grid xs={12} md={6}  >
                             <div style={{ dispaly: "flex", justifyContent: "right", alignContent: "right", alignItems: "center" }}>
-                                <Stack pt={15} pl={10}>
+                                <Stack pt={14} pl={10}>
                                     <Typography
                                         variant="paragraph"
-                                        sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: "50px" }}
-                                        fontWeight="normal"
+                                        sx={{ width: { xs: "100%", md: "100%" }, fontFamily: "Roboto", lineHeight: "47px" }}
+                                        fontWeight="medium"
                                         fontSize={{ xs: "15px", md: "25px" }}
                                         color="#6E6B7B"
                                     >

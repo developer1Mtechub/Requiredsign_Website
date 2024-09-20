@@ -23,20 +23,20 @@ function Home() {
                         <Grid container spacing={0}>
                             <Grid item xs={12} sm={6} md={5} lg={5} align="">
 
-                                <Stack direction="column" pt={{ xs: 5, md: 10 }}>
-                                    <Typography variant="paragraph" align="" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "60px" } }} fontWeight="bold" fontSize={{ xs: "30px", md: "48px" }} color="#1662A7">
+                                <Stack direction="column" pt={{ xs: 5, md: 5 }}>
+                                    <Typography variant="paragraph" align="" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "30px", md: "62px" }} color="#1662A7">
                                         UNLIMITED<br />
                                         E-SIGNATURES
                                     </Typography>
 
-                                    <Typography variant="paragraph" sx={{ color: "#6E6B7B", fontSize: { xs: "25px", md: "30px" }, fontWeight: "normal" }}>
+                                    <Typography variant="paragraph" sx={{ color: "#6E6B7B", fontSize: { xs: "25px", md: "35px" }, fontWeight: "normal" }}>
                                         at&nbsp;
-                                        <span style={{ color: "#25B2E8", fontSize: "33px", fontWeight: "bold" }}>AFFORDABLE PRICES  </span>
+                                        <span style={{ color: "#25B2E8", fontSize: "40px", fontWeight: "bold" }}>AFFORDABLE PRICES  </span>
                                     </Typography>
 
-                                    <Typography variant="paragraph" sx={{ display: { xs: "none", sm: "block", md: "block" }, color: "#6E6B7B", fontSize: { xs: "25px", md: "30px" }, fontWeight: "normal" }}>
+                                    <Typography variant="paragraph" sx={{ display: { xs: "none", sm: "block", md: "block" }, color: "#6E6B7B", fontSize: { xs: "25px", md: "35px" }, fontWeight: "normal" }}>
                                         for businesses&nbsp;
-                                        <span style={{ color: "#1662A7", fontSize: "45px", fontWeight: "bold" }}>WORLDWIDE</span>
+                                        <span style={{ color: "#1662A7", fontSize: "50px", fontWeight: "bold" }}>WORLDWIDE</span>
                                     </Typography>
 
                                     {/* small screen */}
@@ -83,12 +83,12 @@ function Home() {
                                     <Box align="right" sx={{ alignSelf: "right", display: { xs: "none", sm: "flex" } }}>
                                         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                                             <video
-                                                width="90%"
+                                                width="80%"
                                                 // height="315"
                                                 controls
                                                 autoPlay
                                                 muted
-                                                style={{ boxShadow: "4px 4px 55px rgba(0, 0, 0, 0.25)", borderRadius: "15px" }}
+                                                style={{ boxShadow: "4px 4px 55px rgba(0, 0, 0, 0.45)", borderRadius: "15px" }}
                                             >
                                                 <source src={requireSign_video} type="video/mp4" />
                                                 Your browser does not support the video tag.
