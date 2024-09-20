@@ -66,7 +66,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
@@ -100,7 +100,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
@@ -134,7 +134,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
@@ -168,7 +168,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
@@ -202,7 +202,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
@@ -236,7 +236,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
@@ -249,7 +249,7 @@ function Functions() {
                             </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} align="center" pt={2}> 
+                        <Grid xs={12} md={4} align="center" pt={2}>
                             <Box
                                 sx={{
                                     boxShadow: "none",
@@ -270,7 +270,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
@@ -283,7 +283,7 @@ function Functions() {
                             </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} align="center" pt={2}> 
+                        <Grid xs={12} md={4} align="center" pt={2}>
                             <Box
                                 sx={{
                                     boxShadow: "none",
@@ -304,7 +304,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
@@ -317,7 +317,7 @@ function Functions() {
                             </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} align="center" pt={2}> 
+                        <Grid xs={12} md={4} align="center" pt={2}>
                             <Box
                                 sx={{
                                     boxShadow: "none",
@@ -338,7 +338,7 @@ function Functions() {
                                         sx={{
                                             pt: 0.5,
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
+                                            fontWeight: "medium",
                                             fontSize: { xs: "14px", md: "28px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",

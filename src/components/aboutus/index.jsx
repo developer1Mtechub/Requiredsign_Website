@@ -1,7 +1,10 @@
 import { Avatar, Box, Button, Container, Divider, Grid, Stack, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 import "../../styles/Home.css"
-import aboutus_main from "../../Assets/aboutus_main.PNG";
+import aboutus_main from "../../Assets/aboutus_main.png";
+import aboutus_main1 from "../../Assets/aboutus_main.svg";
+import macbook from "../../Assets/macbook.png";
+import mobile_phone from "../../Assets/mobile_phone.png";
 import aboutus_sec1 from "../../Assets/aboutus_sec1.png";
 import aboutus_sec2 from "../../Assets/aboutus_sec2.png";
 import { KeyboardArrowRight } from '@mui/icons-material'
@@ -48,7 +51,40 @@ function AboutUs() {
                         </Grid>
 
                         <Grid xs={12} sm={6} md={6} align="center">
-                            <Box component="img" src={aboutus_main} sx={{ pt: { xs: 2, md: 0 }, width: "100%" }} />
+                            {/* <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', padding: '0 20px' }}> */}
+                            <Grid container spacing={2} pt={2} alignItems="center" justifyContent="center" sx={{ display: { xs: "none", md: "none" } }}>
+                                {/* Macbook Image */}
+                                <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Box
+                                        component="img"
+                                        src={macbook} // replace with your image path
+                                        alt="MacBook Login View"
+                                        sx={{
+                                            width: '590px', // Takes full width of the grid item
+                                            // maxWidth: '600px', // To restrict max width on larger screens
+                                            objectFit: 'contain',
+                                        }}
+                                    />
+                                </Grid>
+
+                                {/* Mobile Phone Image */}
+                                <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Box
+                                        component="img"
+                                        src={mobile_phone} // replace with your image path
+                                        alt="Mobile Login View"
+                                        sx={{
+                                            ml: 0,
+                                            mt: 0,
+                                            width: '83%',
+                                            // maxWidth: '250px', // Restrict width for mobile image
+                                            objectFit: 'contain',
+                                        }}
+                                    />
+                                </Grid>
+                            </Grid>
+                            {/* </Box> */}
+                            <Box component="img" src={aboutus_main} sx={{ display: { xs: "block", md: "block" }, pt: { xs: 2, md: 0 }, width: { xs: "100%", md: "750px" } }} />
                         </Grid>
                     </Grid>
                     {/* </div> */}
@@ -63,14 +99,29 @@ function AboutUs() {
                         </Grid>
 
                         <Grid xs={12} sm={6} md={6}  >
-                            <Stack pt={{ xs: 5, md: 6 }}>
-                                {/* <div style={{ display: "flex", justifyContent: "right", alignContent: "right" }}> */}
-                                <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "25px" }} color="#6E6B7B">
-                                    Our team of seasoned tech experts has a proven track record of delivering innovative solutions for leading corporations worldwide.
-                                    <br /><br />
-                                    By leveraging our deep understanding of both business and technology, we've developed an e-signature platform that's not only powerful but also easy to use.
+                            <Stack
+                                // pt={{ xs: 5, md: 6 }}
+                                sx={{ height: "90%", justifyContent: "center" }}
+                            >
+                                <Typography
+                                    variant="paragraph"
+                                    sx={{
+                                        width: { xs: "100%", md: "95%" },
+                                        fontFamily: "Roboto",
+                                        lineHeight: { xs: "35px", md: "45px" },
+                                    }}
+                                    fontWeight="normal"
+                                    fontSize={{ xs: "15px", md: "25px" }}
+                                    color="#6E6B7B"
+                                >
+                                    Our team of seasoned tech experts has a proven track record of delivering
+                                    innovative solutions for leading corporations worldwide.
+                                    <br />
+                                    <br />
+                                    By leveraging our deep understanding of both business and technology,
+                                    we've developed an e-signature platform that's not only powerful but also
+                                    easy to use.
                                 </Typography>
-                                {/* </div> */}
                             </Stack>
                         </Grid>
 
@@ -79,7 +130,10 @@ function AboutUs() {
                         </Grid>
 
                         <Grid xs={12} sm={6} md={6}>
-                            <Stack pt={{ xs: 5, md: 8 }}>
+                            <Stack
+                                // pt={{ xs: 5, md: 8 }}
+                                sx={{ height: "95%", justifyContent: "center" }}
+                            >
                                 {/* <div style={{ display: "flex", justifyContent: "right", alignContent: "right" }}> */}
                                 <Typography variant="paragraph" sx={{ width: { xs: "100%", md: "95%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "25px" }} color="#6E6B7B">
                                     Whether you're a small local business or a large global enterprise, RequireSign offers a cost-effective solution that empowers you to streamline your processes, reduce paperwork, and enhance security.
