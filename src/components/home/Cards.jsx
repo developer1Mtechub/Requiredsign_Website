@@ -16,12 +16,12 @@ function Cards() {
             <Box id="" pt={{ xs: 10, md: 10 }} pb={{ xs: 10, md: 15 }}>
 
                 <Grid container spacing={0}>
-                    <Grid xs={12} md={12} p={""} sx={{ display: { xs: "none", md: "block" } }}>
+                    {/* <Grid xs={12} md={2.4} p={""} sx={{ display: { xs: "none", md: "block" } }}>
                         <div style={{ display: "flex", justifyContent: "space-between", gap: "20px" }}>
                             <Card
                                 sx={{
                                     cursor: "pointer",
-                                    width: "80%",
+                                    width: "100%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -63,7 +63,7 @@ function Cards() {
                             <Card
                                 sx={{
                                     cursor: "pointer",
-                                    width: "80%",
+                                    width: "100%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -105,7 +105,7 @@ function Cards() {
                             <Card
                                 sx={{
                                     cursor: "pointer",
-                                    width: "80%",
+                                    width: "100%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -147,7 +147,7 @@ function Cards() {
                             <Card
                                 sx={{
                                     cursor: "pointer",
-                                    width: "80%",
+                                    width: "100%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -190,7 +190,7 @@ function Cards() {
                             <Card
                                 sx={{
                                     cursor: "pointer",
-                                    width: "80%",
+                                    width: "100%",
                                     borderRadius: "10px",
                                     backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -231,11 +231,11 @@ function Cards() {
                             </Card>
 
                         </div>
-                    </Grid>
+                    </Grid> */}
 
                     {/* small screen */}
 
-                    <Grid xs={12} md={4} p={2} sx={{ display: { xs: "block", md: "none" } }}>
+                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -279,7 +279,7 @@ function Cards() {
                         </Card>
                     </Grid>
 
-                    <Grid xs={12} md={4} p={2} sx={{ display: { xs: "block", md: "none" } }}>
+                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -323,7 +323,7 @@ function Cards() {
                         </Card>
                     </Grid>
 
-                    <Grid xs={12} md={4} p={2} sx={{ display: { xs: "block", md: "none" } }}>
+                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -367,11 +367,11 @@ function Cards() {
                         </Card>
                     </Grid>
 
-                    <Grid xs={12} md={4} p={2} sx={{ display: { xs: "block", md: "none" } }}>
+                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
                         <Card
                             sx={{
                                 cursor: "pointer",
-                                width: { xs: "100%", md: "90%" },
+                                width: { xs: "100%", md: "100%" },
                                 borderRadius: "10px",
                                 backgroundColor: "#F3F4F6",
                                 border: "1px solid #B8C2CC",
@@ -387,7 +387,7 @@ function Cards() {
                             }}
                         >
                             <CardContent>
-                                <Stack direction="column" spacing={2} pl={5} pr={5}>
+                                <Stack direction="column" spacing={2} pl={3} pr={3}>
                                     <Box
                                         component="img"
                                         src={encruption}
@@ -404,7 +404,7 @@ function Cards() {
                                             textAlign: "center", // Default text alignment
                                         }}
                                     >
-                                        Secured by<br />
+                                        Secured <br /> by
                                         Encrption
                                     </Typography>
                                 </Stack>
@@ -412,11 +412,11 @@ function Cards() {
                         </Card>
                     </Grid>
 
-                    <Grid xs={12} md={4} p={2} sx={{ display: { xs: "block", md: "none" } }}>
+                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
                         <Card
                             sx={{
                                 cursor: "pointer",
-                                width: { xs: "100%", md: "90%" },
+                                width: { xs: "100%", md: "100%" },
                                 borderRadius: "10px",
                                 backgroundColor: "#F3F4F6",
                                 border: "1px solid #B8C2CC",

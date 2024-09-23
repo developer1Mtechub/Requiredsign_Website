@@ -21,7 +21,7 @@ function DataCenters() {
         <>
 
             <Box pb={4}>
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md:25}}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12}  >

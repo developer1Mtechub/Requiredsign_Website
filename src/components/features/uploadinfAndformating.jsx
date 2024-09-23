@@ -10,11 +10,11 @@ function UploadingAndFormatting() {
     return (
         <>
             <Box pt={5} pb={5}>
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center" pb={2}>
-                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "50px" }} color="#1662A7">
+                            <Typography variant="paragraph" sx={{ width: {xs:"100%",md:"90%"}, fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "50px" }} color="#1662A7">
                                 Uploading & Formatting Documents
                             </Typography>
                         </Grid>

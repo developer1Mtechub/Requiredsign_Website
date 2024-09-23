@@ -54,7 +54,7 @@ function Contactus() {
     return (
         <>
             <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md:25}}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
@@ -68,7 +68,7 @@ function Contactus() {
             </Box>
 
             <Box pt={8} pb={5}>
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md:25}}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12} align="center" pb={6}>
@@ -96,7 +96,7 @@ function Contactus() {
                                             <Card
                                                 sx={{
                                                     mt: 2,
-                                                    width: { xs: "100%", md: "93%" },
+                                                    width: { xs: "100%", md: "98%" },
                                                     backgroundColor: "#F3F4F6",
                                                     border: "1px solid #B8C2CC",
                                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
@@ -213,7 +213,7 @@ function Contactus() {
                                         <Card
                                             sx={{
                                                 mt: 2,
-                                                width: { xs: "100%", md: "93%" },
+                                                width: { xs: "100%", md: "98%" },
                                                 backgroundColor: "#F3F4F6",
                                                 border: "1px solid #B8C2CC",
                                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
@@ -274,7 +274,7 @@ function Contactus() {
                                         variant="h5"
                                         sx={{ fontFamily: "Roboto", lineHeight: "45px" }}
                                         fontWeight="medium"
-                                        fontSize={{ xs: "15px", md: "33px" }}
+                                        fontSize={{ xs: "25px", md: "33px" }}
                                         color="#1662A7"
                                         align="left"  // Align text to the left
                                     >
@@ -374,7 +374,7 @@ function Contactus() {
                                         variant="h5"
                                         sx={{ fontFamily: "Roboto", lineHeight: "45px" }}
                                         fontWeight="medium"
-                                        fontSize={{ xs: "15px", md: "33px" }}
+                                        fontSize={{ xs: "25px", md: "33px" }}
                                         color="#1662A7"
                                         align="left"  // Align text to the left
                                     >

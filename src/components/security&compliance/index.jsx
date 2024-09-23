@@ -9,7 +9,7 @@ function SecurityCompliance() {
     return (
         <>
             <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
@@ -23,7 +23,7 @@ function SecurityCompliance() {
             </Box>
 
             <Box pt={5} pb={4}>
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12}  >
@@ -42,7 +42,7 @@ function SecurityCompliance() {
                                     variant="paragraph"
                                     sx={{ width: "100%", fontFamily: "Roboto", lineHeight: "55px" }}
                                     fontWeight="medium"
-                                    fontSize={{ xs: "15px", md: "35px" }}
+                                    fontSize={{ xs: "20px", md: "35px" }}
                                     color="#25B2E8"
                                 >
                                     Our security measures include:
@@ -115,7 +115,7 @@ function SecurityCompliance() {
             </Box>
 
             <Box >
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12}  >
@@ -125,7 +125,7 @@ function SecurityCompliance() {
                                     variant="paragraph"
                                     sx={{ width: "100%", fontFamily: "Roboto", lineHeight: "55px" }}
                                     fontWeight="medium"
-                                    fontSize={{ xs: "15px", md: "35px" }}
+                                    fontSize={{ xs: "18px", md: "35px" }}
                                     color="#25B2E8"
                                 >
                                     Our compliance efforts ensure that:

@@ -11,7 +11,7 @@ function Footer() {
 
     return (
         <>
-            <Box pl={{ xs: 5, md: 23 }} pr={{ xs: 5, md: 10 }}>
+            <Box pl={{ xs: 5, md: 25.5 }} pr={{ xs: 5, md: 11 }}>
                 <Box pt={5} pb={5}>
                     <Grid container spacing={0}>
                         <Grid xs={12} sm={12} md={2.4} align="left">
@@ -20,7 +20,7 @@ function Footer() {
 
                         <Grid xs={12} sm={3} md={2.4} pt={{ xs: 3, md: 0 }} align="left">
                             <Stack direction="row" spacing={{ xs: 10, md: 20 }}>
-                                <Stack direction="column" spacing={{ xs: 1, md:2 }}>
+                                <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
                                     <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
                                         QUICK LINKS
                                     </Typography>
@@ -46,7 +46,7 @@ function Footer() {
 
                         <Grid xs={12} sm={3.5} md={2.4} pt={{ xs: 3, md: 0 }} align="left">
                             <Stack direction="row" spacing={{ xs: 10, md: 20 }}>
-                                <Stack direction="column" spacing={{ xs: 1, md:2 }}>
+                                <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
                                     <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
                                         OTHER
                                     </Typography>
@@ -64,7 +64,7 @@ function Footer() {
 
                         <Grid xs={12} sm={2.5} md={2.4} pt={{ xs: 3, md: 0 }} align="left">
                             <Stack direction="row" spacing={{ xs: 10, md: 20 }}>
-                                <Stack direction="column" spacing={{ xs: 1, md:2 }}>
+                                <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
                                     <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
                                         CONTACT US
                                     </Typography>
@@ -97,7 +97,9 @@ function Footer() {
                         </Grid>
 
                         <Grid xs={12} md={12} pt={5} align="left">
-                            <Divider />
+                            <Box pr={{ xs: 5, md: 11 }}>
+                                <Divider />
+                            </Box>
                         </Grid>
 
                         <Grid xs={12} md={12} pt={2} align="center">

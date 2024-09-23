@@ -47,7 +47,7 @@ function Navbar() {
         <>
             <Box sx={{ display: { xs: "none", sm: "none", md: "block", lg: "block" } }}>
                 <AppBar position="fixed" sx={{ height: "80px", display: "flex", boxShadow: "0px 2px 4px rgba(22, 98, 167, 0.2)", backgroundColor: "#000212", backgroundColor: "white", }} className="navbar">
-                    <Box pl={{ xs: 5, md: 10 }} pr={{ xs: 5, md: 10 }} pt={1}>
+                    <Box pl={{ xs: 5, md: 21.5 }} pr={{ xs: 5, md: 21.5 }} pt={1}>
                         <Toolbar>
 
                             {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "76px" }}> */}
