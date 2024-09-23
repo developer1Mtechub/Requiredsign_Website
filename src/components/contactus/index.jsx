@@ -54,7 +54,18 @@ function Contactus() {
     return (
         <>
             <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
-                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
+                <Container
+                    maxWidth="lg"
+                    sx={{
+                        maxWidth: {
+                            xs: '100%',     // For extra-small screens, full width
+                            sm: '90%',      // For small screens
+                            md: '80%',      // For medium screens
+                           lg: '80%',      // For large screens
+                            xl: '75%',       // For extra-large screens
+                        }
+                    }}
+                >
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
@@ -64,11 +75,22 @@ function Contactus() {
                             </Stack>
                         </Grid>
                     </Grid>
-                </Box>
+                </Container>
             </Box>
 
             <Box pt={8} pb={5}>
-                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
+                <Container
+                    maxWidth="lg"
+                    sx={{
+                        maxWidth: {
+                            xs: '100%',     // For extra-small screens, full width
+                            sm: '90%',      // For small screens
+                            md: '80%',      // For medium screens
+                           lg: '80%',      // For large screens
+                            xl: '75%',       // For extra-large screens
+                        }
+                    }}
+                >
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12} align="center" pb={6}>
@@ -79,7 +101,7 @@ function Contactus() {
 
                         <Grid xs={12} md={12} align="center" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                             <Grid xs={12} md={12}>
-                                <div style={{ marginLeft: "70px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "50px", alignItems: "center" }}>
+                                <div style={{ marginLeft: " 0px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "50px", alignItems: "center" }}>
                                     {/* Contact Sales Section */}
                                     <div style={{ textAlign: "left" }}>
                                         <Typography
@@ -96,7 +118,7 @@ function Contactus() {
                                             <Card
                                                 sx={{
                                                     mt: 2,
-                                                    width: { xs: "100%", md: "98%" },
+                                                    width: { xs: "100%", md: "100%" },
                                                     backgroundColor: "#F3F4F6",
                                                     border: "1px solid #B8C2CC",
                                                     boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
@@ -213,7 +235,7 @@ function Contactus() {
                                         <Card
                                             sx={{
                                                 mt: 2,
-                                                width: { xs: "100%", md: "98%" },
+                                                width: { xs: "100%", md: "100%" },
                                                 backgroundColor: "#F3F4F6",
                                                 border: "1px solid #B8C2CC",
                                                 boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)",
@@ -355,9 +377,9 @@ function Contactus() {
                                                     />
 
                                                     <Button type="submit" sx={{
-                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "55px", borderRadius: "10px", fontSize: "20px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "120px",
                                                         "&:hover": {
-                                                            backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "55px", borderRadius: "10px", fontSize: "20px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                            backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "215px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "120px",
                                                         }
                                                     }}>Submit
                                                     </Button>
@@ -397,9 +419,9 @@ function Contactus() {
                                                 </Typography>
 
                                                 <Button sx={{
-                                                    backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "55px", borderRadius: "10px", fontSize: "20px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "200px",
+                                                     backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
                                                     "&:hover": {
-                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "55px", borderRadius: "10px", fontSize: "20px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "200px",
+                                                         backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
                                                     }
                                                 }}>Contact Support
                                                 </Button>
@@ -415,7 +437,7 @@ function Contactus() {
                             <Textfield />
                         </Grid>
                     </Grid>
-                </Box>
+                </Container>
             </Box>
 
         </>

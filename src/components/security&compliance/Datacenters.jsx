@@ -15,13 +15,69 @@ import data_center_9 from "../../Assets/data_center_9.png";
 import data_center_10 from "../../Assets/data_center_10.png";
 import Textfield from '../Textfield';
 
+import Slider from "react-slick";
+import "./Testmonials.css"
+import "aos/dist/aos.css"
+
 function DataCenters() {
+
+    var settings = {
+        dots: false,
+        arrows: true,
+        infinite: true,
+        centerMode: true,
+        centerPadding: "0px",
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    // centerPadding: "60px",
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 366,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: true,
+                    centerPadding: "0px",
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
     return (
         <>
 
             <Box pb={4}>
-                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md:25}}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12}  >
@@ -73,7 +129,40 @@ function DataCenters() {
                             </Box>
                         </Grid>
 
-                        <Grid xs={12} sm={4} md={2} pt={2} align="center">
+                        <Grid item xs={12} md={12} lg={12} align="center">
+                            <Box align="center">
+                                <Box pl={{ xs: 0, md: 0 }} pt={5}>
+                                    <Slider autoplay  {...settings}>
+                                        <div>
+                                            <Box component="img" src={data_center_5} sx={{ width: { xs: "40%", md: "40%" } }} />
+                                        </div>
+
+                                        <div>
+                                            <Box component="img" src={data_center_6} sx={{ width: { xs: "40%", md: "55%" } }} />
+                                        </div>
+
+                                        <div>
+                                            <Box component="img" src={data_center_7} sx={{ width: { xs: "40%", md: "35%" } }} />
+                                        </div>
+
+                                        <div>
+                                            <Box component="img" src={data_center_8} sx={{ pt: 3, width: { xs: "40%", md: "50%" } }} />
+                                        </div>
+
+                                        <div>
+                                            <Box component="img" src={data_center_9} sx={{ width: { xs: "40%", md: "60%" } }} />
+                                        </div>
+
+                                        <div>
+                                            <Box component="img" src={data_center_10} sx={{ width: { xs: "40%", md: "60%" } }} />
+                                        </div>
+
+                                    </Slider>
+                                </Box>
+                            </Box>
+                        </Grid>
+
+                        {/* <Grid xs={12} sm={4} md={2} pt={2} align="center">
                             <Box component="img" src={data_center_5} sx={{ width: { xs: "40%", md: "50%" } }} />
                         </Grid>
 
@@ -95,7 +184,7 @@ function DataCenters() {
 
                         <Grid xs={12} sm={4} md={2} pt={4} align="center">
                             <Box component="img" src={data_center_10} sx={{ width: { xs: "40%", md: "70%" } }} />
-                        </Grid>
+                        </Grid> */}
 
                         {/* textfield */}
                         <Grid item xs={12} sm={12} md={12} lg={12} pt={4} pb={4} align="center" >
