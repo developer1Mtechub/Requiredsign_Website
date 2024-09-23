@@ -387,7 +387,7 @@ function Cards() {
                             }}
                         >
                             <CardContent>
-                                <Stack direction="column" spacing={2} pl={3} pr={3}>
+                                <Stack direction="column" spacing={2} pl={1} pr={1}>
                                     <Box
                                         component="img"
                                         src={encruption}

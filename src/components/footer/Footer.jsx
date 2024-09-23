@@ -11,7 +11,18 @@ function Footer() {
 
     return (
         <>
-            <Box pl={{ xs: 5, md: 25.5 }} pr={{ xs: 5, md: 11 }}>
+            <Container
+                maxWidth="lg"
+                sx={{
+                    maxWidth: {
+                        xs: '100%',     // For extra-small screens, full width
+                        sm: '90%',      // For small screens
+                        md: '80%',      // For medium screens
+                        lg: '80%',      // For large screens
+                        xl: '72%',       // For extra-large screens
+                    }
+                }}
+            >
                 <Box pt={5} pb={5}>
                     <Grid container spacing={0}>
                         <Grid xs={12} sm={12} md={2.4} align="left">
@@ -26,19 +37,19 @@ function Footer() {
                                     </Typography>
 
                                     <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={550} fontSize={{ xs: "14px", md: "16px" }} >Home</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Home</Typography>
                                     </NavLink>
 
                                     <NavLink to="/aboutus" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={550} fontSize={{ xs: "14px", md: "16px" }} >About</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >About</Typography>
                                     </NavLink>
 
                                     <NavLink to="/features" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={550} fontSize={{ xs: "14px", md: "16px" }} >Features</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Features</Typography>
                                     </NavLink>
 
                                     <NavLink to="/patners" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={550} fontSize={{ xs: "14px", md: "16px" }} >Patners</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Patners</Typography>
                                     </NavLink>
                                 </Stack>
                             </Stack>
@@ -52,11 +63,11 @@ function Footer() {
                                     </Typography>
 
                                     <NavLink to="/security_and_compliance" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={550} fontSize={{ xs: "14px", md: "16px" }} >Security & Compliance</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Security & Compliance</Typography>
                                     </NavLink>
 
                                     <NavLink to="/pricing_and_plans" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={550} fontSize={{ xs: "14px", md: "16px" }} >Pricing Plans</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Pricing Plans</Typography>
                                     </NavLink>
                                 </Stack>
                             </Stack>
@@ -70,11 +81,11 @@ function Footer() {
                                     </Typography>
 
                                     <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={550} fontSize={{ xs: "14px", md: "16px" }} >Contact Sales</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Contact Sales</Typography>
                                     </NavLink>
 
                                     <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={550} fontSize={{ xs: "14px", md: "16px" }} >Contact Support</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Contact Support</Typography>
                                     </NavLink>
                                 </Stack>
                             </Stack>
@@ -110,7 +121,7 @@ function Footer() {
 
                     </Grid>
                 </Box>
-            </Box>
+            </Container>
         </>
     )
 }

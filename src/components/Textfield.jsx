@@ -4,10 +4,10 @@ import { Email } from '@mui/icons-material'
 
 function Textfield() {
 
-    const [isFocused, setIsFocused] = useState(false);
-    const handleFocus = () => {
-        setIsFocused(true);
-    };
+const [isFocused, setIsFocused] = useState(false);
+const handleFocus = () => {
+    setIsFocused(true);
+};
 
     return (
         <>
@@ -17,7 +17,7 @@ function Textfield() {
                     <Box sx={{
                         // #F3F4F6
                         // #B8C2CC
-                        alignSelf: "center", backgroundColor: "rgb(22, 98, 167,1)", border: "1px solid rgb(22, 98, 167,1)", width: { xs: "100%", md: "50%" }, padding: "8px", display: "flex", // Flexbox to align items horizontally
+                        alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "100%", md: "50%" }, padding: "8px", display: "flex", // Flexbox to align items horizontally
                         alignItems: "center", // Align items vertically in the center
                         justifyContent: "space-between", borderRadius: "15px", gap: "10px"
                     }}>

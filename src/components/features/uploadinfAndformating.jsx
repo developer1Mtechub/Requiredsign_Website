@@ -10,7 +10,18 @@ function UploadingAndFormatting() {
     return (
         <>
             <Box pt={5} pb={5}>
-                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
+            <Container
+                maxWidth="lg"
+                sx={{
+                    maxWidth: {
+                        xs: '100%',     // For extra-small screens, full width
+                        sm: '90%',      // For small screens
+                        md: '80%',      // For medium screens
+                       lg: '80%',      // For large screens
+                        xl: '75%',       // For extra-large screens
+                    }
+                }}
+            >
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center" pb={2}>
@@ -118,7 +129,7 @@ function UploadingAndFormatting() {
                         </Grid>
 
                     </Grid>
-                </Box>
+                </Container>
             </Box>
         </>
     )

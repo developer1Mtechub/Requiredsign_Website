@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Container, Divider, Grid, InputAdornment, Stack, Typography } from '@mui/material'
+import { Avatar, Box, Button, Container, Divider, Grid, InputAdornment, Stack, TextField, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import "../../styles/Home.css"
 import { Email, KeyboardArrowRight } from '@mui/icons-material'
@@ -14,27 +14,43 @@ import Textfield from '../Textfield';
 
 function Home() {
 
+    const [isFocused, setIsFocused] = useState(false);
+    const handleFocus = () => {
+        setIsFocused(true);
+    };
+
     return (
         <>
-            <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
+            <Container
+                maxWidth="lg"
+                sx={{
+                    maxWidth: {
+                        xs: '100%',     // For extra-small screens, full width
+                        sm: '90%',      // For small screens
+                        md: '80%',      // For medium screens
+                        lg: '80%',      // For large screens
+                        xl: '75%',       // For extra-large screens
+                    }
+                }}
+            >
                 <Box  >
                     <Box id="home" pt={{ xs: 5, md: 20 }}>
                         {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}> */}
                         <Grid container spacing={0}>
                             <Grid item xs={12} sm={6} md={5} lg={5} align="">
 
-                                <Stack direction="column" pt={{ xs: 5, md: 5 }}>
+                                <Stack direction="column" pt={{ xs: 5, md: 1.5 }}>
                                     <Typography variant="paragraph" align="" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "30px", md: "62px" }} color="#1662A7">
                                         UNLIMITED<br />
                                         E-SIGNATURES
                                     </Typography>
 
-                                    <Typography variant="paragraph" sx={{ color: "#6E6B7B", fontSize: { xs: "25px", md: "35px" }, fontWeight: "normal" }}>
+                                    <Typography variant="paragraph" sx={{ color: "#6E6B7B", fontSize: { xs: "25px", md: "31px" }, fontWeight: "normal" }}>
                                         at&nbsp;
                                         <span style={{ color: "#25B2E8", fontSize: "40px", fontWeight: "bold" }}>AFFORDABLE PRICES  </span>
                                     </Typography>
 
-                                    <Typography variant="paragraph" sx={{ display: { xs: "none", sm: "block", md: "block" }, color: "#6E6B7B", fontSize: { xs: "25px", md: "35px" }, fontWeight: "normal" }}>
+                                    <Typography variant="paragraph" sx={{ display: { xs: "none", sm: "block", md: "block" }, color: "#6E6B7B", fontSize: { xs: "25px", md: "31px" }, fontWeight: "normal" }}>
                                         for businesses&nbsp;
                                         <span style={{ color: "#1662A7", fontSize: "50px", fontWeight: "bold" }}>WORLDWIDE</span>
                                     </Typography>
@@ -116,7 +132,91 @@ function Home() {
                             </Grid>
 
                             <Grid item xs={12} sm={12} md={12} lg={12} pt={0} align="center" >
-                                <Textfield />
+
+                                {/* <Textfield /> */}
+                                <Stack direction="column" spacing={2}>
+                                    {/* <Box component="img" src={inputfield} sx={{ alignSelf: "center", pt: 5, pb: 2, width: { xs: "100%", md: "50%" } }} /> */}
+                                    <Stack pt={5} pb={2}>
+                                        <Box sx={{ p: 5, boxShadow: "4px 4px 55px rgba(0, 0, 0, 0.25)", backgroundColor: "#1662A7", borderRadius: "20px" }}>
+                                            <Box sx={{
+                                                // #F3F4F6
+                                                // #B8C2CC
+                                                alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "100%", md: "50%" }, padding: "8px", display: "flex", // Flexbox to align items horizontally
+                                                alignItems: "center", // Align items vertically in the center
+                                                justifyContent: "space-between", borderRadius: "15px", gap: "10px"
+                                            }}>
+                                                <TextField
+                                                    fullWidth
+                                                    variant="outlined"
+                                                    placeholder="you@email.com"
+                                                    sx={{
+                                                        borderRadius: "10px",
+                                                        backgroundColor: "white",
+                                                        width: "100%",
+                                                        '& .MuiOutlinedInput-root': {
+                                                            '& fieldset': {
+                                                                border: isFocused ? '1px solid transparent' : '1px solid transparent',
+                                                                border: "3px solid transparent", // Updated to avoid black border
+                                                            },
+                                                            '&:hover fieldset': {
+                                                                border: '3px solid transparent', // Keep this for hover effect
+                                                            },
+                                                            '&.Mui-focused fieldset': {
+                                                                border: '3px solid transparent', // Ensures no border on focus
+                                                            },
+                                                            '& .MuiInputBase-input::placeholder': {
+                                                                color: "gray",
+                                                                fontSize: "15px",
+                                                                fontWeight: 'bold', // Makes the placeholder text bold
+                                                            },
+                                                        },
+                                                    }}
+                                                    InputLabelProps={{
+                                                        style: {
+                                                            color: isFocused ? 'gray' : 'gray',
+                                                            fontSize: "15px",
+                                                        },
+                                                    }}
+                                                    InputProps={{
+                                                        style: {
+                                                            fontSize: "15px",
+                                                            fontWeight: "500px",
+                                                            letterSpacing: "0.5px",
+                                                            borderRadius: "20px",
+                                                            backgroundColor: "white",
+                                                        },
+                                                        startAdornment: (
+                                                            <InputAdornment position="start">
+                                                                <Email />
+                                                            </InputAdornment>
+                                                        ),
+                                                    }}
+                                                    autoFocus={true}
+                                                />
+
+                                                <Button
+                                                    variant="contained"
+                                                    color="primary"
+                                                    sx={{
+                                                        backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                                        "&:hover": {
+                                                            backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                                        }
+                                                    }}
+                                                >
+                                                    Get Started
+                                                </Button>
+                                            </Box>
+                                        </Box>
+                                    </Stack>
+
+                                    <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "14px", md: "20px" }} color="#6E6B7B">
+                                        By clicking “Get Started” button , you agree to  <span style={{ color: "#1662A7" }}>Terms & Conditions</span> and &nbsp;
+                                        <span style={{ color: "#1662A7" }}>Privacy Policy</span>.
+                                    </Typography>
+
+                                </Stack>
+
                             </Grid>
                         </Grid>
                         {/* </div> */}
@@ -125,7 +225,7 @@ function Home() {
 
                 <Cards />
 
-            </Box>
+            </Container>
         </>
     )
 }
