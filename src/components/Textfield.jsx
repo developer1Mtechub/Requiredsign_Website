@@ -15,7 +15,9 @@ function Textfield() {
                 {/* <Box component="img" src={inputfield} sx={{ alignSelf: "center", pt: 5, pb: 2, width: { xs: "100%", md: "50%" } }} /> */}
                 <Stack pt={5} pb={2}>
                     <Box sx={{
-                        alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "100%", md: "50%" }, padding: "8px", display: "flex", // Flexbox to align items horizontally
+                        // #F3F4F6
+                        // #B8C2CC
+                        alignSelf: "center", backgroundColor: "rgb(22, 98, 167,1)", border: "1px solid rgb(22, 98, 167,1)", width: { xs: "100%", md: "50%" }, padding: "8px", display: "flex", // Flexbox to align items horizontally
                         alignItems: "center", // Align items vertically in the center
                         justifyContent: "space-between", borderRadius: "15px", gap: "10px"
                     }}>
@@ -72,9 +74,9 @@ function Textfield() {
                             variant="contained"
                             color="primary"
                             sx={{
-                                backgroundColor: "#1662A7", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
                                 "&:hover": {
-                                    backgroundColor: "#1662A7", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                    backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
                                 }
                             }}
                         >
