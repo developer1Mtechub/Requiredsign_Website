@@ -13,22 +13,23 @@ function Contactus() {
     const validationSchema = yup.object({
         firstname: yup
             .string()
-            .required('First Name* is required'),
+            .required('First Name is required'),
         lastname: yup
             .string()
-            .required('Last Name* is required'),
+            .required('Last Name is required'),
         businessemail: yup
             .string()
+            .email('Enter a valid email')
             .required('Email is required'),
         companyname: yup
             .string()
-            .required('Company Name* is required'),
+            .required('Company Name is required'),
         jobtitle: yup
             .string()
-            .required('Job Title* is required'),
+            .required('Job Title is required'),
         companysize: yup
             .string()
-            .required('Company Size* is required'),
+            .required('Company Size is required'),
         comments: yup
             .string()
             .nullable(),
@@ -107,9 +108,8 @@ function Contactus() {
                                                         <Stack direction="row" spacing={3}>
                                                             <Inputfield
                                                                 label="First Name*"
-                                                                name="firstname"
                                                                 value={formik.values.firstname}
-                                                                onChange={(e) => formik.setFieldValue("firstname", e.target.value)}
+                                                                onChngeterm={(e) => formik.setFieldValue("firstname", e.target.value)}
                                                                 error={formik.touched.firstname && Boolean(formik.errors.firstname)}
                                                                 helperText={formik.touched.firstname && formik.errors.firstname}
                                                             />
@@ -117,7 +117,7 @@ function Contactus() {
                                                                 label="Last Name*"
                                                                 name="lastname"
                                                                 value={formik.values.lastname}
-                                                                onChange={(e) => formik.setFieldValue("lastname", e.target.value)}
+                                                                onChngeterm={(e) => formik.setFieldValue("lastname", e.target.value)}
                                                                 error={formik.touched.lastname && Boolean(formik.errors.lastname)}
                                                                 helperText={formik.touched.lastname && formik.errors.lastname}
                                                             />
@@ -127,7 +127,7 @@ function Contactus() {
                                                             label="Business Email*"
                                                             name="businessemail"
                                                             value={formik.values.businessemail}
-                                                            onChange={(e) => formik.setFieldValue("businessemail", e.target.value)}
+                                                            onChngeterm={(e) => formik.setFieldValue("businessemail", e.target.value)}
                                                             error={formik.touched.businessemail && Boolean(formik.errors.businessemail)}
                                                             helperText={formik.touched.businessemail && formik.errors.businessemail}
                                                         />
@@ -136,7 +136,7 @@ function Contactus() {
                                                             label="Company Name*"
                                                             name="companyname"
                                                             value={formik.values.companyname}
-                                                            onChange={(e) => formik.setFieldValue("companyname", e.target.value)}
+                                                            onChngeterm={(e) => formik.setFieldValue("companyname", e.target.value)}
                                                             error={formik.touched.companyname && Boolean(formik.errors.companyname)}
                                                             helperText={formik.touched.companyname && formik.errors.companyname}
                                                         />
@@ -146,16 +146,17 @@ function Contactus() {
                                                                 label="Job Title*"
                                                                 name="jobtitle"
                                                                 value={formik.values.jobtitle}
-                                                                onChange={(e) => formik.setFieldValue("jobtitle", e.target.value)}
+                                                                onChngeterm={(e) => formik.setFieldValue("jobtitle", e.target.value)}
                                                                 error={formik.touched.jobtitle && Boolean(formik.errors.jobtitle)}
                                                                 helperText={formik.touched.jobtitle && formik.errors.jobtitle}
                                                             />
 
                                                             <Inputfield
+                                                                type="number"
                                                                 label="Company Size*"
                                                                 name="companysize"
                                                                 value={formik.values.companysize}
-                                                                onChange={(e) => formik.setFieldValue("companysize", e.target.value)}
+                                                                onChngeterm={(e) => formik.setFieldValue("companysize", e.target.value)}
                                                                 error={formik.touched.companysize && Boolean(formik.errors.companysize)}
                                                                 helperText={formik.touched.companysize && formik.errors.companysize}
                                                             />
@@ -167,7 +168,7 @@ function Contactus() {
                                                             rows={6}
                                                             name="comments"
                                                             value={formik.values.comments}
-                                                            onChange={(e) => formik.setFieldValue("comments", e.target.value)}
+                                                            onChngeterm={(e) => formik.setFieldValue("comments", e.target.value)}
                                                             error={formik.touched.comments && Boolean(formik.errors.comments)}
                                                             helperText={formik.touched.comments && formik.errors.comments}
                                                         />

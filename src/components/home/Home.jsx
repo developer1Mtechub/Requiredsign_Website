@@ -12,7 +12,7 @@ import url from '../../calendly_url'
 import Cards from './Cards';
 import Textfield from '../Textfield';
 
-function Home() { 
+function Home() {
 
     return (
         <>
@@ -55,7 +55,7 @@ function Home() {
                                             </Stack>
                                         </Grid>
 
-                                        <Grid xs={12} sm={4} md={3.8} align="center" p={{ xs: 1, md: 1 }}>
+                                        <Grid xs={12} sm={4} md={3.5} align="center" p={{ xs: 1, md: 1 }}>
                                             <Stack spacing={1} direction="row">
                                                 <Avatar variant="square" src={scalable} sx={{ width: { xs: 20, md: 30 }, height: { xs: 20, md: 30 } }} />
                                                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "15px", md: "19px" }} color="#6E6B7B">
@@ -64,7 +64,7 @@ function Home() {
                                             </Stack>
                                         </Grid>
 
-                                        <Grid xs={12} sm={4} md={4} align="center" p={{ xs: 1, md: 1 }}>
+                                        <Grid xs={12} sm={4} md={4.3} align="center" p={{ xs: 1, md: 1 }}>
                                             <Stack spacing={1} direction="row">
                                                 <Avatar variant="square" src={secure} sx={{ width: { xs: 20, md: 30 }, height: { xs: 20, md: 35 } }} />
                                                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "15px", md: "19px" }} color="#6E6B7B">

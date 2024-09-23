@@ -98,13 +98,13 @@ function PricingAndPlans() {
                                     You WIN with RequireSign.
                                 </Typography>
 
-                                <Card sx={{ alignSelf: "center", width: { xs: "100%", md: "45%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "none", borderRadius: "10px" }}>
-                                    <CardContent>
+                                <Box sx={{ alignSelf: "center", width: { xs: "100%", md: "45%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "none", borderRadius: "10px" }}>
+                                    <Stack p={2}>
                                         <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="normal" fontSize={{ xs: "15px", md: "23px" }} color="#6E6B7B">
                                             NOTE: API services will be available by January 2025
                                         </Typography>
-                                    </CardContent>
-                                </Card>
+                                    </Stack>
+                                </Box>
 
                                 <Stack alignSelf="center" spacing={2} direction="row" pt={2} pb={2}>
                                     {/* Annually Button */}
