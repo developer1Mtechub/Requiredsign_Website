@@ -54,7 +54,7 @@ function Contactus() {
     return (
         <>
             <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
-                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md:25}}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
@@ -68,7 +68,7 @@ function Contactus() {
             </Box>
 
             <Box pt={8} pb={5}>
-                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md:25}}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12} align="center" pb={6}>
