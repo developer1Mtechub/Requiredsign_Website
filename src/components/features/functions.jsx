@@ -36,20 +36,20 @@ function Functions() {
     return (
         <>
             <Box pt={3} pb={3}>
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center" pb={5}>
-                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "55px" }} color="#1662A7">
+                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "55px" }} color="#1662A7">
                                 Functions
                             </Typography>
                         </Grid>
 
-                        <Grid xs={12} md={4} align="center">
+                        <Grid xs={12} md={4} align="center" pt={{ xs: 2, md: 0 }}>
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -79,11 +79,11 @@ function Functions() {
                             </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} align="center">
+                        <Grid xs={12} md={4} align="center" pt={{ xs: 2, md: 0 }}>
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -113,11 +113,11 @@ function Functions() {
                             </Box>
                         </Grid>
 
-                        <Grid xs={12} md={4} align="center">
+                        <Grid xs={12} md={4} align="center" pt={{ xs: 2, md: 0 }}>
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -151,7 +151,7 @@ function Functions() {
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -185,7 +185,7 @@ function Functions() {
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -219,7 +219,7 @@ function Functions() {
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -253,7 +253,7 @@ function Functions() {
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -287,7 +287,7 @@ function Functions() {
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",
@@ -321,7 +321,7 @@ function Functions() {
                             <Box
                                 sx={{
                                     boxShadow: "none",
-                                    width: "70%",
+                                    width: "80%",
                                     borderRadius: "10px",
                                     // backgroundColor: "#F3F4F6",
                                     border: "1px solid #B8C2CC",

@@ -9,7 +9,7 @@ function Map() {
     return (
         <>
             <Box pt={5} pb={5}>
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Stack direction="column" spacing={4}>
                         <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "35px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "33px" }} color="#6E6B7B">
                             Clients can be hosted  <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>ON-PREMISE</span> or on <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>OUR CLOUD SERVERS</span> located in

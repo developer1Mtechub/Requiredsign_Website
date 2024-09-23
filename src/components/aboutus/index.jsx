@@ -15,7 +15,7 @@ function AboutUs() {
     return (
         <>
             <Box id=" " pt={15} pb={13} sx={{ backgroundColor: "#F8F8F8" }} >
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center", alignContent: "center", height: "100vh" }}> */}
                     <Grid container spacing={0} pt={{ xs: 2, md: 10 }}>
                         <Grid xs={12} sm={6} md={6}>
@@ -50,7 +50,7 @@ function AboutUs() {
                             </Stack>
                         </Grid>
 
-                        <Grid xs={12} sm={6} md={6} align="center">
+                        <Grid xs={12} sm={6} md={6} align="center" pt={{ xs: 4, md: 0 }}>
                             {/* <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', padding: '0 20px' }}> */}
                             <Grid container spacing={2} pt={2} alignItems="center" justifyContent="center" sx={{ display: { xs: "none", md: "none" } }}>
                                 {/* Macbook Image */}
@@ -84,7 +84,7 @@ function AboutUs() {
                                 </Grid>
                             </Grid>
                             {/* </Box> */}
-                            <Box component="img" src={aboutus_main} sx={{ display: { xs: "block", md: "block" }, pt: { xs: 2, md: 0 }, width: { xs: "100%", md: "750px" } }} />
+                            <Box component="img" src={aboutus_main} sx={{ display: { xs: "block", md: "block" }, height: "75%", width: { xs: "100%", md: "100%" } }} />
                         </Grid>
                     </Grid>
                     {/* </div> */}
@@ -92,7 +92,7 @@ function AboutUs() {
             </Box >
 
             <Box pt={3} pb={5}>
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} sm={6} md={6}>
                             <Box component="img" src={aboutus_sec1} sx={{ pt: { xs: 5, md: 0 }, alignSelf: "start", width: { xs: "100%", md: "85%" } }} />

@@ -16,7 +16,7 @@ function Home() {
 
     return (
         <>
-            <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+            <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                 <Box  >
                     <Box id="home" pt={{ xs: 5, md: 20 }}>
                         {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}> */}

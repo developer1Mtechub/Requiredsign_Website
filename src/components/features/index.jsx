@@ -12,7 +12,7 @@ function Features() {
     return (
         <>
             <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
@@ -26,11 +26,11 @@ function Features() {
             </Box>
 
             <Box pt={5} pb={5}>
-                <Box pl={{ xs: 5, md: 13 }} pr={{ xs: 5, md: 13 }}>
+                <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center">
-                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "50px" }} color="#1662A7">
+                            <Typography variant="paragraph" sx={{ width: { mxs: "100%", md: "90%" }, fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "50px" }} color="#1662A7">
                                 Rebranding & White Labeling
                             </Typography>
                         </Grid>
@@ -41,12 +41,12 @@ function Features() {
 
                         <Grid xs={12} md={6}  >
                             <div style={{ dispaly: "flex", justifyContent: "right", alignContent: "right", alignItems: "center" }}>
-                                <Stack pt={14} pl={10}>
+                                <Stack pt={10} pl={10}>
                                     <Typography
                                         variant="paragraph"
-                                        sx={{ width: { xs: "100%", md: "100%" }, fontFamily: "Roboto", lineHeight: "47px" }}
+                                        sx={{ width: { xs: "100%", md: "100%" }, fontFamily: "Roboto", lineHeight: "44px" }}
                                         fontWeight="medium"
-                                        fontSize={{ xs: "15px", md: "25px" }}
+                                        fontSize={{ xs: "15px", md: "24px" }}
                                         color="#6E6B7B"
                                     >
                                         Tailor your experience with our Rebranding & White Labeling features. Professional and Team plans offer logo customization, while Enterprise and On-Prem take it to the next level with custom domain names.
