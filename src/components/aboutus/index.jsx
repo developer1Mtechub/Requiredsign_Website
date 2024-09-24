@@ -51,7 +51,7 @@ function AboutUs() {
 
     return (
         <>
-            <Box id=" " pt={15} pb={13} sx={{ backgroundColor: "#F8F8F8" }} >
+            <Box id=" " pt={{ xs: 10, sm: 15, md: 15 }} pb={{ xs: 3, sm: 10, md: 13 }} sx={{ backgroundColor: "#F8F8F8" }} >
                 <Container
                     maxWidth="lg"
                     sx={{
@@ -132,7 +132,7 @@ function AboutUs() {
                                 </Grid>
                             </Grid>
                             {/* </Box> */}
-                            <Box component="img" src={aboutus_main} sx={{ display: { xs: "block", md: "block" }, height: "75%", width: { xs: "100%", md: "100%" } }} />
+                            <Box component="img" src={aboutus_main} sx={{ display: { xs: "block", md: "block" }, height: {xs:"100%",md:"75%"}, width: { xs: "100%", md: "100%" } }} />
                             {/* {compressedImage && (
                                 <img src={compressedImage} alt="Compressed" style={{ maxWidth: "100%" }} />
 

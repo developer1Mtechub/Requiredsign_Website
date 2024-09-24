@@ -43,7 +43,7 @@ function Functions() {
                             xs: '100%',     // For extra-small screens, full width
                             sm: '90%',      // For small screens
                             md: '80%',      // For medium screens
-                           lg: '80%',      // For large screens
+                            lg: '80%',      // For large screens
                             xl: '75%',       // For extra-large screens
                         }
                     }}
@@ -363,11 +363,11 @@ function Functions() {
                         </Grid>
                     </Grid>
 
-                    <Grid container spacing={0}>
+                    <Grid container spacing={0} pt={{ xs: 5, md: 0 }}>
                         {/* <Grid xs={12} md={2} p={2}>   </Grid> */}
 
                         <Grid xs={12} md={12} align="center">
-                            <Box component="img" src={send_document} sx={{ width: "95%" }} />
+                            <Box component="img" src={send_document} sx={{ width: { xs: "100%", md: "95%" } }} />
                         </Grid>
 
                         {/* textfield */}
@@ -382,13 +382,13 @@ function Functions() {
                         <Grid xs={12} md={6} pt={{ xs: 2, md: 11 }} align=" ">
                             <div style={{ display: "flex", justifyContent: "center", alignContent: "center" }}>
                                 <Box sx={{ width: { xs: "100%", md: "90%" }, }}>
-                                    <Stack direction="column" spacing={4} pt={0}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "52px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "32px" }} color="#6E6B7B">
+                                    <Stack direction="column" spacing={{ xs: 1, md: 4 }} pt={0}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "32px", md: "52px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "32px" }} color="#6E6B7B">
                                             For <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>DEVELOPERS</span> and <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>COMPANIES</span> requiring e-signatures embedded on company web pages or other advanced functions to enhance your workflow,
                                         </Typography>
 
                                         <Stack direction="row" spacing={2}>
-                                            <Avatar variant="square" src={secure} sx={{ pt: 0.5, width: { xs: 20, md: 30 }, height: { xs: 20, md: 37 } }} />
+                                            <Avatar variant="square" src={secure} sx={{ pt: { xs: 2, md: 0.5 }, width: { xs: 20, md: 30 }, height: { xs: 25, md: 37 } }} />
                                             <div>
                                                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "50px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
                                                     we will be ready by
