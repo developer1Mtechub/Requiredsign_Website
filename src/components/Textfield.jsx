@@ -4,16 +4,16 @@ import { Email } from '@mui/icons-material'
 
 function Textfield() {
 
-const [isFocused, setIsFocused] = useState(false);
-const handleFocus = () => {
-    setIsFocused(true);
-};
+    const [isFocused, setIsFocused] = useState(false);
+    const handleFocus = () => {
+        setIsFocused(true);
+    };
 
     return (
         <>
-            <Stack direction="column" spacing={2}>
+            <Stack direction="column" spacing={{ xs: 3, sm: 2, md: 2 }}>
                 {/* <Box component="img" src={inputfield} sx={{ alignSelf: "center", pt: 5, pb: 2, width: { xs: "100%", md: "50%" } }} /> */}
-                <Stack pt={5} pb={2}>
+                <Stack pt={5} pb={{ xs: 0, sm: 2, md: 2 }}>
                     <Box sx={{
                         // #F3F4F6
                         // #B8C2CC
@@ -74,7 +74,7 @@ const handleFocus = () => {
                             variant="contained"
                             color="primary"
                             sx={{
-                                backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                display: { xs: "none", sm: "none", md: "block" }, backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
                                 "&:hover": {
                                     backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
                                 }
@@ -84,6 +84,19 @@ const handleFocus = () => {
                         </Button>
                     </Box>
                 </Stack>
+
+                <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{
+                        display: { xs: "block", sm: "block", md: "none" }, alignSelf: "center", backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "40%",
+                        "&:hover": {
+                            backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "40%",
+                        }
+                    }}
+                >
+                    Get Started
+                </Button>
 
                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "14px", md: "20px" }} color="#6E6B7B">
                     By clicking “Get Started” button , you agree to  <span style={{ color: "#1662A7" }}>Terms & Conditions</span> and &nbsp;

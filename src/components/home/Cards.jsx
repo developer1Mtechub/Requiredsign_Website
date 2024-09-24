@@ -48,7 +48,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "25px" },
+                                                fontSize: { xs: "20px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -90,7 +90,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "25px" },
+                                                fontSize: { xs: "20px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -132,7 +132,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "25px" },
+                                                fontSize: { xs: "20px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -174,7 +174,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "25px" },
+                                                fontSize: { xs: "20px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -217,7 +217,7 @@ function Cards() {
                                             sx={{
                                                 fontFamily: "Roboto",
                                                 fontWeight: "bold",
-                                                fontSize: { xs: "14px", md: "25px" },
+                                                fontSize: { xs: "20px", md: "25px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -266,7 +266,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "25px" },
+                                            fontSize: { xs: "20px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -310,7 +310,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "25px" },
+                                            fontSize: { xs: "20px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -354,7 +354,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "25px" },
+                                            fontSize: { xs: "20px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -398,7 +398,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "25px" },
+                                            fontSize: { xs: "20px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -443,7 +443,7 @@ function Cards() {
                                         sx={{
                                             fontFamily: "Roboto",
                                             fontWeight: "bold",
-                                            fontSize: { xs: "14px", md: "25px" },
+                                            fontSize: { xs: "20px", md: "25px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
