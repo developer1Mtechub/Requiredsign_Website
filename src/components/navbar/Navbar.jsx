@@ -6,12 +6,18 @@ import "../../styles/Navbar.css";
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import logo from "../../Assets/logo.png";
 import url from '../../calendly_url';
+import { login, try_for_free } from '../../url';
 
 const drawerWidth = "100%";
 
 function Navbar() {
     const [open, setOpen] = useState(false);
     const navigate = useNavigate();
+
+    const handleNavigation = (path) => {
+        navigate(path);
+        handleDrawerClose(); // Close the drawer after navigation
+    };
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -53,9 +59,9 @@ function Navbar() {
                             maxWidth: {
                                 xs: '100%',     // For extra-small screens, full width
                                 sm: '90%',      // For small screens
-                                md: '80%',      // For medium screens
-                                lg: '84%',      // For large screens
-                                xl: '78%',       // For extra-large screens
+                                md: '85%',      // For medium screens
+                                lg: '89%',      // For large screens
+                                xl: '83%',       // For extra-large screens
                             }
                         }}
                     >
@@ -66,7 +72,10 @@ function Navbar() {
                                 <Grid item md={2.5} lg={2}>
                                     <Box pt={1.5} >
                                         {/* <Avatar variant="square" src={logo} sx={{ width: 20, height: 20 }} /> */}
-                                        <Box component="img" src={logo} sx={{ pt: 0.5, width: 170, height: 40 }} />
+                                        <NavLink to="/">
+                                            <Box component="img" src={logo} sx={{ pt: 0.5, width: 170, height: 40 }} />
+                                        </NavLink>
+
                                     </Box>
                                 </Grid>
 
@@ -125,21 +134,25 @@ function Navbar() {
                                 <Grid item md={3} lg={3} align="right">
                                     <div style={{ display: "flex", justifyContent: "flex-end" }}>
                                         <Stack align="right" spacing={2} direction="row" pt={1.5} >
-                                            <Button sx={{
-                                                backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
-                                                "&:hover": {
+                                            <a href={`${try_for_free}`} target='_blank'>
+                                                <Button onClick={handleDrawerClose} sx={{
                                                     backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
-                                                }
-                                            }}>Try for FREE
-                                            </Button>
+                                                    "&:hover": {
+                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
+                                                    }
+                                                }}>Try for FREE
+                                                </Button>
+                                            </a>
 
-                                            <Button sx={{
-                                                backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
-                                                "&:hover": {
+                                            <a href={`${login}`} target='_blank'>
+                                                <Button onClick={handleDrawerClose} sx={{
                                                     backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
-                                                }
-                                            }}>Login
-                                            </Button>
+                                                    "&:hover": {
+                                                        backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
+                                                    }
+                                                }}>Login
+                                                </Button>
+                                            </a>
                                         </Stack>
                                     </div>
                                 </Grid>
@@ -156,8 +169,10 @@ function Navbar() {
                 <AppBar position="fixed" sx={{ backgroundColor: "#000212", backgroundColor: "white", boxShadow: "none" }}>
                     <Toolbar>
                         <Grid container spacing={2} pt={1}>
-                            <Grid item xs={9} sm={9} mt={1}>
-                                <Box component="img" src={logo} sx={{ width: 120, height: 30 }} />
+                            <Grid item xs={9} sm={9} mt={0}>
+                                <NavLink to="/">
+                                    <Box component="img" src={logo} sx={{ width: 140, height: 30 }} />
+                                </NavLink>
                             </Grid>
                             <Grid item xs={3} sm={3} mt={0} align="right">
                                 <IconButton
@@ -171,63 +186,196 @@ function Navbar() {
                                         width: drawerWidth,
                                         flexShrink: 0,
                                         "& .MuiDrawer-paper": {
-                                            backgroundColor: "#000212", backgroundColor: "white",
+                                            backgroundColor: "#000212",
+                                            backgroundColor: "white",
                                             width: drawerWidth,
                                             height: "auto",
-                                            boxSizing: "border-box"
-                                        }
+                                            boxSizing: "border-box",
+                                        },
                                     }}
                                     anchor="top"
                                     open={open}
-                                    onClick={handleDrawerClose}
                                 >
                                     <Container>
-                                        <Stack direction="column" spacing={2} sx={{ color: "white", pl: 2, pt: 3, pb: 3, fontSize: "15px", fontWeight: "bold", cursor: "pointer" }}>
-                                            <div style={{ display: "flex", justifyContent: "center", alignContent: "center" }}>
-                                                <Box component="img" src={logo} sx={{ width: 150, height: 40 }} />
+                                        <Stack
+                                            direction="column"
+                                            spacing={1}
+                                            sx={{
+                                                color: "white",
+                                                pl: 2,
+                                                pt: 3,
+                                                pb: 3,
+                                                fontSize: "15px",
+                                                fontWeight: "bold",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            <div style={{ display: "flex", justifyContent: "start", alignContent: "start" }}>
+                                                <NavLink to="/">
+                                                    <Box component="img" src={logo} sx={{ width: 140, height: 30 }} />
+                                                </NavLink>
                                             </div>
 
-                                            <div style={{ display: "flex", justifyContent: "center" }}>
-                                                <Stack align="center" spacing={2} direction="row" pt={1.5} >
-                                                    <Button sx={{
-                                                        alignSelf: "center", backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "35px", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "100px",
-                                                        "&:hover": {
-                                                            alignSelf: "center", backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "35px", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "100px",
-                                                        }
-                                                    }}>Try for FREE
-                                                    </Button>
-
-                                                    <Button sx={{
-                                                        alignSelf: "center", backgroundColor: "#1662A7", fontFamily: "Roboto", height: "35px", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "100px",
-                                                        "&:hover": {
-                                                            alignSelf: "center", backgroundColor: "#1662A7", fontFamily: "Roboto", height: "35px", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "100px",
-                                                        }
-                                                    }}>Login
-                                                    </Button>
-                                                </Stack>
-                                            </div>
-
-                                            <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+                                            {/* NavLinks with active styling */}
+                                            <NavLink
+                                                to="/"
+                                                exact
+                                                style={({ isActive }) => ({
+                                                    textDecoration: 'none',
+                                                    width: isActive ? "fit-content" : "100%",
+                                                    padding: "10px 0",
+                                                    color: isActive ? '#1662A7' : '#6E6B7B', height: "10px",
+                                                    // backgroundColor: isActive ? "#f0f0f0" : "transparent",
+                                                    borderBottom: isActive ? '1px solid #1662A7' : 'none',
+                                                    "&:hover": { color: "#1662A7" },
+                                                })}
+                                                onClick={() => handleNavigation("/")}
+                                            >
                                                 <Typography variant="paragraph" pt={1}>Home</Typography>
                                             </NavLink>
-                                            <NavLink to="/aboutus" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+
+                                            <NavLink
+                                                to="/aboutus"
+                                                style={({ isActive }) => ({
+                                                    textDecoration: 'none',
+                                                    width: isActive ? "fit-content" : "100%",
+                                                    padding: "10px 0",
+                                                    color: isActive ? '#1662A7' : '#6E6B7B', height: "10px",
+                                                    // backgroundColor: isActive ? "#f0f0f0" : "transparent",
+                                                    borderBottom: isActive ? '1px solid #1662A7' : 'none',
+                                                    "&:hover": { color: "#1662A7" },
+                                                })}
+                                                onClick={() => handleNavigation("/aboutus")}
+                                            >
                                                 <Typography variant="paragraph" pt={1}>About</Typography>
                                             </NavLink>
-                                            <NavLink to="/features" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+
+                                            <NavLink
+                                                to="/features"
+                                                style={({ isActive }) => ({
+                                                    textDecoration: 'none',
+                                                    width: isActive ? "fit-content" : "100%",
+                                                    padding: "10px 0",
+                                                    color: isActive ? '#1662A7' : '#6E6B7B', height: "10px",
+                                                    // backgroundColor: isActive ? "#f0f0f0" : "transparent",
+                                                    borderBottom: isActive ? '1px solid #1662A7' : 'none',
+                                                    "&:hover": { color: "#1662A7" },
+                                                })}
+                                                onClick={() => handleNavigation("/features")}
+                                            >
                                                 <Typography variant="paragraph" pt={1}>Features</Typography>
                                             </NavLink>
-                                            <NavLink to="/security_and_compliance" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
+
+                                            <NavLink
+                                                to="/security_and_compliance"
+                                                style={({ isActive }) => ({
+                                                    textDecoration: 'none',
+                                                    width: isActive ? "fit-content" : "100%",
+                                                    padding: "10px 0",
+                                                    color: isActive ? '#1662A7' : '#6E6B7B', height: "10px",
+                                                    // backgroundColor: isActive ? "#f0f0f0" : "transparent",
+                                                    borderBottom: isActive ? '1px solid #1662A7' : 'none',
+                                                    "&:hover": { color: "#1662A7" },
+                                                })}
+                                                onClick={() => handleNavigation("/security_and_compliance")}
+                                            >
                                                 <Typography variant="paragraph" pt={1}>Security & Compliance</Typography>
                                             </NavLink>
-                                            <NavLink to="/pricing_and_plans" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
-                                                <Typography variant="paragraph" >Pricing Plans</Typography>
+
+                                            <NavLink
+                                                to="/pricing_and_plans"
+                                                style={({ isActive }) => ({
+                                                    textDecoration: 'none',
+                                                    width: isActive ? "fit-content" : "100%",
+                                                    padding: "10px 0",
+                                                    color: isActive ? '#1662A7' : '#6E6B7B', height: "10px",
+                                                    // backgroundColor: isActive ? "#f0f0f0" : "transparent",
+                                                    borderBottom: isActive ? '1px solid #1662A7' : 'none',
+                                                    "&:hover": { color: "#1662A7" },
+                                                })}
+                                                onClick={() => handleNavigation("/pricing_and_plans")}
+                                            >
+                                                <Typography variant="paragraph" pt={1}>Pricing Plans</Typography>
                                             </NavLink>
-                                            <NavLink to="/patners" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
-                                                <Typography variant="paragraph">Partners</Typography>
+
+                                            <NavLink
+                                                to="/patners"
+                                                style={({ isActive }) => ({
+                                                    textDecoration: 'none',
+                                                    width: isActive ? "fit-content" : "100%",
+                                                    padding: "10px 0",
+                                                    color: isActive ? '#1662A7' : '#6E6B7B', height: "10px",
+                                                    // backgroundColor: isActive ? "#f0f0f0" : "transparent",
+                                                    borderBottom: isActive ? '1px solid #1662A7' : 'none',
+                                                    "&:hover": { color: "#1662A7" },
+                                                })}
+                                                onClick={() => handleNavigation("/partners")}
+                                            >
+                                                <Typography variant="paragraph" pt={1}>Partners</Typography>
                                             </NavLink>
-                                            <NavLink to="/contact" style={({ isActive }) => ({ textDecoration: 'none', width: "fit-content", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px", borderBottom: isActive ? '1px solid #1662A7' : 'none' })}>
-                                                <Typography variant="paragraph">Contact</Typography>
+
+                                            <NavLink
+                                                to="/contact"
+                                                style={({ isActive }) => ({
+                                                    textDecoration: 'none',
+                                                    width: isActive ? "fit-content" : "100%",
+                                                    padding: "10px 0",
+                                                    color: isActive ? '#1662A7' : '#6E6B7B', height: "10px",
+                                                    // backgroundColor: isActive ? "#f0f0f0" : "transparent",
+                                                    borderBottom: isActive ? '1px solid #1662A7' : 'none',
+                                                    "&:hover": { color: "#1662A7" },
+                                                })}
+                                                onClick={() => handleNavigation("/contact")}
+                                            >
+                                                <Typography variant="paragraph" pt={1}>Contact</Typography>
                                             </NavLink>
+
+                                            <div style={{ display: "flex", justifyContent: "center" }}>
+                                                <Stack align="center" spacing={2} direction="row" pt={1.5}>
+                                                    <a href={`${try_for_free}`} onClick={() => setOpen(false)} target='_blank'>
+                                                        <Button
+                                                            sx={{
+                                                                alignSelf: "center",
+                                                                backgroundColor: "#25B2E8",
+                                                                fontFamily: "Roboto",
+                                                                height: "35px",
+                                                                borderRadius: "10px",
+                                                                fontSize: "13px",
+                                                                color: "white",
+                                                                textTransform: "capitalize",
+                                                                width: "100px",
+                                                                "&:hover": {
+                                                                    backgroundColor: "#25B2E8",
+                                                                },
+                                                            }}
+                                                        >
+                                                            Try for FREE
+                                                        </Button>
+                                                    </a>
+
+                                                    <a href={`${login}`} target='_blank' onClick={() => setOpen(false)} >
+                                                        <Button
+                                                            sx={{
+                                                                alignSelf: "center",
+                                                                backgroundColor: "#1662A7",
+                                                                fontFamily: "Roboto",
+                                                                height: "35px",
+                                                                borderRadius: "10px",
+                                                                fontSize: "13px",
+                                                                color: "white",
+                                                                textTransform: "capitalize",
+                                                                width: "100px",
+                                                                "&:hover": {
+                                                                    backgroundColor: "#1662A7",
+                                                                },
+                                                            }}
+                                                        >
+                                                            Login
+                                                        </Button>
+                                                    </a>
+
+                                                </Stack>
+                                            </div>
                                         </Stack>
                                     </Container>
                                 </Drawer>

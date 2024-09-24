@@ -6,12 +6,13 @@ import aboutus_sec1 from "../../Assets/aboutus_sec1.png";
 import aboutus_sec2 from "../../Assets/aboutus_sec2.png";
 import UploadingAndFormatting from './uploadinfAndformating';
 import Functions from './functions';
+import { try_for_free } from '../../url';
 
 function Features() {
 
     return (
         <>
-            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
+            <Box id=" " pt={{ xs: 10, sm: 15, md: 20 }} pb={{ xs: 5, md: 10, md: 10 }} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Container
                     maxWidth="lg"
                     sx={{
@@ -19,7 +20,7 @@ function Features() {
                             xs: '100%',     // For extra-small screens, full width
                             sm: '90%',      // For small screens
                             md: '80%',      // For medium screens
-                           lg: '80%',      // For large screens
+                            lg: '80%',      // For large screens
                             xl: '75%',       // For extra-large screens
                         }
                     }}
@@ -27,7 +28,7 @@ function Features() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize="75px" color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "55px", md: "75px" }} color="#1662A7">
                                     Features
                                 </Typography>
                             </Stack>
@@ -44,7 +45,7 @@ function Features() {
                             xs: '100%',     // For extra-small screens, full width
                             sm: '90%',      // For small screens
                             md: '80%',      // For medium screens
-                           lg: '80%',      // For large screens
+                            lg: '80%',      // For large screens
                             xl: '75%',       // For extra-large screens
                         }
                     }}
@@ -80,15 +81,17 @@ function Features() {
                                         esign.YourCompany.com
                                     </Typography>
 
-                                    <div style={{ marginTop: "15px" }}>
-                                        <Button sx={{
-                                            backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
-                                            "&:hover": {
+                                    <a href={`${try_for_free}`} target='_blank'>
+                                        <div style={{ marginTop: "15px" }}>
+                                            <Button sx={{
                                                 backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
-                                            }
-                                        }}>Try for FREE
-                                        </Button>
-                                    </div>
+                                                "&:hover": {
+                                                    backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
+                                                }
+                                            }}>Try for FREE
+                                            </Button>
+                                        </div>
+                                    </a>
                                 </Stack>
                             </div>
                         </Grid>

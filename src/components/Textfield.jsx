@@ -1,6 +1,7 @@
 import { Box, Button, InputAdornment, Stack, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { Email } from '@mui/icons-material'
+import { NavLink } from 'react-router-dom';
 
 function Textfield() {
 
@@ -17,7 +18,7 @@ function Textfield() {
                     <Box sx={{
                         // #F3F4F6
                         // #B8C2CC
-                        alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "100%", md: "50%" }, padding: "8px", display: "flex", // Flexbox to align items horizontally
+                        alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "100%", md: "50%" }, padding: { xs: "4px", md: "8px" }, display: "flex", // Flexbox to align items horizontally
                         alignItems: "center", // Align items vertically in the center
                         justifyContent: "space-between", borderRadius: "15px", gap: "10px"
                     }}>
@@ -54,7 +55,8 @@ function Textfield() {
                                 },
                             }}
                             InputProps={{
-                                style: {
+                                sx: {
+                                    height: { xs: "40px", md: "auto" },
                                     fontSize: "15px",
                                     fontWeight: "500px",
                                     letterSpacing: "0.5px",
@@ -63,7 +65,7 @@ function Textfield() {
                                 },
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <Email />
+                                        <Email sx={{ fontSize: { xs: "20px", md: "30px" } }} />
                                     </InputAdornment>
                                 ),
                             }}
@@ -99,8 +101,8 @@ function Textfield() {
                 </Button>
 
                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "14px", md: "20px" }} color="#6E6B7B">
-                    By clicking “Get Started” button , you agree to  <span style={{ color: "#1662A7" }}>Terms & Conditions</span> and &nbsp;
-                    <span style={{ color: "#1662A7" }}>Privacy Policy</span>.
+                    By clicking “Get Started” button , you agree to <NavLink to="/terms_&_conditions" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Terms & Conditions</span>.</NavLink> <span style={{ color: "#1662A7" }}> </span> and &nbsp;
+                    <NavLink to="/privacy_&_policy" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Privacy Policy</span>.</NavLink>
                 </Typography>
             </Stack>
         </>
