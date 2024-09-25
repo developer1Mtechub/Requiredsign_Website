@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import "../../styles/Navbar.css";
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import { Close, ExpandLess, ExpandMore } from '@mui/icons-material';
 import logo from "../../Assets/logo.png";
 import url from '../../calendly_url';
 import { login, try_for_free } from '../../url';
@@ -210,10 +210,11 @@ function Navbar() {
                                                 cursor: "pointer",
                                             }}
                                         >
-                                            <div style={{ display: "flex", justifyContent: "start", alignContent: "start" }}>
+                                            <div style={{ display: "flex", justifyContent: "space-between" }}>
                                                 <NavLink to="/">
                                                     <Box component="img" src={logo} sx={{ width: 140, height: 30 }} />
                                                 </NavLink>
+                                                <Close sx={{ color: "#1662A7" }} onClick={() => setOpen(false)} />
                                             </div>
 
                                             {/* NavLinks with active styling */}

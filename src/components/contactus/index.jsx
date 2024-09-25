@@ -53,7 +53,7 @@ function Contactus() {
 
     return (
         <>
-            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
+            <Box id=" " pt={{ xs: 10, sm: 15, md: 20 }} pb={{ xs: 3, md: 10, md: 10 }} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Container
                     maxWidth="lg"
                     sx={{
@@ -61,7 +61,7 @@ function Contactus() {
                             xs: '100%',     // For extra-small screens, full width
                             sm: '90%',      // For small screens
                             md: '80%',      // For medium screens
-                           lg: '80%',      // For large screens
+                            lg: '80%',      // For large screens
                             xl: '75%',       // For extra-large screens
                         }
                     }}
@@ -69,7 +69,7 @@ function Contactus() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize="75px" color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "50px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "40px", md: "75px" }} color="#1662A7">
                                     Contact
                                 </Typography>
                             </Stack>
@@ -86,7 +86,7 @@ function Contactus() {
                             xs: '100%',     // For extra-small screens, full width
                             sm: '90%',      // For small screens
                             md: '80%',      // For medium screens
-                           lg: '80%',      // For large screens
+                            lg: '80%',      // For large screens
                             xl: '75%',       // For extra-large screens
                         }
                     }}
@@ -419,9 +419,9 @@ function Contactus() {
                                                 </Typography>
 
                                                 <Button sx={{
-                                                     backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                    backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
                                                     "&:hover": {
-                                                         backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "150px",
                                                     }
                                                 }}>Contact Support
                                                 </Button>
