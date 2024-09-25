@@ -8,7 +8,7 @@ function SecurityCompliance() {
 
     return (
         <>
-            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
+            <Box id=" " pt={{ xs: 10, sm: 15, md: 20 }} pb={{ xs: 5, md: 10, md: 10 }} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Container
                     maxWidth="lg"
                     sx={{
@@ -16,7 +16,7 @@ function SecurityCompliance() {
                             xs: '100%',     // For extra-small screens, full width
                             sm: '90%',      // For small screens
                             md: '80%',      // For medium screens
-                           lg: '80%',      // For large screens
+                            lg: '80%',      // For large screens
                             xl: '75%',       // For extra-large screens
                         }
                     }}
@@ -24,7 +24,7 @@ function SecurityCompliance() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "55px", md: "75px" }} color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "60px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "50px", md: "75px" }} color="#1662A7">
                                     Security and Compliance
                                 </Typography>
                             </Stack>
@@ -41,7 +41,7 @@ function SecurityCompliance() {
                             xs: '100%',     // For extra-small screens, full width
                             sm: '90%',      // For small screens
                             md: '80%',      // For medium screens
-                           lg: '80%',      // For large screens
+                            lg: '80%',      // For large screens
                             xl: '75%',       // For extra-large screens
                         }
                     }}
@@ -62,7 +62,7 @@ function SecurityCompliance() {
 
                                 <Typography
                                     variant="paragraph"
-                                    sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                    sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                     fontWeight="medium"
                                     fontSize={{ xs: "20px", md: "35px" }}
                                     color="#25B2E8"
@@ -75,7 +75,7 @@ function SecurityCompliance() {
                                     <div>
                                         <Typography
                                             variant="paragraph"
-                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                             fontWeight="medium"
                                             fontSize={{ xs: "15px", md: "27px" }}
                                             color="#020202"
@@ -90,7 +90,7 @@ function SecurityCompliance() {
                                     <div>
                                         <Typography
                                             variant="paragraph"
-                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                             fontWeight="medium"
                                             fontSize={{ xs: "15px", md: "27px" }}
                                             color="#020202"
@@ -105,7 +105,7 @@ function SecurityCompliance() {
                                     <div>
                                         <Typography
                                             variant="paragraph"
-                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                             fontWeight="medium"
                                             fontSize={{ xs: "15px", md: "27px" }}
                                             color="#020202"
@@ -120,7 +120,7 @@ function SecurityCompliance() {
                                     <div>
                                         <Typography
                                             variant="paragraph"
-                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                             fontWeight="medium"
                                             fontSize={{ xs: "15px", md: "27px" }}
                                             color="#020202"
@@ -144,7 +144,7 @@ function SecurityCompliance() {
                             xs: '100%',     // For extra-small screens, full width
                             sm: '90%',      // For small screens
                             md: '80%',      // For medium screens
-                           lg: '80%',      // For large screens
+                            lg: '80%',      // For large screens
                             xl: '75%',       // For extra-large screens
                         }
                     }}
@@ -156,7 +156,7 @@ function SecurityCompliance() {
 
                                 <Typography
                                     variant="paragraph"
-                                    sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                    sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                     fontWeight="medium"
                                     fontSize={{ xs: "18px", md: "35px" }}
                                     color="#25B2E8"
@@ -169,7 +169,7 @@ function SecurityCompliance() {
                                     <div>
                                         <Typography
                                             variant="paragraph"
-                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                             fontWeight="medium"
                                             fontSize={{ xs: "15px", md: "27px" }}
                                             color="#020202"
@@ -184,7 +184,7 @@ function SecurityCompliance() {
                                     <div>
                                         <Typography
                                             variant="paragraph"
-                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                             fontWeight="medium"
                                             fontSize={{ xs: "15px", md: "27px" }}
                                             color="#020202"
@@ -199,7 +199,7 @@ function SecurityCompliance() {
                                     <div>
                                         <Typography
                                             variant="paragraph"
-                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: {xs:"35px",md:"55px"} }}
+                                            sx={{ width: "100%", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "55px" } }}
                                             fontWeight="medium"
                                             fontSize={{ xs: "15px", md: "27px" }}
                                             color="#020202"
@@ -214,7 +214,7 @@ function SecurityCompliance() {
 
                         <Grid xs={12} md={12} pt={10} pb={5} align="center">
                             <Box sx={{ width: { xs: "100%", md: "90%" }, }}>
-                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: {xs:"40px",md:"70px"} }} fontWeight="normal" fontSize={{ xs: "20px", md: "35px" }} color="#6E6B7B">
+                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "40px", md: "70px" } }} fontWeight="normal" fontSize={{ xs: "20px", md: "35px" }} color="#6E6B7B">
                                     By choosing RequireSign, you can <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>TRUST</span> that your documents and data are <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>Protected</span> by the
                                     &nbsp;<span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>HIGHEST SECURITY STANDARDS.</span>
                                 </Typography>

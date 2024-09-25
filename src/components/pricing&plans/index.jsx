@@ -70,7 +70,7 @@ function PricingAndPlans() {
         {
             plan: 'Professional',
             teamSize: '1 User',
-            price: '$9/mo/user',
+            price: '$15',
             priceBody: '$108 billed monthly',
             buttonLabel: 'Get Started',
             trialLabel: 'Free 30-Day Trial',
@@ -84,7 +84,7 @@ function PricingAndPlans() {
             plan: 'Small Business',
             teamSize: '2 Users',
             teamcapacity: "(minimum)",
-            price: '$8/mo/user',
+            price: '$12/user',
             priceBody: '$96 billed monthly',
             buttonLabel: 'Get Started',
             trialLabel: 'Free 30-Day Trial',
@@ -98,7 +98,7 @@ function PricingAndPlans() {
             plan: 'Enterprise',
             teamSize: '50 Users',
             teamcapacity: "(minimum)",
-            price: '$7/mo/user',
+            // price: 'NOT AVAILABLE',
             priceBody: '$84 billed monthly',
             buttonLabel: 'Contact Sales',
             buttonbody: 'NOT AVAILABLE',
@@ -113,7 +113,7 @@ function PricingAndPlans() {
             teamSize: '50 Users',
             teamcapacity: "(minimum)",
             priceBody1: 'Plus hardware subscription',
-            price: '$6/mo/user',
+            // price: '$6/mo/user',
             priceBody: '$72 billed monthly',
             buttonLabel: 'Contact Sales',
             buttonbody: 'NOT AVAILABLE',
@@ -134,7 +134,7 @@ function PricingAndPlans() {
 
     return (
         <>
-            <Box id=" " pt={20} pb={10} sx={{ backgroundColor: "#EAE9E9" }} >
+            <Box id=" " pt={{ xs: 12, sm: 15, md: 20 }} pb={{ xs: 5, md: 10, md: 10 }} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Container
                     maxWidth="lg"
                     sx={{
@@ -150,7 +150,7 @@ function PricingAndPlans() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize="75px" color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "60px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "50px", md: "75px" }} color="#1662A7">
                                     Pricing Plans
                                 </Typography>
                             </Stack>
@@ -277,10 +277,10 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingData.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Stack direction="row" spacing={0.5}>
-                                                                    <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.teamSize}</Typography>
-                                                                    <Typography variant="" sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSise: "10px" }}>{item.teamcapacity}</Typography>
-                                                                </Stack>
+                                                                <div style={{ display: "flex", justifyContent: "center", alignContent: "center", gap: "2px" }}>
+                                                                    <Typography variant="body1" xx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.teamSize}</Typography>
+                                                                    <Typography variant="" sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSize: "10px" }}>{item.teamcapacity}</Typography>
+                                                                </div>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
@@ -294,15 +294,15 @@ function PricingAndPlans() {
                                                             >
                                                                 <>
                                                                     <Stack direction="column" spacing={1}>
-                                                                        <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSise: "13px" }}>{item.priceBody1 == null || undefined ? <></> : `(${item.priceBody1})`}</Typography>
-                                                                        <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.price}</Typography>
-                                                                        <Typography variant="body1" sx={{ color: "#1662A7", fontWeight: "medium", fontSise: "15px" }}>{item.priceBody}</Typography>
+                                                                        <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>{item.priceBody1 == null || undefined ? <></> : `(${item.priceBody1})`}</Typography>
+                                                                        <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.price}</Typography>
+                                                                        <Typography variant="body1" sx={{ color: "#1662A7", fontWeight: "medium", fontSize: "15px" }}>{item.priceBody}</Typography>
                                                                     </Stack>
                                                                 </>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
-                                                    <TableRow>
+                                                    {/* <TableRow>
                                                         <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)' }} />
                                                         {pricingData.map((item, index) => (
                                                             <TableCell
@@ -318,17 +318,16 @@ function PricingAndPlans() {
                                                                         }
                                                                     }}>{item.buttonLabel}
                                                                     </Button>
-                                                                    {/* <Button variant="contained">{item.buttonLabel}</Button> */}
                                                                     {item.trialLabel && (
-                                                                        <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "bold", fontSise: "15px" }}>
+                                                                        <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "bold", fontSize: "15px" }}>
                                                                             {item.trialLabel}
                                                                         </Typography>
                                                                     )}
-                                                                    <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontWeight: "bold", fontSise: "15px" }}>{item.buttonbody}</Typography>
+                                                                    <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontWeight: "bold", fontSize: "15px" }}>{item.buttonbody}</Typography>
                                                                 </Stack>
                                                             </TableCell>
                                                         ))}
-                                                    </TableRow>
+                                                    </TableRow> */}
                                                     <TableRow>
                                                         <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "17px", md: "19px" } }}>Documents Included</TableCell>
                                                         {pricingData.map((item, index) => (
@@ -337,7 +336,7 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingData.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.documentsIncluded}</Typography>
+                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.documentsIncluded}</Typography>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
@@ -349,7 +348,7 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingData.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.templates}</Typography>
+                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.templates}</Typography>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
@@ -361,7 +360,7 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingData.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.publicForms}</Typography>
+                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.publicForms}</Typography>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
@@ -385,7 +384,7 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingData.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                {item.customWebAddress ? <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.customWebAddress}</Typography> : <Cancel color="error" />}
+                                                                {item.customWebAddress ? <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.customWebAddress}</Typography> : <Cancel color="error" />}
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
@@ -393,6 +392,7 @@ function PricingAndPlans() {
                                             </Table>
                                         </TableContainer>
 
+                                        {/* small screen */}
                                         <TableContainer
                                             sx={{
                                                 display: { xs: "block", sm: "none", md: "none" },
@@ -421,159 +421,19 @@ function PricingAndPlans() {
                                                                     fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
                                                                 }}
                                                             >
-                                                                TEAM SIZE
+                                                                Professional
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
                                                 </TableHead>
                                                 <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                            >
-                                                                1 User
-                                                            </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "transparent", fontWeight: "medium", fontSize: "12px" }}
-                                                            > cd </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                            >
-                                                                2 Users
-                                                            </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSize: "10px" }}
-                                                            >(minimum)</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                            >
-                                                                50 Users
-                                                            </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSize: "10px" }}
-                                                            >(minimum)</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                            >
-                                                                50 Users
-                                                            </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSize: "10px" }}
-                                                            >(minimum)</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
-                                                            >
-                                                                PRICE
-                                                            </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
+                                                            PRICE
                                                         </TableCell>
 
                                                         <TableCell
@@ -596,9 +456,173 @@ function PricingAndPlans() {
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            TEAM SIZE
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                1 User
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Documents Included
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Templates
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                5
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Public Forms
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                5
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Branding
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <Cancel color="error" />
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Custom Web Address
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <Cancel color="error" />
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </TableContainer>
+
+                                        <TableContainer
+                                            sx={{
+                                                display: { xs: "block", sm: "none", md: "none" },
+                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
+                                                borderRadius: '5px',
+                                                width: '100%' // Ensures the table takes the full width of the container
+                                            }}
+                                        >
+                                            <Table size="small" sx={{ minWidth: 100 }}>
+                                                <TableHead>
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            colSpan={2}
+                                                            sx={{
+                                                                padding: '20px 8px', // Reduced padding for smaller cells
+                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
+                                                                width: '100%' // Control the width of the cell
+                                                            }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{
+                                                                    color: "#25B2E8",
+                                                                    fontWeight: "bold",
+                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
+                                                                }}
+                                                            >
+                                                                Small Business
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
                                                             sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Small Business
+                                                            PRICE
                                                         </TableCell>
 
                                                         <TableCell
@@ -614,7 +638,7 @@ function PricingAndPlans() {
                                                             <Typography
                                                                 variant="caption"
                                                                 sx={{ pt: 0.3, color: "#1662A7", fontWeight: "medium", fontSize: "12px" }}
-                                                            >    $96 billed annually </Typography>
+                                                            >  $96 billed annually </Typography>
                                                         </TableCell>
                                                     </TableRow>
 
@@ -623,7 +647,177 @@ function PricingAndPlans() {
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Enterprise
+                                                            TEAM SIZE
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                2 Users
+                                                            </Typography>
+                                                            <Typography
+                                                                variant=""
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "12px" }}
+                                                            >
+                                                                (minimum)
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Documents Included
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Templates
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Public Forms
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Branding
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <CheckCircle sx={{ color: "#6ACE0C" }} />
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Custom Web Address
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </TableContainer>
+
+                                        <TableContainer
+                                            sx={{
+                                                display: { xs: "block", sm: "none", md: "none" },
+                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
+                                                borderRadius: '5px',
+                                                width: '100%' // Ensures the table takes the full width of the container
+                                            }}
+                                        >
+                                            <Table size="small" sx={{ minWidth: 100 }}>
+                                                <TableHead>
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            colSpan={2}
+                                                            sx={{
+                                                                padding: '20px 8px', // Reduced padding for smaller cells
+                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
+                                                                width: '100%' // Control the width of the cell
+                                                            }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{
+                                                                    color: "#25B2E8",
+                                                                    fontWeight: "bold",
+                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
+                                                                }}
+                                                            >
+                                                                Enterprise
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            PRICE
                                                         </TableCell>
 
                                                         <TableCell
@@ -639,7 +833,7 @@ function PricingAndPlans() {
                                                             <Typography
                                                                 variant="caption"
                                                                 sx={{ pt: 0.3, color: "#1662A7", fontWeight: "medium", fontSize: "12px" }}
-                                                            >   $84 billed annually</Typography>
+                                                            > $84 billed annually </Typography>
                                                         </TableCell>
                                                     </TableRow>
 
@@ -648,8 +842,179 @@ function PricingAndPlans() {
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            On-Prem Hosting
+                                                            TEAM SIZE
                                                         </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                50 Users
+                                                            </Typography>
+                                                            <Typography
+                                                                variant=""
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "12px" }}
+                                                            >
+                                                                (minimum)
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Documents Included
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Templates
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Public Forms
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Branding
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <CheckCircle sx={{ color: "#6ACE0C" }} />
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Custom Web Address
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </TableContainer>
+
+                                        <TableContainer
+                                            sx={{
+                                                display: { xs: "block", sm: "none", md: "none" },
+                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
+                                                borderRadius: '5px',
+                                                width: '100%' // Ensures the table takes the full width of the container
+                                            }}
+                                        >
+                                            <Table size="small" sx={{ minWidth: 100 }}>
+                                                <TableHead>
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            colSpan={2}
+                                                            sx={{
+                                                                padding: '20px 8px', // Reduced padding for smaller cells
+                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
+                                                                width: '100%' // Control the width of the cell
+                                                            }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{
+                                                                    color: "#25B2E8",
+                                                                    fontWeight: "bold",
+                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
+                                                                }}
+                                                            >
+                                                                On-Prem Hosting
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            PRICE
+                                                        </TableCell>
+
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
@@ -657,7 +1022,7 @@ function PricingAndPlans() {
                                                             <Typography
                                                                 variant="caption"
                                                                 sx={{ pt: 0.3, color: "red", fontWeight: "medium", fontSize: "12px" }}
-                                                            >   (Plus hardware subscription)</Typography>
+                                                            >(Plus hardware subscription)</Typography>
                                                             <Typography
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
@@ -667,673 +1032,139 @@ function PricingAndPlans() {
                                                             <Typography
                                                                 variant="caption"
                                                                 sx={{ pt: 0.3, color: "#1662A7", fontWeight: "medium", fontSize: "12px" }}
-                                                            >   $72 billed annually</Typography>
+                                                            >$72 billed annually</Typography>
                                                         </TableCell>
                                                     </TableRow>
 
-
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            TEAM SIZE
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
                                                             <Typography
                                                                 variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                ANNUALLY
+                                                                50 Users
+                                                            </Typography>
+                                                            <Typography
+                                                                variant=""
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "12px" }}
+                                                            >
+                                                                (minimum)
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
-                                                </TableHead>
-                                                <TableBody>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Professional
+                                                            Documents Included
                                                         </TableCell>
 
                                                         <TableCell
                                                             align="center"
-                                                            sx={{ borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Stack direction="column" spacing={1}>
-                                                                <Button sx={{
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    "&:hover": {
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    }
-                                                                }}>Get Started
-                                                                </Button>
-
-                                                                <Typography variant="" sx={{ color: "#00BE00", fontWeight: "bold", fontSise: "13px" }}>
-                                                                    Free 30-Day Trial
-                                                                </Typography>
-
-                                                            </Stack>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Stack direction="column" spacing={1}>
-                                                                <Button sx={{
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    "&:hover": {
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    }
-                                                                }}>Get Started
-                                                                </Button>
-
-                                                                <Typography variant="" sx={{ color: "#00BE00", fontWeight: "bold", fontSise: "13px" }}>
-                                                                    Free 30-Day Trial
-                                                                </Typography>
-
-                                                            </Stack>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Stack direction="column" spacing={1}>
-                                                                <Button sx={{
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    "&:hover": {
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    }
-                                                                }}>Contact Sales
-                                                                </Button>
-
-                                                                <Typography variant="" sx={{ color: "red", fontWeight: "bold", fontSise: "13px" }}>
-                                                                    NOT AVAILABLE
-                                                                </Typography>
-
-                                                            </Stack>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Stack direction="column" spacing={1}>
-                                                                <Button sx={{
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    "&:hover": {
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    }
-                                                                }}>Contact Sales
-                                                                </Button>
-
-                                                                <Typography variant="" sx={{ color: "red", fontWeight: "bold", fontSise: "13px" }}>
-                                                                    NOT AVAILABLE
-                                                                </Typography>
-
-                                                            </Stack>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-                                        {/* // */}
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
                                                             <Typography
                                                                 variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                DOCUMENTS INCLUDED
+                                                                UNLIMITED
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
-                                                </TableHead>
-                                                <TableBody>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Professional
+                                                            Templates
                                                         </TableCell>
 
                                                         <TableCell
                                                             align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
                                                             <Typography
                                                                 variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                TEMPLATES
+                                                                UNLIMITED
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
-                                                </TableHead>
-                                                <TableBody>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Professional
+                                                            Public Forms
                                                         </TableCell>
 
                                                         <TableCell
                                                             align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>5</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
                                                             <Typography
                                                                 variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                PUBLIC FORMS
+                                                                UNLIMITED
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
-                                                </TableHead>
-                                                <TableBody>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Professional
+                                                            Branding
                                                         </TableCell>
 
                                                         <TableCell
                                                             align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>5</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
                                                             <Typography
                                                                 variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                Branding
+                                                                <CheckCircle sx={{ color: "#6ACE0C" }} />
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
-                                                </TableHead>
-                                                <TableBody>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Professional
+                                                            Custom Web Address
                                                         </TableCell>
 
                                                         <TableCell
                                                             align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Cancel color="error" />
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <CheckCircle sx={{ color: "#6ACE0C" }} />
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <CheckCircle sx={{ color: "#6ACE0C" }} />
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <CheckCircle sx={{ color: "#6ACE0C" }} />
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
                                                             <Typography
                                                                 variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                CUSTOM WEB ADDRESS
+                                                                UNLIMITED
                                                             </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Cancel color="error" />
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '13px 13px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '13px 13px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
                                                         </TableCell>
                                                     </TableRow>
                                                 </TableBody>
@@ -1375,14 +1206,14 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingDataMonthly.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Stack direction="row" spacing={0.5}>
-                                                                    <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.teamSize}</Typography>
-                                                                    <Typography variant="" sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSise: "10px" }}>{item.teamcapacity}</Typography>
-                                                                </Stack>
+                                                                <div style={{ display: "flex", justifyContent: "center", alignContent: "center", gap: "2px" }}>
+                                                                    <Typography variant="body1" xx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.teamSize}</Typography>
+                                                                    <Typography variant="" sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSize: "10px" }}>{item.teamcapacity}</Typography>
+                                                                </div>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
-                                                    <TableRow>
+                                                    {/* <TableRow>
                                                         <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "17px", md: "19px" } }}>PRICE</TableCell>
                                                         {pricingDataMonthly.map((item, index) => (
                                                             <TableCell
@@ -1392,14 +1223,14 @@ function PricingAndPlans() {
                                                             >
                                                                 <>
                                                                     <Stack direction="column" spacing={1}>
-                                                                        <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSise: "13px" }}>{item.priceBody1 == null || undefined ? <></> : `(${item.priceBody1})`}</Typography>
-                                                                        <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.price}</Typography>
-                                                                        <Typography variant="body1" sx={{ color: "#1662A7", fontWeight: "medium", fontSise: "15px" }}>{item.priceBody}</Typography>
+                                                                        <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>{item.priceBody1 == null || undefined ? <></> : `(${item.priceBody1})`}</Typography>
+                                                                        <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.price}</Typography>
+                                                                        <Typography variant="body1" sx={{ color: "#1662A7", fontWeight: "medium", fontSize: "15px" }}>{item.priceBody}</Typography>
                                                                     </Stack>
                                                                 </>
                                                             </TableCell>
                                                         ))}
-                                                    </TableRow>
+                                                    </TableRow> */}
                                                     <TableRow>
                                                         <TableCell sx={{ borderRight: '1px solid rgba(224, 224, 224, 1)' }} />
                                                         {pricingDataMonthly.map((item, index) => (
@@ -1409,6 +1240,11 @@ function PricingAndPlans() {
                                                                 sx={{ borderRight: index !== pricingDataMonthly.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
                                                                 <Stack direction="column" spacing={1}>
+                                                                    {item.price == null || undefined ?
+                                                                        <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "15px" }}>{item.buttonbody}</Typography>
+                                                                        :
+                                                                        <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.price}</Typography>
+                                                                    }
                                                                     <Button sx={{
                                                                         backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "15px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "150px",
                                                                         "&:hover": {
@@ -1417,12 +1253,20 @@ function PricingAndPlans() {
                                                                     }}>{item.buttonLabel}
                                                                     </Button>
                                                                     {/* <Button variant="contained">{item.buttonLabel}</Button> */}
-                                                                    {item.trialLabel && (
-                                                                        <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "bold", fontSise: "15px" }}>
+                                                                    {/* {item.trialLabel && (
+                                                                        <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "bold", fontSize: "15px" }}>
                                                                             {item.trialLabel}
                                                                         </Typography>
-                                                                    )}
-                                                                    <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontWeight: "bold", fontSise: "15px" }}>{item.buttonbody}</Typography>
+                                                                    )} */}
+                                                                    {item?.trialLabel == null || undefined ?
+                                                                        <Typography variant="body1" sx={{ color: "transparent", fontWeight: "bold", fontSize: "15px" }}>
+                                                                            Free 30-Day Trial
+                                                                        </Typography>
+                                                                        :
+                                                                        <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "bold", fontSize: "15px" }}>
+                                                                            {item.trialLabel}
+                                                                        </Typography>
+                                                                    }
                                                                 </Stack>
                                                             </TableCell>
                                                         ))}
@@ -1435,7 +1279,7 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingDataMonthly.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.documentsIncluded}</Typography>
+                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.documentsIncluded}</Typography>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
@@ -1447,7 +1291,7 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingDataMonthly.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.templates}</Typography>
+                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.templates}</Typography>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
@@ -1459,7 +1303,7 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingDataMonthly.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.publicForms}</Typography>
+                                                                <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.publicForms}</Typography>
                                                             </TableCell>
                                                         ))}
                                                     </TableRow>
@@ -1483,9 +1327,203 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingDataMonthly.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                {item.customWebAddress ? <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>{item.customWebAddress}</Typography> : <Cancel color="error" />}
+                                                                {item.customWebAddress ? <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.customWebAddress}</Typography> : <Cancel color="error" />}
                                                             </TableCell>
                                                         ))}
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </TableContainer>
+
+                                        {/* small screen */}
+                                        <TableContainer
+                                            sx={{
+                                                display: { xs: "block", sm: "none", md: "none" },
+                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
+                                                borderRadius: '5px',
+                                                width: '100%' // Ensures the table takes the full width of the container
+                                            }}
+                                        >
+                                            <Table size="small" sx={{ minWidth: 100 }}>
+                                                <TableHead>
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            colSpan={2}
+                                                            sx={{
+                                                                padding: '20px 8px', // Reduced padding for smaller cells
+                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
+                                                                width: '100%' // Control the width of the cell
+                                                            }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{
+                                                                    color: "#25B2E8",
+                                                                    fontWeight: "bold",
+                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
+                                                                }}
+                                                            >
+                                                                Professional
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            PRICE
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+
+                                                            {/* <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "15px" }}>{item.buttonbody}</Typography> */}
+
+                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>$15</Typography>
+
+                                                            <Button sx={{
+                                                                backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                "&:hover": {
+                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                }
+                                                            }}>Get Started
+                                                            </Button>
+
+                                                            <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "medium", fontSize: "14px" }}>Free 30-Day Trial</Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            TEAM SIZE
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                1 User
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Documents Included
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Templates
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                5
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Public Forms
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                5
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Branding
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <Cancel color="error" />
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Custom Web Address
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <Cancel color="error" />
+                                                            </Typography>
+                                                        </TableCell>
                                                     </TableRow>
                                                 </TableBody>
                                             </Table>
@@ -1519,7 +1557,7 @@ function PricingAndPlans() {
                                                                     fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
                                                                 }}
                                                             >
-                                                                TEAM SIZE
+                                                                Small Business
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
@@ -1529,34 +1567,38 @@ function PricingAndPlans() {
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Professional
+                                                            PRICE
                                                         </TableCell>
 
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
-                                                            >
-                                                                1 User
-                                                            </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "transparent", fontWeight: "medium", fontSize: "12px" }}
-                                                            > cd </Typography>
+
+                                                            {/* <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "15px" }}>{item.buttonbody}</Typography> */}
+
+                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>$12/user</Typography>
+
+                                                            <Button sx={{
+                                                                backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                "&:hover": {
+                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                }
+                                                            }}>Get Started
+                                                            </Button>
+
+                                                            <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "medium", fontSize: "14px" }}>Free 30-Day Trial</Typography>
                                                         </TableCell>
                                                     </TableRow>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Small Business
+                                                            TEAM SIZE
                                                         </TableCell>
 
                                                         <TableCell
@@ -1570,9 +1612,11 @@ function PricingAndPlans() {
                                                                 2 Users
                                                             </Typography>
                                                             <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSize: "10px" }}
-                                                            >(minimum)</Typography>
+                                                                variant=""
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "12px" }}
+                                                            >
+                                                                (minimum)
+                                                            </Typography>
                                                         </TableCell>
                                                     </TableRow>
 
@@ -1581,7 +1625,177 @@ function PricingAndPlans() {
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Enterprise
+                                                            Documents Included
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Templates
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Public Forms
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Branding
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <CheckCircle sx={{ color: "#6ACE0C" }} />
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Custom Web Address
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </TableContainer>
+
+                                        <TableContainer
+                                            sx={{
+                                                display: { xs: "block", sm: "none", md: "none" },
+                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
+                                                borderRadius: '5px',
+                                                width: '100%' // Ensures the table takes the full width of the container
+                                            }}
+                                        >
+                                            <Table size="small" sx={{ minWidth: 100 }}>
+                                                <TableHead>
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            colSpan={2}
+                                                            sx={{
+                                                                padding: '20px 8px', // Reduced padding for smaller cells
+                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
+                                                                width: '100%' // Control the width of the cell
+                                                            }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{
+                                                                    color: "#25B2E8",
+                                                                    fontWeight: "bold",
+                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
+                                                                }}
+                                                            >
+                                                                Enterprise
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            PRICE
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+
+                                                            <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>NOT AVAILABLE</Typography>
+
+                                                            <Button sx={{
+                                                                backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                "&:hover": {
+                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                }
+                                                            }}>Contact Sales
+                                                            </Button>
+
+
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            TEAM SIZE
                                                         </TableCell>
 
                                                         <TableCell
@@ -1595,9 +1809,11 @@ function PricingAndPlans() {
                                                                 50 Users
                                                             </Typography>
                                                             <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSize: "10px" }}
-                                                            >(minimum)</Typography>
+                                                                variant=""
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "12px" }}
+                                                            >
+                                                                (minimum)
+                                                            </Typography>
                                                         </TableCell>
                                                     </TableRow>
 
@@ -1606,7 +1822,177 @@ function PricingAndPlans() {
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            On-Prem Hosting
+                                                            Documents Included
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Templates
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Public Forms
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Branding
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <CheckCircle sx={{ color: "#6ACE0C" }} />
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Custom Web Address
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                UNLIMITED
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </TableContainer>
+
+                                        <TableContainer
+                                            sx={{
+                                                display: { xs: "block", sm: "none", md: "none" },
+                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
+                                                borderRadius: '5px',
+                                                width: '100%' // Ensures the table takes the full width of the container
+                                            }}
+                                        >
+                                            <Table size="small" sx={{ minWidth: 100 }}>
+                                                <TableHead>
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            colSpan={2}
+                                                            sx={{
+                                                                padding: '20px 8px', // Reduced padding for smaller cells
+                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
+                                                                width: '100%' // Control the width of the cell
+                                                            }}
+                                                        >
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{
+                                                                    color: "#25B2E8",
+                                                                    fontWeight: "bold",
+                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
+                                                                }}
+                                                            >
+                                                                On-Prem Hosting
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            PRICE
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
+
+                                                            <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>NOT AVAILABLE</Typography>
+
+                                                            <Button sx={{
+                                                                backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                "&:hover": {
+                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                }
+                                                            }}>Contact Sales
+                                                            </Button>
+
+
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            TEAM SIZE
                                                         </TableCell>
 
                                                         <TableCell
@@ -1620,58 +2006,20 @@ function PricingAndPlans() {
                                                                 50 Users
                                                             </Typography>
                                                             <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#4F6169", fontWeight: "medium", fontSize: "10px" }}
-                                                            >(minimum)</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
+                                                                variant=""
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "12px" }}
                                                             >
-                                                                PRICE
+                                                                (minimum)
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
-                                                </TableHead>
-                                                <TableBody>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Professional
+                                                            Documents Included
                                                         </TableCell>
 
                                                         <TableCell
@@ -1682,21 +2030,17 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                $9/mo/user
+                                                                UNLIMITED
                                                             </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#1662A7", fontWeight: "medium", fontSize: "12px" }}
-                                                            >    $108 billed monthly </Typography>
                                                         </TableCell>
                                                     </TableRow>
 
                                                     <TableRow>
                                                         <TableCell
                                                             align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Small Business
+                                                            Templates
                                                         </TableCell>
 
                                                         <TableCell
@@ -1707,12 +2051,8 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                $8/mo/user
+                                                                UNLIMITED
                                                             </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#1662A7", fontWeight: "medium", fontSize: "12px" }}
-                                                            >    $96 billed monthly </Typography>
                                                         </TableCell>
                                                     </TableRow>
 
@@ -1721,7 +2061,7 @@ function PricingAndPlans() {
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            Enterprise
+                                                            Public Forms
                                                         </TableCell>
 
                                                         <TableCell
@@ -1732,12 +2072,8 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                $7/mo/user
+                                                                UNLIMITED
                                                             </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#1662A7", fontWeight: "medium", fontSize: "12px" }}
-                                                            >   $84 billed monthly</Typography>
                                                         </TableCell>
                                                     </TableRow>
 
@@ -1746,698 +2082,45 @@ function PricingAndPlans() {
                                                             align="center"
                                                             sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
                                                         >
-                                                            On-Prem Hosting
+                                                            Branding
                                                         </TableCell>
+
                                                         <TableCell
                                                             align="center"
                                                             sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
                                                             <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "red", fontWeight: "medium", fontSize: "12px" }}
-                                                            >   (Plus hardware subscription)</Typography>
+                                                                variant="body1"
+                                                                sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                            >
+                                                                <CheckCircle sx={{ color: "#6ACE0C" }} />
+                                                            </Typography>
+                                                        </TableCell>
+                                                    </TableRow>
+
+                                                    <TableRow>
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
+                                                        >
+                                                            Custom Web Address
+                                                        </TableCell>
+
+                                                        <TableCell
+                                                            align="center"
+                                                            sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
+                                                        >
                                                             <Typography
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                $6/mo/user
+                                                                UNLIMITED
                                                             </Typography>
-                                                            <Typography
-                                                                variant="caption"
-                                                                sx={{ pt: 0.3, color: "#1662A7", fontWeight: "medium", fontSize: "12px" }}
-                                                            >   $72 billed monthly</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
-                                                            >
-                                                                MONTHLY
-                                                            </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Stack direction="column" spacing={1}>
-                                                                <Button sx={{
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    "&:hover": {
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    }
-                                                                }}>Get Started
-                                                                </Button>
-
-                                                                <Typography variant="" sx={{ color: "#00BE00", fontWeight: "bold", fontSise: "13px" }}>
-                                                                    Free 30-Day Trial
-                                                                </Typography>
-
-                                                            </Stack>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Stack direction="column" spacing={1}>
-                                                                <Button sx={{
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    "&:hover": {
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    }
-                                                                }}>Get Started
-                                                                </Button>
-
-                                                                <Typography variant="" sx={{ color: "#00BE00", fontWeight: "bold", fontSise: "13px" }}>
-                                                                    Free 30-Day Trial
-                                                                </Typography>
-
-                                                            </Stack>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Stack direction="column" spacing={1}>
-                                                                <Button sx={{
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    "&:hover": {
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    }
-                                                                }}>Contact Sales
-                                                                </Button>
-
-                                                                <Typography variant="" sx={{ color: "red", fontWeight: "bold", fontSise: "13px" }}>
-                                                                    NOT AVAILABLE
-                                                                </Typography>
-
-                                                            </Stack>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Stack direction="column" spacing={1}>
-                                                                <Button sx={{
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    "&:hover": {
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                    }
-                                                                }}>Contact Sales
-                                                                </Button>
-
-                                                                <Typography variant="" sx={{ color: "red", fontWeight: "bold", fontSise: "13px" }}>
-                                                                    NOT AVAILABLE
-                                                                </Typography>
-
-                                                            </Stack>
                                                         </TableCell>
                                                     </TableRow>
                                                 </TableBody>
                                             </Table>
                                         </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
-                                                            >
-                                                                DOCUMENTS INCLUDED
-                                                            </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
-                                                            >
-                                                                TEMPLATES
-                                                            </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>5</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
-                                                            >
-                                                                PUBLIC FORMS
-                                                            </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>5</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '20px 20px', borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
-                                                            >
-                                                                Branding
-                                                            </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Cancel color="error" />
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <CheckCircle sx={{ color: "#6ACE0C" }} />
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <CheckCircle sx={{ color: "#6ACE0C" }} />
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <CheckCircle sx={{ color: "#6ACE0C" }} />
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
-                                        <TableContainer
-                                            sx={{
-                                                display: { xs: "block", sm: "none", md: "none" },
-                                                border: '1px solid rgba(224, 224, 224, 1)', // Border around the table
-                                                borderRadius: '5px',
-                                                width: '100%' // Ensures the table takes the full width of the container
-                                            }}
-                                        >
-                                            <Table size="small" sx={{ minWidth: 100 }}>
-                                                <TableHead>
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            colSpan={2}
-                                                            sx={{
-                                                                padding: '20px 8px', // Reduced padding for smaller cells
-                                                                // borderRight: "1px solid rgba(224, 224, 224, 1)",
-                                                                width: '100%' // Control the width of the cell
-                                                            }}
-                                                        >
-                                                            <Typography
-                                                                variant="body1"
-                                                                sx={{
-                                                                    color: "#25B2E8",
-                                                                    fontWeight: "bold",
-                                                                    fontSize: { xs: "20px", md: "20px" } // Reduced font size for better fit
-                                                                }}
-                                                            >
-                                                                CUSTOM WEB ADDRESS
-                                                            </Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Professional
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Cancel color="error" />
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '4px 8px', color: "#4F6169", fontWeight: "bold", borderRight: '1px solid rgba(224, 224, 224, 1)', fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Small Business
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '13px 13px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            Enterprise
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-
-                                                    <TableRow>
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: '13px 13px', borderRight: '1px solid rgba(224, 224, 224, 1)', color: "#4F6169", fontWeight: "bold", fontSize: { xs: "15px", md: "17px" }, width: '50%' }}
-                                                        >
-                                                            On-Prem Hosting
-                                                        </TableCell>
-
-                                                        <TableCell
-                                                            align="center"
-                                                            sx={{ padding: "13px 13px", borderRight: "1px solid rgba(224, 224, 224, 1)" }}
-                                                        >
-                                                            <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSise: "15px" }}>UNLIMITED</Typography>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-
                                     </>
                                 )}
 

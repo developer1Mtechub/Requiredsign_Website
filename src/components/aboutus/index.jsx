@@ -10,6 +10,7 @@ import aboutus_sec2 from "../../Assets/aboutus_sec2.png";
 import { KeyboardArrowRight } from '@mui/icons-material'
 import Map from './map';
 import imageCompression from "browser-image-compression";
+import { try_for_free } from '../../url';
 
 function AboutUs() {
 
@@ -86,13 +87,15 @@ function AboutUs() {
                                         That's where RequireSign comes in.
                                     </Typography>
 
-                                    <Button sx={{
-                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
-                                        "&:hover": {
+                                    <a href={`${try_for_free}`} target='_blank'>
+                                        <Button sx={{
                                             backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
-                                        }
-                                    }}>Try for FREE
-                                    </Button>
+                                            "&:hover": {
+                                                backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
+                                            }
+                                        }}>Try for FREE
+                                        </Button>
+                                    </a>
 
                                 </Stack>
                             </Stack>
@@ -132,7 +135,7 @@ function AboutUs() {
                                 </Grid>
                             </Grid>
                             {/* </Box> */}
-                            <Box component="img" src={aboutus_main} sx={{ display: { xs: "block", md: "block" }, height: {xs:"100%",md:"75%"}, width: { xs: "100%", md: "100%" } }} />
+                            <Box component="img" src={aboutus_main} sx={{ display: { xs: "block", md: "block" }, height: { xs: "100%", md: "75%" }, width: { xs: "100%", md: "100%" } }} />
                             {/* {compressedImage && (
                                 <img src={compressedImage} alt="Compressed" style={{ maxWidth: "100%" }} />
 
