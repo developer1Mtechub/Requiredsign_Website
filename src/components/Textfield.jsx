@@ -91,9 +91,9 @@ function Textfield() {
                     variant="contained"
                     color="primary"
                     sx={{
-                        display: { xs: "block", sm: "block", md: "none" }, alignSelf: "center", backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "40%",
+                        display: { xs: "block", sm: "block", md: "none" }, alignSelf: "center", backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "35%",
                         "&:hover": {
-                            backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "40%",
+                            backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "35%",
                         }
                     }}
                 >
@@ -102,7 +102,7 @@ function Textfield() {
 
                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "14px", md: "20px" }} color="#6E6B7B">
                     By clicking “Get Started” button , you agree to <NavLink to="/terms_&_conditions" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Terms & Conditions</span>.</NavLink> <span style={{ color: "#1662A7" }}> </span> and &nbsp;
-                    <NavLink to="/privacy_&_policy" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Privacy Policy</span>.</NavLink>
+                    <NavLink to="/privacy_&_policy" style={{ textDecoration: "none" }}><span style={{ color: "#1662A7" }}>Privacy Policy</span>.</NavLink>
                 </Typography>
             </Stack>
         </>

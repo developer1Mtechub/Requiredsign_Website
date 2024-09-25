@@ -9,7 +9,7 @@ function Patners() {
 
     return (
         <>
-            <Box id=" " pt={{ xs: 10, sm: 15, md: 20 }} pb={{ xs: 5, md: 10, md: 10 }} sx={{ backgroundColor: "#EAE9E9" }} >
+        <Box id=" " pt={{ xs: 10, sm: 15, md: 20 }} pb={{ xs: 3, md: 10, md: 10 }} sx={{ backgroundColor: "#EAE9E9" }} >
                 <Container
                     maxWidth="lg"
                     sx={{
@@ -25,7 +25,7 @@ function Patners() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "55px", md: "75px" }} color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "40px", md: "75px" }} color="#1662A7">
                                     Partners
                                 </Typography>
                             </Stack>
