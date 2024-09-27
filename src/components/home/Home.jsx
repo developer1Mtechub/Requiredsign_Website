@@ -216,9 +216,9 @@ function Home() {
                                                 variant="contained"
                                                 color="primary"
                                                 sx={{
-                                                    display: { xs: "block", sm: "block", md: "none" }, mt: { xs: 1, sm: 0, md: 0 }, alignSelf: "center", backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "32%",
+                                                    display: { xs: "block", sm: "block", md: "none" }, mt: { xs: 1, sm: 0, md: 0 }, alignSelf: "center", backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "fit-content",
                                                     "&:hover": {
-                                                        backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "32%",
+                                                        backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "fit-content",
                                                     }
                                                 }}
                                             >
