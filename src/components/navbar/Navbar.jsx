@@ -333,7 +333,7 @@ function Navbar() {
 
                                             <div style={{ display: "flex", justifyContent: "center" }}>
                                                 <Stack align="center" spacing={2} direction="row" pt={1.5}>
-                                                    <a href={`${try_for_free}`} onClick={() => setOpen(false)} target='_blank' style={{textDecoration}}>
+                                                    <a href={`${try_for_free}`} onClick={() => setOpen(false)} target='_blank' style={{textDecoration:"none"}}>
                                                         <Button
                                                             sx={{
                                                                 alignSelf: "center",
