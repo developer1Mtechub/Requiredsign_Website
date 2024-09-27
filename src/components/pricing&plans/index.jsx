@@ -33,7 +33,7 @@ function PricingAndPlans() {
             templates: 'UNLIMITED',
             publicForms: 'UNLIMITED',
             branding: true,
-            customWebAddress: 'UNLIMITED'
+            customWebAddress: 'Subdomain'
         },
         {
             plan: 'Enterprise',
@@ -47,7 +47,7 @@ function PricingAndPlans() {
             templates: 'UNLIMITED',
             publicForms: 'UNLIMITED',
             branding: true,
-            customWebAddress: 'UNLIMITED'
+            customWebAddress: 'Your Domain'
         },
         {
             plan: 'On-Prem Hosting',
@@ -62,7 +62,7 @@ function PricingAndPlans() {
             templates: 'UNLIMITED',
             publicForms: 'UNLIMITED',
             branding: true,
-            customWebAddress: 'UNLIMITED'
+            customWebAddress: 'Your Domain'
         }
     ];
 
@@ -92,7 +92,7 @@ function PricingAndPlans() {
             templates: 'UNLIMITED',
             publicForms: 'UNLIMITED',
             branding: true,
-            customWebAddress: 'UNLIMITED'
+            customWebAddress: 'Subdomain'
         },
         {
             plan: 'Enterprise',
@@ -106,7 +106,7 @@ function PricingAndPlans() {
             templates: 'UNLIMITED',
             publicForms: 'UNLIMITED',
             branding: true,
-            customWebAddress: 'UNLIMITED'
+            customWebAddress: 'Your Domain'
         },
         {
             plan: 'On-Prem Hosting',
@@ -121,7 +121,7 @@ function PricingAndPlans() {
             templates: 'UNLIMITED',
             publicForms: 'UNLIMITED',
             branding: true,
-            customWebAddress: 'UNLIMITED'
+            customWebAddress: 'Your Domain'
         }
     ];
 
@@ -200,13 +200,13 @@ function PricingAndPlans() {
                                             backgroundColor: isAnnually ? "#25B2E8" : "transparent",
                                             letterSpacing: "1px",
                                             fontFamily: "Roboto",
-                                            height: "45px",
+                                            height: { xs: "40px", md: "45px" },
                                             borderRadius: "10px",
                                             fontSize: "17px",
                                             fontWeight: "medium",
                                             color: isAnnually ? "white" : "#25B2E8",
                                             textTransform: "capitalize",
-                                            width: "140px",
+                                            width: { xs: "100px", md: "140px" },
                                             border: isAnnually ? "none" : "1px solid #A6A6A6",
                                             "&:hover": {
                                                 backgroundColor: isAnnually ? "#25B2E8" : "transparent",
@@ -224,13 +224,13 @@ function PricingAndPlans() {
                                             backgroundColor: isAnnually ? "transparent" : "#25B2E8",
                                             letterSpacing: "1px",
                                             fontFamily: "Roboto",
-                                            height: "45px",
+                                            height: { xs: "40px", md: "45px" },
                                             borderRadius: "10px",
                                             fontSize: "17px",
                                             fontWeight: "medium",
                                             color: isAnnually ? "#25B2E8" : "white",
                                             textTransform: "capitalize",
-                                            width: "140px",
+                                            width: { xs: "100px", md: "140px" },
                                             border: isAnnually ? "1px solid #A6A6A6" : "none",
                                             "&:hover": {
                                                 backgroundColor: isAnnually ? "transparent" : "#25B2E8",
@@ -769,7 +769,7 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                UNLIMITED
+                                                                Subdomain
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
@@ -964,7 +964,7 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                UNLIMITED
+                                                                Your Domain
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
@@ -1163,7 +1163,7 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                UNLIMITED
+                                                                Your Domain
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
@@ -1720,7 +1720,7 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                UNLIMITED
+                                                                Sub Domain
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
@@ -1917,7 +1917,7 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                UNLIMITED
+                                                                Your Domain
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
@@ -2114,7 +2114,7 @@ function PricingAndPlans() {
                                                                 variant="body1"
                                                                 sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                             >
-                                                                UNLIMITED
+                                                                Your Domain
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
