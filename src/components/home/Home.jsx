@@ -207,7 +207,7 @@ function Home() {
                                                         }
                                                     }}
                                                 >
-                                                    Get Started 
+                                                    Get Started
                                                 </Button>
                                             </Box>
 
@@ -222,7 +222,7 @@ function Home() {
                                                     }
                                                 }}
                                             >
-                                                Get Started 
+                                                Get Started
                                             </Button>
 
                                         </Box>
