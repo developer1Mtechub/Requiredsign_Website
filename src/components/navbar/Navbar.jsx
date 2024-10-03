@@ -130,11 +130,10 @@ function Navbar() {
                                     </div>
                                 </Grid>
 
-
                                 <Grid item md={3} lg={3} align="right">
                                     <div style={{ display: "flex", justifyContent: "flex-end" }}>
                                         <Stack align="right" spacing={2} direction="row" pt={1.5} >
-                                            <a href={`${try_for_free}`} target='_blank'>
+                                            <a href={`${try_for_free}`} target='_blank' style={{ textDecoration: "none" }}>
                                                 <Button onClick={handleDrawerClose} sx={{
                                                     backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
                                                     "&:hover": {
@@ -333,7 +332,7 @@ function Navbar() {
 
                                             <div style={{ display: "flex", justifyContent: "center" }}>
                                                 <Stack align="center" spacing={2} direction="row" pt={1.5}>
-                                                    <a href={`${try_for_free}`} onClick={() => setOpen(false)} target='_blank'>
+                                                    <a href={`${try_for_free}`} onClick={() => setOpen(false)} target='_blank' style={{ textDecoration: "none" }}>
                                                         <Button
                                                             sx={{
                                                                 alignSelf: "center",
