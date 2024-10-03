@@ -21,7 +21,7 @@ function Inputfield() {
         setLoading(true);
         setTimeout(() => {
 
-            const InsertAPIURL = `${API_URL}/website_contact_us/contact_us_website`;
+            const InsertAPIURL = `${API_URL}website_contact_us/contact_us_website`;
             const headers = {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
