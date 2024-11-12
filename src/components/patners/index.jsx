@@ -51,7 +51,15 @@ function Patners() {
 
                         <Grid xs={12} md={12} align="center" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                             <div style={{ display: "flex", justifyContent: "center", alignContent: "center", gap: "70px" }}>
+ 
                                 <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "600px", lg: "650px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
+ 
+ 
+                                <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "690px", lg: "735px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
+ 
+                               <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "690px",lg:"735px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
+ 
+ 
                                     <CardContent>
                                         <Stack spacing={4}>
                                             <Box component="img" src={resellers} sx={{ alignSelf: "center", width: "286px", height: "286px" }} />
@@ -67,7 +75,15 @@ function Patners() {
                                     </CardContent>
                                 </Card>
 
+ 
                                 <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "600px", lg: "650px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
+ 
+ 
+                                <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "690px", lg: "735px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
+ 
+                                    <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "690px",lg:"735px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
+ 
+ 
                                     <CardContent>
                                         <Stack spacing={3.5}>
                                             <Box component="img" src={non_profits} sx={{ alignSelf: "center", width: "332px", height: "286px" }} />
