@@ -25,7 +25,7 @@ function Patners() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "40px", md: "75px" }} color="#1662A7">
+                            <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "40px", md: "70px" }} color="#1662A7">
                                     Partners
                                 </Typography>
                             </Stack>
@@ -51,7 +51,7 @@ function Patners() {
 
                         <Grid xs={12} md={12} align="center" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                             <div style={{ display: "flex", justifyContent: "center", alignContent: "center", gap: "70px" }}>
-                                <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "690px", lg: "735px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
+                                <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "600px", lg: "650px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
                                     <CardContent>
                                         <Stack spacing={4}>
                                             <Box component="img" src={resellers} sx={{ alignSelf: "center", width: "286px", height: "286px" }} />
@@ -60,14 +60,14 @@ function Patners() {
                                                 Resellers
                                             </Typography>
 
-                                            <Typography variant="paragraph" sx={{ width: "90%", alignSelf: "center", fontFamily: "Roboto", lineHeight: "50px" }} fontWeight={400} fontSize={{ xs: "15px", md: "23px" }} color="#6E6B7B">
+                                            <Typography variant="paragraph" sx={{ width: "90%", alignSelf: "center", fontFamily: "Roboto", lineHeight: "40px" }} fontWeight={400} fontSize={{ xs: "15px", md: "18px" }} color="#6E6B7B">
                                                 Our reseller program is one of the most generous in the industry. We enjoy enhancing the value of our partners’ product offerings, saving their clients money and rewarding partners for their introductions.
                                             </Typography>
                                         </Stack>
                                     </CardContent>
                                 </Card>
 
-                                <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "690px", lg: "735px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
+                                <Card sx={{ alignSelf: "center", height: { xs: "auto", md: "600px", lg: "650px" }, width: { xs: "100%", md: "44%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "45px" }}>
                                     <CardContent>
                                         <Stack spacing={3.5}>
                                             <Box component="img" src={non_profits} sx={{ alignSelf: "center", width: "332px", height: "286px" }} />
@@ -76,14 +76,14 @@ function Patners() {
                                                 Non-Profits
                                             </Typography>
 
-                                            <Typography variant="paragraph" sx={{ width: "90%", alignSelf: "center", fontFamily: "Roboto", lineHeight: "50px" }} fontWeight={400} fontSize={{ xs: "15px", md: "23px" }} color="#6E6B7B">
+                                            <Typography variant="paragraph" sx={{ width: "90%", alignSelf: "center", fontFamily: "Roboto", lineHeight: "40px" }} fontWeight={400} fontSize={{ xs: "15px", md: "18px" }} color="#6E6B7B">
                                                 We offer substantial discounts to non-profit organizations and have established partnerships to facilitate regular donations.
 
                                                 <br />
                                                 Choose from a variety of donation options to meet your fundraising goals.</Typography>
 
 
-                                            {/* <Typography variant="paragraph" sx={{ width: "90%", alignSelf: "center", fontFamily: "Roboto", lineHeight: "50px" }} fontWeight={400} fontSize={{ xs: "15px", md: "23px" }} color="#6E6B7B">
+                                            {/* <Typography variant="paragraph" sx={{ width: "90%", alignSelf: "center", fontFamily: "Roboto", lineHeight: "40px" }} fontWeight={400} fontSize={{ xs: "15px", md: "18px" }} color="#6E6B7B">
                                                 Choose from a variety of donation options to meet your fundraising goals.
                                             </Typography> */}
                                         </Stack>

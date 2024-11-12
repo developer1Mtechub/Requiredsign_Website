@@ -48,6 +48,7 @@ function Contactus() {
 
         onSubmit: (values, { resetForm }) => {
             console.log(values);
+
         },
     });
 
@@ -69,7 +70,7 @@ function Contactus() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "50px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "40px", md: "75px" }} color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "40px", md: "70px" }} color="#1662A7">
                                     Contact
                                 </Typography>
                             </Stack>
@@ -94,7 +95,7 @@ function Contactus() {
                     <Grid container spacing={0}>
 
                         <Grid xs={12} md={12} align="center" pb={6}>
-                            <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" } }} fontWeight={450} fontSize={{ xs: "20px", md: "40px" }} color="#25B2E8">
+                            <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "40px" } }} fontWeight={450} fontSize={{ xs: "20px", md: "35px" }} color="#25B2E8">
                                 We are ready to help you sign up or give you support.
                             </Typography>
                         </Grid>
@@ -126,7 +127,7 @@ function Contactus() {
                                                 }}
                                             >
                                                 <CardContent>
-                                                    <Stack pt={1.5} spacing={4}>
+                                                    <Stack pt={1.5} spacing={2}>
                                                         <Stack direction="row" spacing={3}>
                                                             <Inputfield
                                                                 label="First Name*"
@@ -163,7 +164,7 @@ function Contactus() {
                                                             helperText={formik.touched.companyname && formik.errors.companyname}
                                                         />
 
-                                                        <Stack direction="row" spacing={4}>
+                                                        <Stack direction="row" spacing={2}>
                                                             <Inputfield
                                                                 label="Job Title*"
                                                                 name="jobtitle"
@@ -200,13 +201,13 @@ function Contactus() {
                                                             sx={{
                                                                 backgroundColor: "#25B2E8",
                                                                 fontFamily: "Roboto",
-                                                                height: "55px",
+                                                                height: "45px",
                                                                 borderRadius: "10px",
-                                                                fontSize: "20px",
+                                                                fontSize: "18px",
                                                                 color: "white",
                                                                 textTransform: "capitalize",
                                                                 alignSelf: "center",
-                                                                width: "150px",
+                                                                width: "180px",
                                                                 "&:hover": {
                                                                     backgroundColor: "#25B2E8",
                                                                 },
@@ -243,11 +244,11 @@ function Contactus() {
                                             }}
                                         >
                                             <CardContent>
-                                                <Stack spacing={4}>
+                                                <Stack spacing={2}>
                                                     <Box
                                                         component="img"
                                                         src={it_support}
-                                                        sx={{ alignSelf: "center", width: "100%", height: "507px" }}
+                                                        sx={{ alignSelf: "center", width: "100%", height: "448px" }}
                                                     />
                                                     <Typography
                                                         variant="body1"
@@ -264,13 +265,13 @@ function Contactus() {
                                                         sx={{
                                                             backgroundColor: "#25B2E8",
                                                             fontFamily: "Roboto",
-                                                            height: "55px",
+                                                            height: "45px",
                                                             borderRadius: "10px",
-                                                            fontSize: "20px",
+                                                            fontSize: "18px",
                                                             color: "white",
                                                             textTransform: "capitalize",
                                                             alignSelf: "center",
-                                                            width: "200px",
+                                                            width: "180px",
                                                             "&:hover": {
                                                                 backgroundColor: "#25B2E8",
                                                             },
@@ -307,7 +308,7 @@ function Contactus() {
                                         <Card sx={{ mt: 2, width: { xs: "100%", md: "662px" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "20px" }}>
                                             <CardContent>
                                                 <Stack pt={2} pb={2} spacing={4.5}>
-                                                    <Stack direction="column" spacing={4}>
+                                                    <Stack direction="column" spacing={2}>
                                                         <Inputfield
                                                             label="First Name*"
                                                             name="firstname"
@@ -345,7 +346,7 @@ function Contactus() {
                                                         helperText={formik.touched.companyname && formik.errors.companyname}
                                                     />
 
-                                                    <Stack direction="column" spacing={4}>
+                                                    <Stack direction="column" spacing={2}>
                                                         <Inputfield
                                                             label="Job Title*"
                                                             name="jobtitle"
@@ -376,13 +377,13 @@ function Contactus() {
                                                         helperText={formik.touched.comments && formik.errors.comments}
                                                     />
 
-                                                    <Button type="submit" sx={{
-                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                    {/* <Button type="submit" sx={{
+                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "35px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "120px",
                                                         "&:hover": {
-                                                            backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "40px", borderRadius: "10px", fontSize: "215px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                            backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "35px", borderRadius: "10px", fontSize: "215px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "120px",
                                                         }
                                                     }}>Submit
-                                                    </Button>
+                                                    </Button> */}
 
                                                 </Stack>
                                             </CardContent>
@@ -405,7 +406,7 @@ function Contactus() {
 
                                     <Card sx={{ mt: 2, width: { xs: "100%", md: "662px" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.1)", borderRadius: "20px" }}>
                                         <CardContent>
-                                            <Stack spacing={4}>
+                                            <Stack spacing={2}>
                                                 <Box component="img" src={it_support} sx={{ alignSelf: "center", width: "100%", height: "260px" }} />
                                                 <Typography
                                                     variant="body1"

@@ -82,7 +82,7 @@ function DataCenters() {
 
                         <Grid xs={12} md={12}  >
                             <Stack direction="column" pt={4} pb={4} spacing={2}>
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight={900} fontSize="55px" color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight={800} fontSize="50px" color="#1662A7">
                                     Our Data Center's
                                 </Typography>
                             </Stack>
@@ -91,13 +91,13 @@ function DataCenters() {
                         <Grid xs={12} md={12} pt={2} align="center" sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
                             <div style={{ display: "flex", justifyContent: "center", alignContent: "center", alignItems: "center", gap: "100px" }}>
                                 {/* <Stack align="center" direction="row" spacing={10}> */}
-                                <Box component="img" src={data_center_1} sx={{ alignSelf: "center", width: { xs: "70%", md: "10%" } }} />
+                                <Box component="img" src={data_center_1} sx={{ alignSelf: "center", width: { xs: "70%", md: "18%" } }} />
 
-                                <Box component="img" src={data_center_2} sx={{ alignSelf: "center", width: { xs: "70%", md: "10%" } }} />
+                                <Box component="img" src={data_center_2} sx={{ alignSelf: "center", width: { xs: "70%", md: "18%" } }} />
 
-                                <Box component="img" src={data_center_3} sx={{ alignSelf: "center", width: { xs: "70%", md: "10%" } }} />
+                                <Box component="img" src={data_center_3} sx={{ alignSelf: "center", width: { xs: "70%", md: "18%" } }} />
 
-                                <Box component="img" src={data_center_4} sx={{ alignSelf: "center", width: { xs: "70%", md: "10%" } }} />
+                                <Box component="img" src={data_center_4} sx={{ alignSelf: "center", width: { xs: "70%", md: "18%" } }} />
 
                                 {/* </Stack> */}
                             </div>
@@ -123,8 +123,8 @@ function DataCenters() {
 
                         <Grid xs={12} md={12} pt={7} pb={7} align="center">
                             <Box sx={{ width: { xs: "100%", md: "100%" }, }}>
-                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "40px", md: "60px" } }} fontWeight="bold" fontSize={{ xs: "20px", md: "36px" }} color="#6E6B7B">
-                                    RequireSign adheres to <br /><span style={{ fontWeight: 900, color: "#1662A7", textTransform: "capitalize" }}>GLOBAL COMPLIANCE STANDARDS</span> for <span style={{ fontWeight: 900, color: "#1662A7", textTransform: "capitalize" }}>PRIVACY OF SENSITIVE INFORMATION</span>
+                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "40px", md: "50px" } }} fontWeight="bold" fontSize={{ xs: "20px", md: "30px" }} color="#6E6B7B">
+                                    RequireSign adheres to<br /> <span style={{ fontWeight: 900, color: "#1662A7", textTransform: "capitalize" }}>GLOBAL COMPLIANCE STANDARDS</span> for <span style={{ fontWeight: 900, color: "#1662A7", textTransform: "capitalize" }}>PRIVACY OF SENSITIVE INFORMATION</span>
                                 </Typography>
                             </Box>
                         </Grid>

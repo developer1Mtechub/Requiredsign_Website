@@ -84,45 +84,60 @@ function Navbar() {
                                         <Stack
                                             align="center"
                                             direction="row"
-                                            spacing={{ md: 1.5, lg: 1.5 }}
+                                            spacing={{
+                                                md: 1.5, lg: .7
+                                            }}
                                             fontFamily="Roboto"
                                             sx={{
-                                                pt: 3,
+                                                pt: 3.5,
                                                 color: "white",
-                                                fontSize: "16.5px",
+                                                fontSize: "14px",
                                                 letterSpacing: "1px",
                                                 fontWeight: "medium",
                                                 cursor: "pointer",
                                             }}
                                         >
                                             {["Home", "About", "Features", "Security & Compliance", "Pricing Plans", "Partners", "Contact"].map(
-                                                (text, index) => {
+                                                (text, index, array) => {
                                                     const paths = ["/", "/aboutus", "/features", "/security_and_compliance", "/pricing_and_plans", "/patners", "/contact"];
                                                     return (
-                                                        <NavLink
-                                                            key={index}
-                                                            to={paths[index]}
-                                                            exact={index === 0}
-                                                            style={({ isActive }) => ({
-                                                                textDecoration: "none",
-                                                                color: isActive ? "#1662A7" : "#6E6B7B",
-                                                                height: "25px",
-                                                                borderBottom: isActive ? "1px solid #1662A7" : "none",
-                                                                transition: "color 0.3s ease, borderBottom 0.3s ease",
-                                                            })}
-                                                        >
-                                                            <Typography
-                                                                variant="paragraph"
-                                                                sx={{
-                                                                    ":hover": {
-                                                                        color: "#1662A7", // Hover effect
-                                                                        // borderBottom: "1px solid #1662A7", // Hover underline effect
-                                                                    },
-                                                                }}
+                                                        <React.Fragment key={index}>
+                                                            <NavLink
+                                                                to={paths[index]}
+                                                                exact={index === 0}
+                                                                style={({ isActive }) => ({
+                                                                    textDecoration: "none",
+                                                                    color: isActive ? "#1662A7" : "#6E6B7B",
+                                                                    height: "18px",
+                                                                    borderBottom: isActive ? "1px solid #1662A7" : "none",
+                                                                    transition: "color 0.3s ease, borderBottom 0.3s ease",
+                                                                })}
                                                             >
-                                                                {text}
-                                                            </Typography>
-                                                        </NavLink>
+                                                                <Typography
+                                                                    variant="paragraph"
+                                                                    sx={{
+                                                                        ":hover": {
+                                                                            color: "#1662A7",
+                                                                        },
+                                                                    }}
+                                                                >
+                                                                    {text}
+                                                                </Typography>
+                                                            </NavLink>
+                                                            {/* Add separator after each item except the last one */}
+                                                            {index < array.length - 1 && (
+                                                                <Typography
+                                                                    variant="paragraph"
+                                                                    sx={{
+                                                                        color: "#6E6B7B", // Style for the separator
+                                                                        // mx: 1,           // Horizontal margin for spacing
+                                                                        fontWeight: "medium",
+                                                                    }}
+                                                                >
+                                                                    |
+                                                                </Typography>
+                                                            )}
+                                                        </React.Fragment>
                                                     );
                                                 }
                                             )}
@@ -135,9 +150,9 @@ function Navbar() {
                                         <Stack align="right" spacing={2} direction="row" pt={1.5} >
                                             <a href={`${try_for_free}`} target='_blank' style={{ textDecoration: "none" }}>
                                                 <Button onClick={handleDrawerClose} sx={{
-                                                    backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
+                                                    backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "130px",
                                                     "&:hover": {
-                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
+                                                        backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "130px",
                                                     }
                                                 }}>Try for FREE
                                                 </Button>
@@ -145,9 +160,9 @@ function Navbar() {
 
                                             <a href={`${login}`} target='_blank'>
                                                 <Button onClick={handleDrawerClose} sx={{
-                                                    backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
+                                                    backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "130px",
                                                     "&:hover": {
-                                                        backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "16px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "135px",
+                                                        backgroundColor: "#1662A7", fontFamily: "Roboto", height: "45px", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", alignSelf: "center", width: "130px",
                                                     }
                                                 }}>Login
                                                 </Button>

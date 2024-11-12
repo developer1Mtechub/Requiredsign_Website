@@ -41,14 +41,14 @@ function Cards() {
                                         <Box
                                             component="img"
                                             src={budget_concious}
-                                            sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                           sx={{ alignSelf: "center", width: 100, height: 100 }}
                                         />
                                         <Typography
                                             className="hover-text"
                                             sx={{
                                                 fontFamily: "Roboto",
-                                                fontWeight: "bold",
-                                                fontSize: { xs: "20px", md: "25px" },
+                                                fontWeight: "medium",
+                                                fontSize: { xs: "20px", md: "20px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -83,14 +83,14 @@ function Cards() {
                                         <Box
                                             component="img"
                                             src={full_features}
-                                            sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                           sx={{ alignSelf: "center", width: 100, height: 100 }}
                                         />
                                         <Typography
                                             className="hover-text"
                                             sx={{
                                                 fontFamily: "Roboto",
-                                                fontWeight: "bold",
-                                                fontSize: { xs: "20px", md: "25px" },
+                                                fontWeight: "medium",
+                                                fontSize: { xs: "20px", md: "20px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -125,14 +125,14 @@ function Cards() {
                                         <Box
                                             component="img"
                                             src={legally_binding}
-                                            sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                           sx={{ alignSelf: "center", width: 100, height: 100 }}
                                         />
                                         <Typography
                                             className="hover-text"
                                             sx={{
                                                 fontFamily: "Roboto",
-                                                fontWeight: "bold",
-                                                fontSize: { xs: "20px", md: "25px" },
+                                                fontWeight: "medium",
+                                                fontSize: { xs: "20px", md: "20px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -167,14 +167,14 @@ function Cards() {
                                         <Box
                                             component="img"
                                             src={encruption}
-                                            sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                           sx={{ alignSelf: "center", width: 100, height: 100 }}
                                         />
                                         <Typography
                                             className="hover-text"
                                             sx={{
                                                 fontFamily: "Roboto",
-                                                fontWeight: "bold",
-                                                fontSize: { xs: "20px", md: "25px" },
+                                                fontWeight: "medium",
+                                                fontSize: { xs: "20px", md: "20px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -210,14 +210,14 @@ function Cards() {
                                         <Box
                                             component="img"
                                             src={planet_friendly}
-                                            sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                           sx={{ alignSelf: "center", width: 100, height: 100 }}
                                         />
                                         <Typography
                                             className="hover-text"
                                             sx={{
                                                 fontFamily: "Roboto",
-                                                fontWeight: "bold",
-                                                fontSize: { xs: "20px", md: "25px" },
+                                                fontWeight: "medium",
+                                                fontSize: { xs: "20px", md: "20px" },
                                                 color: "#1662A7",
                                                 transition: "color 0.3s ease, text-align 0.3s ease",
                                                 textAlign: "center", // Default text alignment
@@ -235,7 +235,7 @@ function Cards() {
 
                     {/* small screen */}
 
-                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
+                    <Grid xs={12} md={2.4} p={1} >
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -259,14 +259,14 @@ function Cards() {
                                     <Box
                                         component="img"
                                         src={budget_concious}
-                                        sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                       sx={{ alignSelf: "center", width: 100, height: 100 }}
                                     />
                                     <Typography
                                         className="hover-text"
                                         sx={{
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
-                                            fontSize: { xs: "20px", md: "25px" },
+                                            fontWeight: "medium",
+                                            fontSize: { xs: "20px", md: "20px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -279,7 +279,7 @@ function Cards() {
                         </Card>
                     </Grid>
 
-                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
+                    <Grid xs={12} md={2.4} p={1} >
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -303,14 +303,14 @@ function Cards() {
                                     <Box
                                         component="img"
                                         src={full_features}
-                                        sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                       sx={{ alignSelf: "center", width: 100, height: 100 }}
                                     />
                                     <Typography
                                         className="hover-text"
                                         sx={{
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
-                                            fontSize: { xs: "20px", md: "25px" },
+                                            fontWeight: "medium",
+                                            fontSize: { xs: "20px", md: "20px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -323,7 +323,7 @@ function Cards() {
                         </Card>
                     </Grid>
 
-                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
+                    <Grid xs={12} md={2.4} p={1} >
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -347,14 +347,14 @@ function Cards() {
                                     <Box
                                         component="img"
                                         src={legally_binding}
-                                        sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                       sx={{ alignSelf: "center", width: 100, height: 100 }}
                                     />
                                     <Typography
                                         className="hover-text"
                                         sx={{
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
-                                            fontSize: { xs: "20px", md: "25px" },
+                                            fontWeight: "medium",
+                                            fontSize: { xs: "20px", md: "20px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -367,7 +367,7 @@ function Cards() {
                         </Card>
                     </Grid>
 
-                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
+                    <Grid xs={12} md={2.4} p={1} >
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -391,28 +391,28 @@ function Cards() {
                                     <Box
                                         component="img"
                                         src={encruption}
-                                        sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                       sx={{ alignSelf: "center", width: 100, height: 100 }}
                                     />
                                     <Typography
                                         className="hover-text"
                                         sx={{
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
-                                            fontSize: { xs: "20px", md: "25px" },
+                                            fontWeight: "medium",
+                                            fontSize: { xs: "20px", md: "20px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
                                         }}
                                     >
-                                        Secured <br /> by
-                                        Encrption
+                                        Secured <br/> by
+                                        Encryption 
                                     </Typography>
                                 </Stack>
                             </CardContent>
                         </Card>
                     </Grid>
 
-                    <Grid xs={12} md={2.4} p={1.5} sx={{ display: { xs: "block", md: "block" } }}>
+                    <Grid xs={12} md={2.4} p={1} >
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -436,14 +436,14 @@ function Cards() {
                                     <Box
                                         component="img"
                                         src={planet_friendly}
-                                        sx={{ alignSelf: "center", width: 120, height: 120 }}
+                                       sx={{ alignSelf: "center", width: 100, height: 100 }}
                                     />
                                     <Typography
                                         className="hover-text"
                                         sx={{
                                             fontFamily: "Roboto",
-                                            fontWeight: "bold",
-                                            fontSize: { xs: "20px", md: "25px" },
+                                            fontWeight: "medium",
+                                            fontSize: { xs: "20px", md: "20px" },
                                             color: "#1662A7",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment

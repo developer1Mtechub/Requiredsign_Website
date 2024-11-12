@@ -28,7 +28,7 @@ function Features() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "40px", md: "75px" }} color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "40px", md: "70px" }} color="#1662A7">
                                     Features
                                 </Typography>
                             </Stack>
@@ -53,47 +53,78 @@ function Features() {
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center">
-                            <Typography variant="paragraph" sx={{ width: { mxs: "100%", md: "90%" }, fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "50px" }} color="#1662A7">
+                            <Typography variant="paragraph" sx={{ width: { mxs: "100%", md: "90%" }, fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "40px" }} color="#1662A7">
                                 Rebranding & White Labeling
                             </Typography>
                         </Grid>
 
-                        <Grid xs={12} md={6}>
-                            <Box component="img" src={rebranding_and_white_labling} sx={{ pt: 5, alignSelf: "start", width: "100%" }} />
-                        </Grid>
+                        <Grid container alignItems="center" justifyContent="center">
+                            <Grid xs={12} md={6}>
+                                <Box
+                                    component="img"
+                                    src={rebranding_and_white_labling}
+                                    sx={{
+                                        pt: 5,
+                                        width: "95%",
+                                        display: "block",
+                                        margin: "0 auto", // Centers the image horizontally within its grid
+                                    }}
+                                />
+                            </Grid>
 
-                        <Grid xs={12} md={6} align="left">
-                            <div style={{ dispaly: "flex", justifyContent: "start", alignContent: "start", alignItems: "start" }}>
-                                <Stack pt={{ xs: 5, md: 10 }} pl={{ xs: 0, md: 10 }}>
+                            <Grid xs={12} md={6} container alignItems="center" justifyContent="center">
+                                <Stack
+                                    width={{ xs: "100%", md: "75%" }}
+                                    pt={{ xs: 5, md: 10 }}
+                                    pl={{ xs: 0, md: 10 }}
+                                    sx={{ textAlign: "center" }} // Centers text content inside the Stack
+                                >
                                     <Typography
-                                        variant="paragraph"
-                                        sx={{ width: { xs: "100%", md: "100%" }, fontFamily: "Roboto", lineHeight: { xs: "35px", md: "44px" } }}
+                                        align='left'
+                                        variant="body1"
+                                        sx={{
+                                            alignSelf: "center",
+                                            width: { xs: "100%", md: "100%" },
+                                            fontFamily: "Roboto",
+                                            lineHeight: "35px",
+                                        }}
                                         fontWeight="medium"
-                                        fontSize={{ xs: "15px", md: "24px" }}
+                                        fontSize={{ xs: "15px", md: "17px" }}
                                         color="#6E6B7B"
                                     >
                                         Tailor your experience with our Rebranding & White Labeling features. Professional and Team plans offer logo customization, while Enterprise and On-Prem take it to the next level with custom domain names.
                                         <br />
-                                        <Stack sx={{ pt: 1, pb: 1 }}>Elevate your brand's professional image today!</Stack>
-
+                                        <Stack sx={{ pt: 0.5, pb: 0.5 }}>Elevate your brand's professional image today!</Stack>
                                         Example of custom domain:
                                         <br />
                                         esign.YourCompany.com
                                     </Typography>
 
-                                    <a href={`${try_for_free}`} target='_blank' style={{ textDecoration: "none" }}>
-                                        <div style={{ marginTop: "15px" }}>
-                                            <Button sx={{
-                                                backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
+                                    <a href={try_for_free} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "start", justifyContent: "start", textDecoration: "none" }}>
+                                        <Button
+
+                                            sx={{
+                                                mt: 2,
+                                                alignSelf: "center",
+                                                backgroundColor: "#25B2E8",
+                                                fontFamily: "Roboto",
+                                                height: "40px",
+                                                fontWeight: "bold",
+                                                borderRadius: "10px",
+                                                fontSize: { xs: "14px", md: "16px" },
+                                                color: "white",
+                                                textTransform: "capitalize",
+                                                width: { xs: "130px", md: "150px" },
                                                 "&:hover": {
-                                                    backgroundColor: "#25B2E8", fontFamily: "Roboto", height: "45px", fontWeight: "bold", borderRadius: "10px", fontSize: { xs: "14px", md: "20px" }, color: "white", textTransform: "capitalize", width: { xs: "130px", md: "170px" },
-                                                }
-                                            }}>Try for FREE
-                                            </Button>
-                                        </div>
+                                                    backgroundColor: "#25B2E8",
+                                                },
+                                            }}
+                                        >
+                                            Try for FREE
+                                        </Button>
                                     </a>
                                 </Stack>
-                            </div>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Container>

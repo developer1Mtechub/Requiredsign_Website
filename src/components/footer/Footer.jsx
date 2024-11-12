@@ -25,104 +25,104 @@ function Footer() {
             >
                 <Box pt={5} pb={5}>
                     <Grid container spacing={0}>
-                        <Grid xs={12} sm={12} md={2.4} align="left" >
+                        <Grid xs={12} sm={12} md={3} align="left" >
                             <Box component="img" src={logo} sx={{ pt: 0.5, width: 170, height: 40 }} />
                         </Grid>
 
-                        <Grid xs={12} sm={3} md={2.4} pt={{ xs: 3, md: 0 }} align="left" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
+                        <Grid xs={12} sm={3} md={3} pt={{ xs: 3, md: 0 }} align="left" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                             <Stack direction="row" spacing={{ xs: 10, md: 20 }}>
-                                <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
-                                    <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
+                                <Stack direction="column" spacing={{ xs: 1, md: 1 }}>
+                                    <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "18px" }} color="#1662A7">
                                         QUICK LINKS
                                     </Typography>
 
-                                    <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Home</Typography>
+                                    <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Home</Typography>
                                     </NavLink>
 
-                                    <NavLink to="/aboutus" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >About</Typography>
+                                    <NavLink to="/aboutus" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >About</Typography>
                                     </NavLink>
 
-                                    <NavLink to="/features" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Features</Typography>
+                                    <NavLink to="/features" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Features</Typography>
                                     </NavLink>
 
-                                    <NavLink to="/patners" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Patners</Typography>
+                                    <NavLink to="/patners" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Partners</Typography>
                                     </NavLink>
                                 </Stack>
                             </Stack>
                         </Grid>
 
                         {/* small screen */}
-                        <Grid xs={12} sm={3} md={2.4} pt={{ xs: 3, md: 0 }} align="center" sx={{ display: { xs: "block", sm: "none", md: "none" } }}>
+                        <Grid xs={12} sm={3} md={3} pt={{ xs: 3, md: 0 }} align="center" sx={{ display: { xs: "block", sm: "none", md: "none" } }}>
                             <div style={{ display: "flex", justifyContent: "center", alignContent: "center" }}>
                                 <Stack pl={3} direction="row" spacing={{ xs: 10, md: 20 }}>
-                                    <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
-                                        <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
+                                    <Stack direction="column" spacing={{ xs: 1, md: 1 }}>
+                                        <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "17px" }} color="#1662A7">
                                             QUICK LINKS
                                         </Typography>
 
-                                        <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                            <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Home</Typography>
+                                        <NavLink to="/" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                            <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Home</Typography>
                                         </NavLink>
 
-                                        <NavLink to="/aboutus" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                            <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >About</Typography>
+                                        <NavLink to="/aboutus" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                            <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >About</Typography>
                                         </NavLink>
 
-                                        <NavLink to="/features" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                            <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Features</Typography>
+                                        <NavLink to="/features" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                            <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Features</Typography>
                                         </NavLink>
 
-                                        <NavLink to="/patners" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                            <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Patners</Typography>
+                                        <NavLink to="/patners" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                            <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Partners</Typography>
                                         </NavLink>
 
                                         <Box pt={3}>
-                                            <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
-                                                <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
+                                            <Stack direction="column" spacing={{ xs: 1, md: 1 }}>
+                                                <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "17px" }} color="#1662A7">
                                                     OTHER
                                                 </Typography>
 
-                                                <NavLink to="/security_and_compliance" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Security & Compliance</Typography>
+                                                <NavLink to="/security_and_compliance" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Security & Compliance</Typography>
                                                 </NavLink>
 
-                                                <NavLink to="/pricing_and_plans" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Pricing Plans</Typography>
+                                                <NavLink to="/pricing_and_plans" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Pricing Plans</Typography>
                                                 </NavLink>
 
-                                                <NavLink to="/privacy_&_policy" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Privacy & Policy</Typography>
+                                                <NavLink to="/privacy_&_policy" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Privacy & Policy</Typography>
                                                 </NavLink>
 
-                                                <NavLink to="/terms_&_conditions" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Terms & Conditions</Typography>
+                                                <NavLink to="/terms_&_conditions" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Terms & Conditions</Typography>
                                                 </NavLink>
                                             </Stack>
                                         </Box>
 
                                         <Box pt={3}>
-                                            <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
-                                                <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
+                                            <Stack direction="column" spacing={{ xs: 1, md: 1 }}>
+                                                <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "17px" }} color="#1662A7">
                                                     CONTACT US
                                                 </Typography>
 
-                                                <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Contact Sales</Typography>
+                                                <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Contact Sales</Typography>
                                                 </NavLink>
 
-                                                <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Contact Support</Typography>
+                                                <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Contact Support</Typography>
                                                 </NavLink>
                                             </Stack>
                                         </Box>
 
-                                        <Box pt={3}>
-                                            <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
-                                                <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
+                                        {/* <Box pt={3}>
+                                            <Stack direction="column" spacing={{ xs: 1, md: 1 }}>
+                                                <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "17px" }} color="#1662A7">
                                                     SOCIAL
                                                 </Typography>
 
@@ -135,62 +135,62 @@ function Footer() {
                                                 </div>
 
                                             </Stack>
-                                        </Box>
+                                        </Box> */}
 
                                     </Stack>
                                 </Stack>
                             </div>
                         </Grid>
 
-                        <Grid xs={12} sm={3.5} md={2.4} pt={{ xs: 3, md: 0 }} align="left" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
+                        <Grid xs={12} sm={3.5} md={3} pt={{ xs: 3, md: 0 }} align="left" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                             <Stack direction="row" spacing={{ xs: 10, md: 20 }}>
-                                <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
-                                    <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
+                                <Stack direction="column" spacing={{ xs: 1, md: 1 }}>
+                                    <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "17px" }} color="#1662A7">
                                         OTHER
                                     </Typography>
 
-                                    <NavLink to="/security_and_compliance" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Security & Compliance</Typography>
+                                    <NavLink to="/security_and_compliance" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Security & Compliance</Typography>
                                     </NavLink>
 
-                                    <NavLink to="/pricing_and_plans" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Pricing Plans</Typography>
+                                    <NavLink to="/pricing_and_plans" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Pricing Plans</Typography>
                                     </NavLink>
 
-                                    <NavLink to="/privacy_&_policy" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Privacy & Policy</Typography>
+                                    <NavLink to="/privacy_&_policy" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Privacy & Policy</Typography>
                                     </NavLink>
 
-                                    <NavLink to="/terms_&_conditions" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Terms & Conditions</Typography>
+                                    <NavLink to="/terms_&_conditions" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Terms & Conditions</Typography>
                                     </NavLink>
 
                                 </Stack>
                             </Stack>
                         </Grid>
 
-                        <Grid xs={12} sm={2.5} md={2.4} pt={{ xs: 3, md: 0 }} align="left" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
+                        <Grid xs={12} sm={2.5} md={3} pt={{ xs: 3, md: 0 }} align="left" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                             <Stack direction="row" spacing={{ xs: 10, md: 20 }}>
-                                <Stack direction="column" spacing={{ xs: 1, md: 2 }}>
-                                    <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
+                                <Stack direction="column" spacing={{ xs: 1, md: 1 }}>
+                                    <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "17px" }} color="#1662A7">
                                         CONTACT US
                                     </Typography>
 
-                                    <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Contact Sales</Typography>
+                                    <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Contact Sales</Typography>
                                     </NavLink>
 
-                                    <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: 'none', color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "16px" }} >Contact Support</Typography>
+                                    <NavLink to="/contact" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Contact Support</Typography>
                                     </NavLink>
                                 </Stack>
                             </Stack>
                         </Grid>
 
-                        <Grid xs={12} sm={3} md={2.4} pt={{ xs: 3, md: 0 }} align="left" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
+                        {/* <Grid xs={12} sm={3} md={2.4} pt={{ xs: 3, md: 0 }} align="left" sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                             <Stack direction="row" spacing={{ xs: 10, md: 20 }}>
                                 <Stack direction="column" spacing={2}>
-                                    <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "20px" }} color="#1662A7">
+                                    <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto" }} fontWeight={500} fontSize={{ xs: "15px", md: "17px" }} color="#1662A7">
                                         SOCIAL
                                     </Typography>
 
@@ -201,7 +201,7 @@ function Footer() {
                                     </Stack>
                                 </Stack>
                             </Stack>
-                        </Grid>
+                        </Grid> */}
 
                         <Grid xs={12} md={12} pt={5} align="left">
                             <Box pr={{ xs: 5, md: 11 }}>
@@ -210,7 +210,7 @@ function Footer() {
                         </Grid>
 
                         <Grid xs={12} md={12} pt={2} align="center">
-                            <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={400} fontSize={{ xs: "14px", md: "17px" }} color="#6E6B7B">
+                            <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={400} fontSize={{ xs: "14px", md: "15px" }} color="#6E6B7B">
                                 © 2024 RequireSign | All Rights Reserved
                             </Typography>
                         </Grid>

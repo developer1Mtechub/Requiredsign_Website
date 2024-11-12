@@ -51,7 +51,7 @@ function Functions() {
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center" pb={5}>
-                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "55px" }} color="#1662A7">
+                            <Typography variant="paragraph" sx={{ width: "90%", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "40px" }} color="#1662A7">
                                 Functions
                             </Typography>
                         </Grid>
@@ -78,7 +78,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -112,7 +112,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -146,7 +146,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -180,7 +180,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -214,7 +214,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -248,7 +248,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -282,7 +282,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -316,7 +316,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -350,7 +350,7 @@ function Functions() {
                                             pt: 0.5,
                                             fontFamily: "Roboto",
                                             fontWeight: "medium",
-                                            fontSize: { xs: "14px", md: "28px" },
+                                            fontSize: { xs: "14px", md: "20px" },
                                             color: "#6E6B7B",
                                             transition: "color 0.3s ease, text-align 0.3s ease",
                                             textAlign: "center", // Default text alignment
@@ -379,27 +379,54 @@ function Functions() {
                             <Box component="img" src={coming_soon} sx={{ width: { xs: "100%", md: "80%" } }} />
                         </Grid>
 
-                        <Grid xs={12} md={6} pt={{ xs: 2, md: 11 }} align=" ">
-                            <div style={{ display: "flex", justifyContent: "center", alignContent: "center" }}>
-                                <Box sx={{ width: { xs: "100%", md: "90%" }, }}>
-                                    <Stack direction="column" spacing={{ xs: 1, md: 4 }} pt={0}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "32px", md: "52px" } }} fontWeight="normal" fontSize={{ xs: "15px", md: "32px" }} color="#6E6B7B">
-                                            For <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>DEVELOPERS</span> and <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>COMPANIES</span> requiring e-signatures embedded on company web pages or other advanced functions to enhance your workflow,
-                                        </Typography>
+                        <Grid xs={12} md={6} pt={{ xs: 2, md: 5 }} container justifyContent="center" alignItems="center">
+                            <Box sx={{ width: { xs: "100%", md: "90%" } }}>
+                                <Stack direction="column" spacing={{ xs: 1, md: 4 }} pt={0} alignItems="center">
+                                    <Typography
+                                    align='left'
+                                        variant="body1"
+                                        sx={{
+                                            fontFamily: "Roboto",
+                                            lineHeight: { xs: "32px", md: "40px" },
+                                            textAlign: "left",
+                                        }}
+                                        fontWeight="normal"
+                                        fontSize={{ xs: "15px", md: "25px" }}
+                                        color="#6E6B7B"
+                                    >
+                                        For <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>DEVELOPERS</span> and{" "}
+                                        <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>COMPANIES</span> requiring
+                                        e-signatures embedded on company web pages or other advanced functions to enhance your workflow,
+                                    </Typography>
 
-                                        <Stack direction="row" spacing={2}>
-                                            <Avatar variant="square" src={secure} sx={{ pt: { xs: 2, md: 0.5 }, width: { xs: 20, md: 30 }, height: { xs: 25, md: 37 } }} />
-                                            <div>
-                                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "50px" }} fontWeight="normal" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">
-                                                    we will be ready by
-                                                    &nbsp;<span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>JANUARY 2025.</span>
-                                                </Typography>
-                                            </div>
-                                        </Stack>
+                                    <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
+                                        <Avatar
+                                            variant="square"
+                                            src={secure}
+                                            sx={{
+                                                width: { xs: 20, md: 30 },
+                                                height: { xs: 25, md: 37 },
+                                            }}
+                                        />
+                                        <Typography
+                                            variant="body1"
+                                            sx={{
+                                                fontFamily: "Roboto",
+                                                lineHeight: "40px",
+                                                textAlign: "center",
+                                            }}
+                                            fontWeight="normal"
+                                            fontSize={{ xs: "15px", md: "25px" }}
+                                            color="#6E6B7B"
+                                        >
+                                            we will be ready by&nbsp;
+                                            <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>JANUARY 2025.</span>
+                                        </Typography>
                                     </Stack>
-                                </Box>
-                            </div>
+                                </Stack>
+                            </Box>
                         </Grid>
+
 
                         {/* textfield */}
                         <Grid item xs={12} sm={12} md={12} lg={12} pt={6} pb={6} align="center" >

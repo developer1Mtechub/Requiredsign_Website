@@ -4,8 +4,12 @@ import "../../styles/Home.css"
 import rebranding_and_white_labling from "../../Assets/rebranding_and_white_labling.png";
 import { Cancel, CheckCircle } from '@mui/icons-material';
 import Textfield from '../Textfield';
+import { login } from '../../url';
+import { useNavigate } from 'react-router-dom';
 
 function PricingAndPlans() {
+
+    const navigate = useNavigate();
 
     const pricingData = [
         {
@@ -132,6 +136,14 @@ function PricingAndPlans() {
         setIsAnnually(view === 'annually');
     };
 
+    const handleButtonClick = (item) => {
+        if (item.buttonLabel === 'Get Started') {
+            window.open(`${login}`, '_blank');
+        } else if (item.buttonLabel === 'Contact Sales') {
+            navigate('/contact');  // Replace with your route for "Contact Sales"
+        }
+    };
+
     return (
         <>
             <Box id=" " pt={{ xs: 10, sm: 15, md: 20 }} pb={{ xs: 3, md: 10, md: 10 }} sx={{ backgroundColor: "#EAE9E9" }} >
@@ -150,7 +162,7 @@ function PricingAndPlans() {
                     <Grid container spacing={0}>
                         <Grid xs={12} md={12}>
                             <Stack direction="column" >
-                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "50px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "40px", md: "75px" }} color="#1662A7">
+                                <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight="bold" fontSize={{ xs: "40px", md: "70px" }} color="#1662A7">
                                     Pricing Plans
                                 </Typography>
                             </Stack>
@@ -176,17 +188,18 @@ function PricingAndPlans() {
 
                         <Grid xs={12} align="center">
                             <Stack spacing={4}>
-                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" }, textTransform: "uppercase" }} fontWeight={900} fontSize={{ xs: "15px", md: "28px" }} color="#1662A7">
-                                    <span style={{ fontSize: "40px" }}>UNLIMITED</span> document volume with simple and affordable pricing.
+                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "45px" }, textTransform: "uppercase" }} fontWeight={600} fontSize={{ xs: "15px", md: "28px" }} color="#1662A7">
+                                    {/* <span style={{ fontSize: "40px" }}>UNLIMITED</span> */}
+                                    UNLIMITED document volume <span style={{ color: "#6E6B7B" }}>with</span> <span style={{ color: "#25B2E8" }}> simple and affordable pricing. </span>
                                 </Typography>
 
                                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="bold" fontSize={{ xs: "15px", md: "35px" }} color="#25B2E8">
-                                    You WIN with RequireSign.
+                                    <span style={{ color: "#6E6B7B" }}>You</span> WIN <span style={{ color: "#6E6B7B" }}>with</span> RequireSign.
                                 </Typography>
 
                                 <Box sx={{ alignSelf: "center", width: { xs: "100%", md: "50%" }, backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", boxShadow: "none", borderRadius: "10px" }}>
                                     <Stack p={2}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="normal" fontSize={{ xs: "15px", md: "23px" }} color="#6E6B7B">
+                                        <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="normal" fontSize={{ xs: "15px", md: "18px" }} color="#6E6B7B">
                                             NOTE: API services will be available by January 2025
                                         </Typography>
                                     </Stack>
@@ -1245,12 +1258,25 @@ function PricingAndPlans() {
                                                                         :
                                                                         <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.price}</Typography>
                                                                     }
-                                                                    <Button sx={{
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "15px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                                    {/* <a href={`${login}`} target='_blank'>
+                                                                <Button
+                                                                    sx={{
+                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
                                                                         "&:hover": {
-                                                                            backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "15px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                                            backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
                                                                         }
-                                                                    }}>{item.buttonLabel}
+                                                                    }}>Get Started
+                                                                </Button>
+                                                            </a> */}
+                                                                    <Button
+                                                                        onClick={() => handleButtonClick(item)}
+                                                                        sx={{
+                                                                            backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "15px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                                            "&:hover": {
+                                                                                backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "15px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                                            }
+                                                                        }}>{item.buttonLabel}
+                                                                        {/* cgvhbn */}
                                                                     </Button>
                                                                     {/* <Button variant="contained">{item.buttonLabel}</Button> */}
                                                                     {/* {item.trialLabel && (
@@ -1388,13 +1414,17 @@ function PricingAndPlans() {
 
                                                             <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>$15</Typography>
 
-                                                            <Button sx={{
-                                                                backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                "&:hover": {
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                }
-                                                            }}>Get Started
-                                                            </Button>
+                                                            <a href={`${login}`} target='_blank'>
+                                                                <Button
+                                                                    sx={{
+                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                        "&:hover": {
+                                                                            backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                        }
+                                                                    }}>Get Started
+                                                                </Button>
+                                                            </a>
+
 
                                                             <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "medium", fontSize: "14px" }}>Free 30-Day Trial</Typography>
                                                         </TableCell>
@@ -1581,13 +1611,16 @@ function PricingAndPlans() {
 
                                                             <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>$12/user</Typography>
 
-                                                            <Button sx={{
-                                                                backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                "&:hover": {
-                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                }
-                                                            }}>Get Started
-                                                            </Button>
+                                                            <a href={`${login}`} target='_blank'>
+                                                                <Button
+                                                                    sx={{
+                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                        "&:hover": {
+                                                                            backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
+                                                                        }
+                                                                    }}>Get Started
+                                                                </Button>
+                                                            </a>
 
                                                             <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "medium", fontSize: "14px" }}>Free 30-Day Trial</Typography>
                                                         </TableCell>
@@ -1778,7 +1811,7 @@ function PricingAndPlans() {
 
                                                             <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>NOT AVAILABLE</Typography>
 
-                                                            <Button sx={{
+                                                            <Button onClick={() => navigate("/contact")} sx={{
                                                                 backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
                                                                 "&:hover": {
                                                                     backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
@@ -1975,7 +2008,7 @@ function PricingAndPlans() {
 
                                                             <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>NOT AVAILABLE</Typography>
 
-                                                            <Button sx={{
+                                                            <Button onClick={() => navigate("/contact")} sx={{
                                                                 backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
                                                                 "&:hover": {
                                                                     backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",

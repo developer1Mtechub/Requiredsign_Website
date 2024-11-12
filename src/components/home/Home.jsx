@@ -12,6 +12,9 @@ import url from '../../calendly_url'
 import Cards from './Cards';
 import Textfield from '../Textfield';
 import { NavLink } from 'react-router-dom';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+import { try_for_free } from '../../url';
 
 function Home() {
 
@@ -19,6 +22,24 @@ function Home() {
     const handleFocus = () => {
         setIsFocused(true);
     };
+
+    const validationSchema = yup.object({
+        email: yup
+            .string()
+            .email("Enter a valid email")
+            .required("Email is required"),
+    });
+
+    const formik = useFormik({
+        initialValues: {
+            email: ''
+        },
+        validationSchema: validationSchema,
+        onSubmit: (values, { resetForm }) => {
+            console.log(values);
+            window.location.href = `${try_for_free}?prefilled_email=${values.email}`;
+        },
+    });
 
     return (
         <>
@@ -40,20 +61,20 @@ function Home() {
                         <Grid container spacing={0}>
                             <Grid item xs={12} sm={6} md={5} lg={5} align="">
 
-                                <Stack direction="column" pt={{ xs: 5, sm: 0, md: 1.5 }}>
-                                    <Typography variant="paragraph" align="" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "30px", md: "62px" }} color="#1662A7">
+                                <Stack direction="column" pt={{ xs: 5, sm: 0, md: 0 }}>
+                                    <Typography variant="paragraph" align="" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: { xs: "35px", md: "70px" } }} fontWeight="bold" fontSize={{ xs: "30px", md: "60px" }} color="#1662A7">
                                         UNLIMITED<br />
                                         E-SIGNATURES
                                     </Typography>
 
-                                    <Typography variant="paragraph" sx={{ color: "#6E6B7B", fontSize: { xs: "25px", md: "31px" }, fontWeight: "normal" }}>
+                                    <Typography variant="paragraph" sx={{ color: "#6E6B7B", fontSize: { xs: "25px", md: "29px" }, fontWeight: "normal" }}>
                                         at&nbsp;
                                         <span style={{ color: "#25B2E8", fontSize: "40px", fontWeight: "bold" }}>AFFORDABLE PRICES  </span>
                                     </Typography>
 
-                                    <Typography variant="paragraph" sx={{ display: { xs: "none", sm: "block", md: "block" }, color: "#6E6B7B", fontSize: { xs: "25px", md: "31px" }, fontWeight: "normal" }}>
+                                    <Typography variant="paragraph" sx={{ display: { xs: "none", sm: "block", md: "block" }, color: "#6E6B7B", fontSize: { xs: "25px", md: "29px" }, fontWeight: "normal" }}>
                                         for businesses&nbsp;
-                                        <span style={{ color: "#1662A7", fontSize: "50px", fontWeight: "bold" }}>WORLDWIDE</span>
+                                        <span style={{ color: "#1662A7", fontSize: "40px", fontWeight: "bold" }}>WORLDWIDE</span>
                                     </Typography>
 
                                     {/* small screen */}
@@ -66,7 +87,7 @@ function Home() {
                                         <Grid xs={12} sm={4} md={4.2} align="center" p={{ xs: 1, md: 1 }}>
                                             <Stack spacing={1} direction="row">
                                                 <Avatar variant="square" src={rebranable} sx={{ width: { xs: 20, md: 30 }, height: { xs: 20, md: 30 } }} />
-                                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "15px", md: "19px" }} color="#6E6B7B">
+                                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "15px", md: "15px" }} color="#6E6B7B">
                                                     REBRANDABLE
                                                 </Typography>
                                             </Stack>
@@ -75,7 +96,7 @@ function Home() {
                                         <Grid xs={12} sm={4} md={3.5} align="center" p={{ xs: 1, md: 1 }}>
                                             <Stack spacing={1} direction="row">
                                                 <Avatar variant="square" src={scalable} sx={{ width: { xs: 20, md: 30 }, height: { xs: 20, md: 30 } }} />
-                                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "15px", md: "19px" }} color="#6E6B7B">
+                                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "15px", md: "15px" }} color="#6E6B7B">
                                                     SCALABLE
                                                 </Typography>
                                             </Stack>
@@ -84,7 +105,7 @@ function Home() {
                                         <Grid xs={12} sm={4} md={4.3} align="center" p={{ xs: 1, md: 1 }}>
                                             <Stack spacing={1} direction="row">
                                                 <Avatar variant="square" src={secure} sx={{ width: { xs: 20, md: 30 }, height: { xs: 20, md: 35 } }} />
-                                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "15px", md: "19px" }} color="#6E6B7B">
+                                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "15px", md: "15px" }} color="#6E6B7B">
                                                     SECURE
                                                 </Typography>
                                             </Stack>
@@ -100,7 +121,7 @@ function Home() {
                                     <Box align="right" sx={{ alignSelf: "right", display: { xs: "none", sm: "flex" } }}>
                                         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                                             <video
-                                                width="80%"
+                                                width="85%"
                                                 // height="315"
                                                 controls
                                                 autoPlay
@@ -135,105 +156,129 @@ function Home() {
                             <Grid item xs={12} sm={12} md={12} lg={12} pt={0} align="center" >
 
                                 {/* <Textfield /> */}
-                                <Stack direction="column" spacing={{ xs: 3, sm: 2, md: 2 }}>
-                                    {/* <Box component="img" src={inputfield} sx={{ alignSelf: "center", pt: 5, pb: 2, width: { xs: "100%", md: "50%" } }} /> */}
-                                    <Stack pt={5} pb={{ xs: 0, sm: 2, md: 2 }}>
-                                        <Box sx={{ p: { xs: 1, sm: 4, md: 5 }, boxShadow: "4px 4px 55px rgba(0, 0, 0, 0.25)", backgroundColor: "#1662A7", borderRadius: "20px" }}>
-                                            <Box sx={{
-                                                // #F3F4F6
-                                                // #B8C2CC
-                                                alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "90%", md: "50%" }, padding: { xs: "4px", md: "8px" }, display: "flex", // Flexbox to align items horizontally
-                                                alignItems: "center", // Align items vertically in the center
-                                                justifyContent: "space-between", borderRadius: "15px", gap: "10px"
-                                            }}>
-                                                <TextField
-                                                    fullWidth
-                                                    variant="outlined"
-                                                    placeholder="you@email.com"
-                                                    sx={{
-                                                        borderRadius: "10px",
-                                                        backgroundColor: "white",
-                                                        // height:"10px",
-                                                        width: "100%",
-                                                        '& .MuiOutlinedInput-root': {
-                                                            '& fieldset': {
-                                                                border: isFocused ? '1px solid transparent' : '1px solid transparent',
-                                                                border: "3px solid transparent", // Updated to avoid black border
-                                                            },
-                                                            '&:hover fieldset': {
-                                                                border: '3px solid transparent', // Keep this for hover effect
-                                                            },
-                                                            '&.Mui-focused fieldset': {
-                                                                border: '3px solid transparent', // Ensures no border on focus
-                                                            },
-                                                            '& .MuiInputBase-input::placeholder': {
-                                                                color: "gray",
-                                                                fontSize: "15px",
-                                                                fontWeight: 'bold', // Makes the placeholder text bold
-                                                            },
-                                                        },
-                                                    }}
-                                                    InputLabelProps={{
-                                                        style: {
-                                                            color: isFocused ? 'gray' : 'gray',
-                                                            fontSize: "15px",
-                                                        },
-                                                    }}
-                                                    InputProps={{
-                                                        sx: {
-                                                            height: { xs: "40px", md: "auto" },
-                                                            fontSize: "15px",
-                                                            fontWeight: "500px",
-                                                            letterSpacing: "0.5px",
-                                                            borderRadius: "20px",
+                                <form onSubmit={formik.handleSubmit}>
+                                    <Stack direction="column" spacing={{ xs: 3, sm: 2, md: 2 }}>
+                                        {/* <Box component="img" src={inputfield} sx={{ alignSelf: "center", pt: 5, pb: 2, width: { xs: "100%", md: "50%" } }} /> */}
+                                        <Stack pt={5} pb={{ xs: 0, sm: 2, md: 2 }}>
+                                            <Box sx={{ p: { xs: 1, sm: 4, md: 5 }, boxShadow: "4px 4px 55px rgba(0, 0, 0, 0.25)", backgroundColor: "#1662A7", borderRadius: "20px" }}>
+                                                <Box sx={{
+                                                    // #F3F4F6
+                                                    // #B8C2CC
+                                                    alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "90%", md: "50%" }, padding: { xs: "4px", md: "8px" }, display: "flex", // Flexbox to align items horizontally
+                                                    alignItems: "center", // Align items vertically in the center
+                                                    justifyContent: "space-between", borderRadius: "15px", gap: "10px"
+                                                }}>
+                                                    <TextField
+                                                        fullWidth
+                                                        variant="outlined"
+                                                        placeholder="you@email.com"
+                                                        name="email"
+                                                        value={formik.values.email}
+                                                        onChange={(e) => formik.setFieldValue("email", e.target.value)}
+                                                        sx={{
+                                                            borderRadius: "10px",
                                                             backgroundColor: "white",
-                                                        },
-                                                        startAdornment: (
-                                                            <InputAdornment position="start">
-                                                                <Email sx={{ fontSize: { xs: "20px", md: "30px" } }} />
-                                                            </InputAdornment>
-                                                        ),
-                                                    }}
-                                                    autoFocus={true}
-                                                />
+                                                            // height:"10px",
+                                                            width: "100%",
+                                                            '& .MuiOutlinedInput-root': {
+                                                                '& fieldset': {
+                                                                    border: isFocused ? '1px solid transparent' : '1px solid transparent',
+                                                                    border: "3px solid transparent", // Updated to avoid black border
+                                                                },
+                                                                '&:hover fieldset': {
+                                                                    border: '3px solid transparent', // Keep this for hover effect
+                                                                },
+                                                                '&.Mui-focused fieldset': {
+                                                                    border: '3px solid transparent', // Ensures no border on focus
+                                                                },
+                                                                '& .MuiInputBase-input::placeholder': {
+                                                                    color: "gray",
+                                                                    fontSize: "15px",
+                                                                    fontWeight: 'bold', // Makes the placeholder text bold
+                                                                },
+                                                            },
+                                                        }}
+                                                        InputLabelProps={{
+                                                            style: {
+                                                                color: isFocused ? 'gray' : 'gray',
+                                                                fontSize: "15px",
+                                                            },
+                                                        }}
+                                                        InputProps={{
+                                                            sx: {
+                                                                height: { xs: "40px", md: "auto" },
+                                                                fontSize: "15px",
+                                                                fontWeight: "500px",
+                                                                letterSpacing: "0.5px",
+                                                                borderRadius: "20px",
+                                                                backgroundColor: "white",
+                                                            },
+                                                            startAdornment: (
+                                                                <InputAdornment position="start">
+                                                                    <Email sx={{ fontSize: { xs: "20px", md: "30px" } }} />
+                                                                </InputAdornment>
+                                                            ),
+                                                        }}
+                                                        autoFocus={true}
+                                                    />
+                                                    <Button
+                                                        variant="contained" type="submit"
+                                                        color="primary"
+                                                        sx={{
+                                                            display: { xs: "none", sm: "none", md: "block" }, backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                                            "&:hover": {
+                                                                backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                                            }
+                                                        }}
+                                                    >
+                                                        Get Started
+                                                    </Button>
+
+                                                </Box>
+
+                                                {/* Validation Error Message Box */}
+                                                {formik.errors.email && formik.touched.email && (
+                                                    <Box sx={{
+                                                        alignSelf: "center",
+                                                        // backgroundColor: "#FFEEEE",
+                                                        padding: "0px",
+                                                        borderRadius: "10px",
+                                                        marginTop: "10px",
+                                                        color: "#D32F2F",
+                                                        width: { xs: "100%", md: "50%" },
+                                                        textAlign: "center"
+                                                    }}>
+                                                        <Typography sx={{ display: "flex", fontSize: "13px", justifyContent: "start", alignSelf: "left" }}>
+                                                            {formik.errors.email}
+                                                        </Typography>
+                                                    </Box>
+                                                )}
 
                                                 <Button
-                                                    variant="contained"
+                                                    // pt={{ xs: 3, sm: 0, md: 0 }}
+                                                    variant="contained" type="submit"
                                                     color="primary"
                                                     sx={{
-                                                        display: { xs: "none", sm: "none", md: "block" }, backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                                        display: { xs: "block", sm: "block", md: "none" }, mt: { xs: 1, sm: 0, md: 0 }, alignSelf: "center", backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "fit-content",
                                                         "&:hover": {
-                                                            backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "50px", fontWeight: "bold", borderRadius: "10px", fontSize: "15px", color: "white", textTransform: "capitalize", width: "160px",
+                                                            backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "fit-content",
                                                         }
                                                     }}
                                                 >
                                                     Get Started
                                                 </Button>
+
                                             </Box>
 
-                                            <Button
-                                                // pt={{ xs: 3, sm: 0, md: 0 }}
-                                                variant="contained"
-                                                color="primary"
-                                                sx={{
-                                                    display: { xs: "block", sm: "block", md: "none" }, mt: { xs: 1, sm: 0, md: 0 }, alignSelf: "center", backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "fit-content",
-                                                    "&:hover": {
-                                                        backgroundColor: "#25B2E8", boxShadow: "none", fontFamily: "Roboto", height: "40px", fontWeight: "bold", borderRadius: "10px", fontSize: "13px", color: "white", textTransform: "capitalize", width: "fit-content",
-                                                    }
-                                                }}
-                                            >
-                                                Get Started
-                                            </Button>
+                                        </Stack>
 
-                                        </Box>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "14px", md: "18px" }} color="#6E6B7B">
+                                            By clicking “Get Started” button , you agree to <NavLink to="/terms_&_conditions" style={{ textDecoration: "none" }}><span style={{ color: "#1662A7" }}>Terms & Conditions</span>.</NavLink> <span style={{ color: "#1662A7" }}> </span> and&nbsp;
+                                            <NavLink to="/privacy_&_policy" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Privacy Policy</span>.</NavLink>
+                                        </Typography>
+
                                     </Stack>
-
-                                    <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="medium" fontSize={{ xs: "14px", md: "20px" }} color="#6E6B7B">
-                                        By clicking “Get Started” button , you agree to <NavLink to="/terms_&_conditions" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Terms & Conditions</span>.</NavLink> <span style={{ color: "#1662A7" }}> </span> and &nbsp;
-                                        <NavLink to="/privacy_&_policy" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Privacy Policy</span>.</NavLink>
-                                    </Typography>
-
-                                </Stack>
+                                </form>
 
                             </Grid>
                         </Grid>

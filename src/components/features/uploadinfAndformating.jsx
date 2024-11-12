@@ -25,7 +25,7 @@ function UploadingAndFormatting() {
                     <Grid container spacing={0}>
 
                         <Grid xs={12} align="center" pb={2}>
-                            <Typography variant="paragraph" sx={{ width: {xs:"100%",md:"90%"}, fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "50px" }} color="#1662A7">
+                            <Typography variant="paragraph" sx={{ width: {xs:"100%",md:"90%"}, fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "22px", md: "40px" }} color="#1662A7">
                                 Uploading & Formatting Documents
                             </Typography>
                         </Grid>
