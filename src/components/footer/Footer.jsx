@@ -23,8 +23,13 @@ function Footer() {
                     }
                 }}
             >
-                <Box pt={5} pb={5}>
+                <Box pb={2}>
                     <Grid container spacing={0}>
+
+                        <Grid xs={12} sm={12} md={12} align="left" >
+                            <Divider sx={{ mb: 5 }} />
+                        </Grid>
+
                         <Grid xs={12} sm={12} md={3} align="left" >
                             <Box component="img" src={logo} sx={{ pt: 0.5, width: 170, height: 40 }} />
                         </Grid>
@@ -95,7 +100,7 @@ function Footer() {
                                                 </NavLink>
 
                                                 <NavLink to="/privacy_&_policy" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Privacy & Policy</Typography>
+                                                    <Typography variant="paragraph" align="center" sx={{ alignSelf: "center", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Privacy Policy</Typography>
                                                 </NavLink>
 
                                                 <NavLink to="/terms_&_conditions" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
@@ -158,7 +163,7 @@ function Footer() {
                                     </NavLink>
 
                                     <NavLink to="/privacy_&_policy" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>
-                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Privacy & Policy</Typography>
+                                        <Typography variant="paragraph" sx={{ alignSelf: "left", fontFamily: "Roboto", letterSpacing: "1px" }} fontWeight={450} fontSize={{ xs: "14px", md: "14px" }} >Privacy Policy</Typography>
                                     </NavLink>
 
                                     <NavLink to="/terms_&_conditions" exact style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : "none", color: isActive ? '#1662A7' : '#6E6B7B', height: "25px" })}>

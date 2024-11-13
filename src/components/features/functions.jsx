@@ -383,7 +383,7 @@ function Functions() {
                             <Box sx={{ width: { xs: "100%", md: "90%" } }}>
                                 <Stack direction="column" spacing={{ xs: 1, md: 4 }} pt={0} alignItems="center">
                                     <Typography
-                                    align='left'
+                                        align='left'
                                         variant="body1"
                                         sx={{
                                             fontFamily: "Roboto",

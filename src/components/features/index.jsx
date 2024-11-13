@@ -88,7 +88,7 @@ function Features() {
                                             fontFamily: "Roboto",
                                             lineHeight: "35px",
                                         }}
-                                        fontWeight="medium"
+                                        fontWeight={450}
                                         fontSize={{ xs: "15px", md: "17px" }}
                                         color="#6E6B7B"
                                     >
@@ -97,7 +97,7 @@ function Features() {
                                         <Stack sx={{ pt: 0.5, pb: 0.5 }}>Elevate your brand's professional image today!</Stack>
                                         Example of custom domain:
                                         <br />
-                                        esign.YourCompany.com
+                                        <span style={{ fontWeight: 900 }}>esign.YourCompany.com</span>
                                     </Typography>
 
                                     <a href={try_for_free} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "start", justifyContent: "start", textDecoration: "none" }}>

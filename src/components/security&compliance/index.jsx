@@ -95,7 +95,7 @@ function SecurityCompliance() {
                                             fontSize={{ xs: "15px", md: "20px" }}
                                             color="#020202"
                                         >
-                                            Secure data storage: <span style={{ fontWeight: "normal", color: "#6E6B7B" }}> Our data centers adhere to strict security standards and are regularly audited. We also implement blockchain decentralized storage for additional security.</span>
+                                            Secure data storage: <span style={{ fontWeight: "normal", color: "#6E6B7B" }}> Our data centers adhere to strict security standards and are regularly audited.</span>
                                         </Typography>
                                     </div>
                                 </Stack>
@@ -212,14 +212,14 @@ function SecurityCompliance() {
                             </Stack>
                         </Grid>
 
-                        <Grid xs={12} md={12} pt={10} pb={5} align="center">
+                        {/* <Grid xs={12} md={12} pt={10} pb={5} align="center">
                             <Box sx={{ width: { xs: "100%", md: "100%" }, }}>
                                 <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: { xs: "40px", md: "55px" } }} fontWeight="normal" fontSize={{ xs: "20px", md: "25px" }} color="#6E6B7B">
                                     By choosing RequireSign, you can <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>TRUST</span> that your documents and data are <span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>Protected</span> by the
                                     &nbsp;<span style={{ fontWeight: "bold", color: "#1662A7", textTransform: "capitalize" }}>HIGHEST SECURITY STANDARDS.</span>
                                 </Typography>
                             </Box>
-                        </Grid>
+                        </Grid> */}
                     </Grid>
                 </Container>
             </Box>

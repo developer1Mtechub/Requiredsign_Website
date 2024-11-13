@@ -34,7 +34,7 @@ function Patners() {
                 </Container>
             </Box>
 
-            <Box pt={7} pb={5}>
+            <Box pt={7} pb={0}>
                 <Container
                     maxWidth="lg"
                     sx={{

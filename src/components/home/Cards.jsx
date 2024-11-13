@@ -13,7 +13,7 @@ function Cards() {
 
     return (
         <>
-            <Box id="" pt={{ xs: 10, md: 10 }} pb={{ xs: 10, md: 15 }}>
+            <Box id="" pt={{ xs: 10, md: 10 }} pb={{ xs: 10, md: 10 }}>
 
                 <Grid container spacing={0}>
                     {/* <Grid xs={12} md={2.4} p={""} sx={{ display: { xs: "none", md: "block" } }}>

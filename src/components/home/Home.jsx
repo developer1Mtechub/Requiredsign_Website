@@ -158,8 +158,13 @@ function Home() {
                                 {/* <Textfield /> */}
                                 <form onSubmit={formik.handleSubmit}>
                                     <Stack direction="column" spacing={{ xs: 3, sm: 2, md: 2 }}>
-                                        {/* <Box component="img" src={inputfield} sx={{ alignSelf: "center", pt: 5, pb: 2, width: { xs: "100%", md: "50%" } }} /> */}
-                                        <Stack pt={5} pb={{ xs: 0, sm: 2, md: 2 }}>
+
+                                        <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="bold" fontSize={{ xs: "14px", md: "25px" }} color="#25B2E8">
+                                            Free 30 Days Trial
+                                            {/* By clicking “Get Started” button , you agree to <NavLink to="/terms_&_conditions" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Terms & Conditions</span>.</NavLink> <span style={{ color: "#1662A7" }}> </span> and &nbsp; */}
+                                        </Typography>
+
+                                        <Stack pt={1} pb={{ xs: 0, sm: 2, md: 2 }}>
                                             <Box sx={{ p: { xs: 1, sm: 4, md: 5 }, boxShadow: "4px 4px 55px rgba(0, 0, 0, 0.25)", backgroundColor: "#1662A7", borderRadius: "20px" }}>
                                                 <Box sx={{
                                                     // #F3F4F6

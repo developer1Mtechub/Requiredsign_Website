@@ -171,7 +171,7 @@ function PricingAndPlans() {
                 </Container>
             </Box>
 
-            <Box pt={5} pb={5}>
+            <Box pt={5} pb={0}>
                 <Container
                     maxWidth="lg"
                     sx={{
@@ -1252,42 +1252,32 @@ function PricingAndPlans() {
                                                                 align="center"
                                                                 sx={{ borderRight: index !== pricingDataMonthly.length - 1 ? '1px solid rgba(224, 224, 224, 1)' : 'none' }}
                                                             >
-                                                                <Stack direction="column" spacing={1}>
+                                                                <Stack
+                                                                    direction="column" spacing={1}>
                                                                     {item.price == null || undefined ?
-                                                                        <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "15px" }}>{item.buttonbody}</Typography>
+                                                                        <></> // <Typography variant="body1" sx={{ color: "transparent", fontWeight: "medium", fontSize: "15px" }}>{item.buttonbody}</Typography>
                                                                         :
                                                                         <Typography variant="body1" sx={{ color: "#4F6169", fontWeight: "medium", fontSize: "15px" }}>{item.price}</Typography>
                                                                     }
-                                                                    {/* <a href={`${login}`} target='_blank'>
-                                                                <Button
-                                                                    sx={{
-                                                                        backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                        "&:hover": {
-                                                                            backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
-                                                                        }
-                                                                    }}>Get Started
-                                                                </Button>
-                                                            </a> */}
-                                                                    <Button
-                                                                        onClick={() => handleButtonClick(item)}
-                                                                        sx={{
-                                                                            backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "15px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "150px",
-                                                                            "&:hover": {
+                                                                    <div style={{
+                                                                        alignItems: "center",       // Centers items horizontally
+                                                                        justifyContent: "center",
+                                                                        height: "100%"   // Centers items vertically
+                                                                    }}>
+                                                                        <Button
+                                                                            onClick={() => handleButtonClick(item)}
+                                                                            sx={{
                                                                                 backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "15px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "150px",
-                                                                            }
-                                                                        }}>{item.buttonLabel}
-                                                                        {/* cgvhbn */}
-                                                                    </Button>
-                                                                    {/* <Button variant="contained">{item.buttonLabel}</Button> */}
-                                                                    {/* {item.trialLabel && (
-                                                                        <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "bold", fontSize: "15px" }}>
-                                                                            {item.trialLabel}
-                                                                        </Typography>
-                                                                    )} */}
+                                                                                "&:hover": {
+                                                                                    backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "15px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "150px",
+                                                                                }
+                                                                            }}>{item.buttonLabel}
+                                                                        </Button>
+                                                                    </div>
                                                                     {item?.trialLabel == null || undefined ?
-                                                                        <Typography variant="body1" sx={{ color: "transparent", fontWeight: "bold", fontSize: "15px" }}>
-                                                                            Free 30-Day Trial
-                                                                        </Typography>
+                                                                        <></>    // <Typography variant="body1" sx={{ color: "transparent", fontWeight: "bold", fontSize: "15px" }}>
+                                                                        //     Free 30-Day Trial
+                                                                        // </Typography>
                                                                         :
                                                                         <Typography variant="body1" sx={{ color: "#00BE00", fontWeight: "bold", fontSize: "15px" }}>
                                                                             {item.trialLabel}
@@ -1809,7 +1799,7 @@ function PricingAndPlans() {
                                                             sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
 
-                                                            <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>NOT AVAILABLE</Typography>
+                                                            {/* <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>NOT AVAILABLE</Typography> */}
 
                                                             <Button onClick={() => navigate("/contact")} sx={{
                                                                 backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",
@@ -2006,7 +1996,7 @@ function PricingAndPlans() {
                                                             sx={{ padding: '8px 8px', color: "#4F6169", fontWeight: "medium", fontSize: "14px" }}
                                                         >
 
-                                                            <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>NOT AVAILABLE</Typography>
+                                                            {/* <Typography variant="body1" sx={{ color: "red", fontWeight: "medium", fontSize: "13px" }}>NOT AVAILABLE</Typography> */}
 
                                                             <Button onClick={() => navigate("/contact")} sx={{
                                                                 backgroundColor: "transparent", letterSpacing: "1px", fontFamily: "Roboto", height: "40px", border: "1px solid #0070E0", borderRadius: "10px", fontSize: "13px", fontWeight: "medium", color: "#0070E0", textTransform: "capitalize", alignSelf: "center", width: "120px",

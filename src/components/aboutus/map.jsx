@@ -8,7 +8,7 @@ function Map() {
 
     return (
         <>
-            <Box pt={5} pb={5}>
+            <Box pt={5} pb={3}>
                 <Box pl={{ xs: 5, md: 20 }} pr={{ xs: 5, md: 20 }}>
                     <Stack direction="column" spacing={4}>
                         <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto", lineHeight: "45px" }} fontWeight="medium" fontSize={{ xs: "15px", md: "30px" }} color="#6E6B7B">

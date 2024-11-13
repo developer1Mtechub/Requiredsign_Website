@@ -80,7 +80,7 @@ function DataCenters() {
                 <Box pl={{ xs: 5, md: 25 }} pr={{ xs: 5, md: 25 }}>
                     <Grid container spacing={0}>
 
-                        <Grid xs={12} md={12}  >
+                        {/* <Grid xs={12} md={12}  >
                             <Stack direction="column" pt={4} pb={4} spacing={2}>
                                 <Typography variant="paragraph" align="center" sx={{ alignText: "", fontFamily: "Roboto", lineHeight: "70px" }} fontWeight={800} fontSize="50px" color="#1662A7">
                                     Our Data Center's
@@ -90,7 +90,7 @@ function DataCenters() {
 
                         <Grid xs={12} md={12} pt={2} align="center" sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
                             <div style={{ display: "flex", justifyContent: "center", alignContent: "center", alignItems: "center", gap: "100px" }}>
-                                {/* <Stack align="center" direction="row" spacing={10}> */}
+                            
                                 <Box component="img" src={data_center_1} sx={{ alignSelf: "center", width: { xs: "70%", md: "18%" } }} />
 
                                 <Box component="img" src={data_center_2} sx={{ alignSelf: "center", width: { xs: "70%", md: "18%" } }} />
@@ -98,10 +98,9 @@ function DataCenters() {
                                 <Box component="img" src={data_center_3} sx={{ alignSelf: "center", width: { xs: "70%", md: "18%" } }} />
 
                                 <Box component="img" src={data_center_4} sx={{ alignSelf: "center", width: { xs: "70%", md: "18%" } }} />
-
-                                {/* </Stack> */}
+ 
                             </div>
-                        </Grid>
+                        </Grid> */}
 
                         <Grid xs={12} sm={3} md={3} pt={2} align="center" sx={{ display: { xs: "block", sm: "block", md: "none" } }}>
                             <Box component="img" src={data_center_1} sx={{ width: { xs: "40%", md: "50%" } }} />
