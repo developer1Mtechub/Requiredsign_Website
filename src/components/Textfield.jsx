@@ -37,12 +37,12 @@ function Textfield() {
             <form onSubmit={formik.handleSubmit}>
                 <Stack direction="column" spacing={{ xs: 3, sm: 2, md: 2 }}>
 
-                    <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="bold" fontSize={{ xs: "14px", md: "25px" }} color="#25B2E8">
+                    <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="bold" fontSize={{ xs: "20px", md: "25px" }} color="#25B2E8">
                         Free 30 Days Trial
                         {/* By clicking “Get Started” button , you agree to <NavLink to="/terms_&_conditions" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Terms & Conditions</span>.</NavLink> <span style={{ color: "#1662A7" }}> </span> and &nbsp; */}
                     </Typography>
 
-                    <Stack pt={1} pb={{ xs: 0, sm: 2, md: 2 }}>
+                    <Stack pt={0} pb={{ xs: 0, sm: 2, md: 2 }}>
 
                         <Box sx={{
                             alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "100%", md: "50%" }, padding: { xs: "4px", md: "8px" }, display: "flex",

@@ -97,7 +97,7 @@ function Features() {
                                         <Stack sx={{ pt: 0.5, pb: 0.5 }}>Elevate your brand's professional image today!</Stack>
                                         Example of custom domain:
                                         <br />
-                                        <span style={{ fontWeight: 900 }}>esign.YourCompany.com</span>
+                                        <span style={{ fontWeight: 900, color: "#222222" }}>esign.YourCompany.com</span>
                                     </Typography>
 
                                     <a href={try_for_free} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "start", justifyContent: "start", textDecoration: "none" }}>

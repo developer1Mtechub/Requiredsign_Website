@@ -157,22 +157,26 @@ function Home() {
 
                                 {/* <Textfield /> */}
                                 <form onSubmit={formik.handleSubmit}>
-                                    <Stack direction="column" spacing={{ xs: 3, sm: 2, md: 2 }}>
+                                    <Stack direction="column" pt={{ xs: 4, sm: 3, md: 0 }} spacing={{ xs: 3, sm: 2, md: 2 }}>
 
-                                        <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="bold" fontSize={{ xs: "14px", md: "25px" }} color="#25B2E8">
-                                            Free 30 Days Trial
-                                            {/* By clicking “Get Started” button , you agree to <NavLink to="/terms_&_conditions" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Terms & Conditions</span>.</NavLink> <span style={{ color: "#1662A7" }}> </span> and &nbsp; */}
-                                        </Typography>
-
-                                        <Stack pt={1} pb={{ xs: 0, sm: 2, md: 2 }}>
+                                        <Stack pt={0} pb={{ xs: 0, sm: 2, md: 2 }}>
                                             <Box sx={{ p: { xs: 1, sm: 4, md: 5 }, boxShadow: "4px 4px 55px rgba(0, 0, 0, 0.25)", backgroundColor: "#1662A7", borderRadius: "20px" }}>
+
+
+                                                <Typography variant="paragraph" sx={{ alignSelf: "center", fontFamily: "Roboto" }} fontWeight="bold" fontSize={{ xs: "20px", md: "25px" }} color="#fff">
+                                                    Free 30 Days Trial
+                                                    {/* By clicking “Get Started” button , you agree to <NavLink to="/terms_&_conditions" style={{ textDecoration: "none" }}> <span style={{ color: "#1662A7" }}>Terms & Conditions</span>.</NavLink> <span style={{ color: "#1662A7" }}> </span> and &nbsp; */}
+                                                </Typography>
+
                                                 <Box sx={{
+                                                    mt: { xs: 1, sm: 2, md: 3 },
                                                     // #F3F4F6
                                                     // #B8C2CC
                                                     alignSelf: "center", backgroundColor: "#F3F4F6", border: "1px solid #B8C2CC", width: { xs: "90%", md: "50%" }, padding: { xs: "4px", md: "8px" }, display: "flex", // Flexbox to align items horizontally
                                                     alignItems: "center", // Align items vertically in the center
                                                     justifyContent: "space-between", borderRadius: "15px", gap: "10px"
                                                 }}>
+
                                                     <TextField
                                                         fullWidth
                                                         variant="outlined"
@@ -293,7 +297,7 @@ function Home() {
 
                 <Cards />
 
-            </Container>
+            </Container >
         </>
     )
 }
